@@ -1,0 +1,1861 @@
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.332548 ms [120.011305 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.333613 ms [119.995974 Hz]. (50 valid samples taken, stddev=0.046196 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{´íÎóÊ¹ÓÃ <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+³ö´í <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_180901\trial.m', 187)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_180901\trial.m',187,0)">line 187</a>)
+            Screen('Flip', display_info.wPtr);
+
+³ö´í <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_180901\main.m', 86)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_180901\main.m',86,0)">line 86</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.331521 ms [120.026110 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332708 ms [120.009000 Hz]. (50 valid samples taken, stddev=0.041761 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 2 times out of a total of 22 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+Error in function FillOval: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{´íÎóÊ¹ÓÃ <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+Screen('FillOval', windowPtr [,color] [,rect] [,perfectUpToMaxDiameter]);
+
+³ö´í <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_180901\trial.m', 78)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_180901\trial.m',78,0)">line 78</a>)
+            Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 +
+            display_info.fixation_radius.*[-1 -1 1 1]);
+
+³ö´í <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_180901\main.m', 95)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_180901\main.m',95,0)">line 95</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Jun  6 2017).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is Intel :: Intel(R) HD Graphics 520 :: 4.4.0 - Build 21.20.16.4627
+PTB-INFO: VBL startline = 1824 , VBL Endline = 1824
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.663545 ms [60.011239 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.666233 ms [60.001561 Hz]. (50 valid samples taken, stddev=0.038626 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+[Warning: Directory already exists.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\main.m', 25)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\main.m',25,0)">line 25</a>)] 
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 4 times out of a total of 76 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip',
+windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m', 187)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m',187,0)">line 187</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\main.m', 102)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\main.m',102,0)">line 102</a>)
+    trials(i_trial).show(display_info);
+} 
+clear
+ clc
+a = tableread('data\data.csv')
+{Undefined function or variable 'tableread'.
+} 
+a = readtable('data\data.csv')
+
+a =
+
+  12×11 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>sub_id</strong><strong>    sub_gender</strong><strong>    sub_age</strong><strong>    block_id</strong><strong>    trial_id</strong><strong>    gain_on_left</strong><strong>    gamble_duration</strong><strong>      gambles  </strong><strong>    sure_reward</strong><strong>    choose_sure</strong><strong>    reaction_time</strong>
+    <strong>______</strong>    <strong>__________</strong>    <strong>_______</strong>    <strong>________</strong>    <strong>________</strong>    <strong>____________</strong>    <strong>_______________</strong>    <strong>___________</strong>    <strong>___________</strong>    <strong>___________</strong>    <strong>_____________</strong>
+
+    1         1             1          -1          457         0                 2                '[3 -3;]'       -2            0                 -1        
+    1         1             1          -1          501         1                 2                '[3 -9;]'       -9            0              0.332        
+    1         1             1          -2          357         0               0.5                '[12 -12;]'     12            1               0.64        
+    1         1             1          -2          313         1               0.5                '[12 -15;]'    -15            0              0.416        
+    1         1             1           1            1         0                 1                '[9 -6;]'        5            0              0.395        
+    1         1             1           1            2         1                 1                '[3 -12;]'     -12            0              0.208        
+    1         1             1           1            3         1                 1                '[15 -15;]'      8            1              0.416        
+    1         1             1           1            4         0                 1                '[18 -6;]'      18            1              0.296        
+    1         1             1           1            5         0                 1                '[18 -9;]'      -2            0              0.454        
+    1         1             1           1            6         1                 1                '[18 -6;]'      -6            0              0.281        
+    1         1             1           1            7         0                 1                '[15 -3;]'       6            0              0.545        
+    1         1             1           1            8         0                 1                '[12 -15;]'     -2            1               0.89        
+
+clc
+height(a)
+
+ans =
+
+    12
+
+descriptiveSum
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/read', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m', 53)" style="font-weight:bold">trial/read</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m',53,0)">line 53</a>)
+Unrecognized variable name 'sub_sex'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('descriptiveSum', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m', 4)" style="font-weight:bold">descriptiveSum</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m',4,0)">line 4</a>)
+    trials(i_trial).read(trialTable(i_trial,:))
+} 
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m',53,0)
+clear
+clc
+descriptiveSum
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/read', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m', 53)" style="font-weight:bold">trial/read</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m',53,0)">line 53</a>)
+Unrecognized variable name 'sub_sex'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('descriptiveSum', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m', 4)" style="font-weight:bold">descriptiveSum</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m',4,0)">line 4</a>)
+    trials(i_trial).read(trialTable(i_trial,:))
+} 
+fclose all
+
+ans =
+
+     0
+
+clear
+clc
+descriptiveSum
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 8
+          n_gambles: []
+            gambles: []
+        sure_reward: []
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 1
+      reaction_time: 0.8900
+
+any(strcmp(trials.Properties.VariableNames(:),'n_gambles'))
+{No appropriate method, property, or field 'Properties' for class 'trial'.
+} 
+any(strcmp(trialTable.Properties.VariableNames(:),'n_gambles'))
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+clear
+clc
+descriptiveSum
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/read', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m', 60)" style="font-weight:bold">trial/read</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m',60,0)">line 60</a>)
+Unrecognized variable name 'n_gambles'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('descriptiveSum', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m', 4)" style="font-weight:bold">descriptiveSum</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m',4,0)">line 4</a>)
+    trials(i_trial).read(trialTable(i_trial,:))
+} 
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m',60,0)
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m',60,0)
+descriptiveSum
+{Undefined function or variable 'trailInfo'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/read', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m', 60)" style="font-weight:bold">trial/read</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m',60,0)">line 60</a>)
+                obj.gambles = eval(trailInfo.gambles{:});
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('descriptiveSum', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m', 4)" style="font-weight:bold">descriptiveSum</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m',4,0)">line 4</a>)
+    trials(i_trial).read(trialTable(i_trial,:))
+} 
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m',4,0)
+clear
+clc
+descriptiveSum
+{Undefined function or variable 'trailInfo'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/read', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m', 60)" style="font-weight:bold">trial/read</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m',60,0)">line 60</a>)
+                obj.gambles = eval(trailInfo.gambles{:});
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('descriptiveSum', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m', 4)" style="font-weight:bold">descriptiveSum</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m',4,0)">line 4</a>)
+    trials(i_trial).read(trialTable(i_trial,:))
+} 
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\trial.m',60,0)
+trialTable.gambles
+
+ans =
+
+  12×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    '[3 -3;]'
+    '[3 -9;]'
+    '[12 -12;]'
+    '[12 -15;]'
+    '[9 -6;]'
+    '[3 -12;]'
+    '[15 -15;]'
+    '[18 -6;]'
+    '[18 -9;]'
+    '[18 -6;]'
+    '[15 -3;]'
+    '[12 -15;]'
+
+trialTable(3).gambles
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('tabular/subsrefParens', 'C:\Program Files\MATLAB\R2017a\toolbox\matlab\datatypes\@tabular\subsrefParens.m', 15)" style="font-weight:bold">tabular/subsrefParens</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\matlab\datatypes\@tabular\subsrefParens.m',15,0)">line 15</a>)
+You cannot subscript a table using linear indexing (one subscript) or
+multidimensional indexing (three or more subscripts). Use a row subscript and a
+variable subscript.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('tabular/numArgumentsFromSubscript', 'C:\Program Files\MATLAB\R2017a\toolbox\matlab\datatypes\@tabular\numArgumentsFromSubscript.m', 59)" style="font-weight:bold">tabular/numArgumentsFromSubscript</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\matlab\datatypes\@tabular\numArgumentsFromSubscript.m',59,0)">line 59</a>)
+        x = subsrefParens(t,s(1));
+} 
+trialTable(3,:).gambles
+
+ans =
+
+  <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a>
+
+    '[12 -12;]'
+
+trialTable(3,:).gambles{:}
+
+ans =
+
+    '[12 -12;]'
+
+clear
+clc
+descriptiveSum
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: -1
+           trial_id: 457
+          n_gambles: 1
+            gambles: [3 -3]
+        sure_reward: -2
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 0
+      reaction_time: -1
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: -1
+           trial_id: 501
+          n_gambles: 1
+            gambles: [3 -9]
+        sure_reward: -9
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 0
+      reaction_time: 0.3320
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: -2
+           trial_id: 357
+          n_gambles: 1
+            gambles: [12 -12]
+        sure_reward: 12
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 1
+      reaction_time: 0.6400
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: -2
+           trial_id: 313
+          n_gambles: 1
+            gambles: [12 -15]
+        sure_reward: -15
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 0
+      reaction_time: 0.4160
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 1
+          n_gambles: 1
+            gambles: [9 -6]
+        sure_reward: 5
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 0
+      reaction_time: 0.3950
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 2
+          n_gambles: 1
+            gambles: [3 -12]
+        sure_reward: -12
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 0
+      reaction_time: 0.2080
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 3
+          n_gambles: 1
+            gambles: [15 -15]
+        sure_reward: 8
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 1
+      reaction_time: 0.4160
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 4
+          n_gambles: 1
+            gambles: [18 -6]
+        sure_reward: 18
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 1
+      reaction_time: 0.2960
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 5
+          n_gambles: 1
+            gambles: [18 -9]
+        sure_reward: -2
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 0
+      reaction_time: 0.4540
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 6
+          n_gambles: 1
+            gambles: [18 -6]
+        sure_reward: -6
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 0
+      reaction_time: 0.2810
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 7
+          n_gambles: 1
+            gambles: [15 -3]
+        sure_reward: 6
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 0
+      reaction_time: 0.5450
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 8
+          n_gambles: 1
+            gambles: [12 -15]
+        sure_reward: -2
+    gamble_duration: []
+       gain_on_left: []
+        choose_sure: 1
+      reaction_time: 0.8900
+
+descriptiveSum
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: -1
+           trial_id: 457
+          n_gambles: 1
+            gambles: [3 -3]
+        sure_reward: -2
+    gamble_duration: 2
+       gain_on_left: 0
+        choose_sure: 0
+      reaction_time: -1
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: -1
+           trial_id: 501
+          n_gambles: 1
+            gambles: [3 -9]
+        sure_reward: -9
+    gamble_duration: 2
+       gain_on_left: 1
+        choose_sure: 0
+      reaction_time: 0.3320
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: -2
+           trial_id: 357
+          n_gambles: 1
+            gambles: [12 -12]
+        sure_reward: 12
+    gamble_duration: 0.5000
+       gain_on_left: 0
+        choose_sure: 1
+      reaction_time: 0.6400
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: -2
+           trial_id: 313
+          n_gambles: 1
+            gambles: [12 -15]
+        sure_reward: -15
+    gamble_duration: 0.5000
+       gain_on_left: 1
+        choose_sure: 0
+      reaction_time: 0.4160
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 1
+          n_gambles: 1
+            gambles: [9 -6]
+        sure_reward: 5
+    gamble_duration: 1
+       gain_on_left: 0
+        choose_sure: 0
+      reaction_time: 0.3950
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 2
+          n_gambles: 1
+            gambles: [3 -12]
+        sure_reward: -12
+    gamble_duration: 1
+       gain_on_left: 1
+        choose_sure: 0
+      reaction_time: 0.2080
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 3
+          n_gambles: 1
+            gambles: [15 -15]
+        sure_reward: 8
+    gamble_duration: 1
+       gain_on_left: 1
+        choose_sure: 1
+      reaction_time: 0.4160
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 4
+          n_gambles: 1
+            gambles: [18 -6]
+        sure_reward: 18
+    gamble_duration: 1
+       gain_on_left: 0
+        choose_sure: 1
+      reaction_time: 0.2960
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 5
+          n_gambles: 1
+            gambles: [18 -9]
+        sure_reward: -2
+    gamble_duration: 1
+       gain_on_left: 0
+        choose_sure: 0
+      reaction_time: 0.4540
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 6
+          n_gambles: 1
+            gambles: [18 -6]
+        sure_reward: -6
+    gamble_duration: 1
+       gain_on_left: 1
+        choose_sure: 0
+      reaction_time: 0.2810
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 7
+          n_gambles: 1
+            gambles: [15 -3]
+        sure_reward: 6
+    gamble_duration: 1
+       gain_on_left: 0
+        choose_sure: 0
+      reaction_time: 0.5450
+
+
+ans = 
+
+  <a href="matlab:helpPopup trial" style="font-weight:bold">trial</a> with properties:
+
+             sub_id: 1
+            sub_sex: 1
+            sub_age: 1
+           block_id: 1
+           trial_id: 8
+          n_gambles: 1
+            gambles: [12 -15]
+        sure_reward: -2
+    gamble_duration: 1
+       gain_on_left: 0
+        choose_sure: 1
+      reaction_time: 0.8900
+
+clc
+clear
+descriptiveSum
+trials.sub_id
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+
+ans =
+
+     1
+
+clc
+[trials.sub_id]
+
+ans =
+
+     1     1     1     1     1     1     1     1     1     1     1     1
+
+nan>0
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+clc
+trials = trials(trials.reaction_time > 0);
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('gt')" style="font-weight:bold"> > </a>
+Too many input arguments.
+} 
+trials = trials(trials.reaction_time > 0);
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('gt')" style="font-weight:bold"> > </a>
+Too many input arguments.
+} 
+trials = trials([trials.reaction_time] > 0);
+descriptiveSum
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('le')" style="font-weight:bold"> <= </a>
+Too many input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('descriptiveSum', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m', 8)" style="font-weight:bold">descriptiveSum</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m',8,0)">line 8</a>)
+reactTooEarly = sum(trials.reaction_time <= 0) / length(trials);
+} 
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\descriptiveSum.m',8,0)
+descriptiveSum
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Jun  6 2017).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is Intel :: Intel(R) HD Graphics 520 :: 4.4.0 - Build 21.20.16.4627
+PTB-INFO: VBL startline = 1824 , VBL Endline = 1824
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.663579 ms [60.011119 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.667169 ms [59.998193 Hz]. (50 valid samples taken, stddev=0.117515 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('horzcat')" style="font-weight:bold">horzcat</a>
+Dimensions of matrices being concatenated are not consistent.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\main.m', 32)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_180902\main.m',32,0)">line 32</a>)
+subSeq = length(unique([formerData.sub_id, sub_id]));
+} 
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+clear
+clc
+main
+Please input subject id
+
+Please input subject sex
+{Index exceeds array bounds.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m', 12)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m',12,0)">line 12</a>)
+sub_sex = sub_argin(1);
+} 
+opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m',12,0)
+main
+Please input subject id
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m', 3)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m',3,0)">line 3</a>)
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 399.24
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.662085 ms [60.016499 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.663069 ms [60.012954 Hz]. (50 valid samples taken, stddev=0.131789 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\trial.m', 190)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\trial.m',190,0)">line 190</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m', 87)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m',87,0)">line 87</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 399.24
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.661987 ms [60.016851 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.667077 ms [59.998523 Hz]. (50 valid samples taken, stddev=0.104041 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 3 times out of a total of 16 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\trial.m', 190)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\trial.m',190,0)">line 190</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m', 87)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m',87,0)">line 87</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 399.24
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.665002 ms [60.005993 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.667795 ms [59.995938 Hz]. (50 valid samples taken, stddev=0.085327 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+Error in function DrawTexture: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+Screen('DrawTexture', windowPointer, texturePointer [,sourceRect] [,destinationRect] [,rotationAngle] [, filterMode] [, globalAlpha] [,
+modulateColor] [, textureShader] [, specialFlags] [, auxParameters]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m', 52)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_180915\exp\main.m',52,0)">line 52</a>)
+    Screen('DrawTexture', display_info.wPtr, insTexture(i_ins), [], display_info.window_rect)
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+PTB-INFO: Multi-display setup in explicit multi-display mode detected. Using the following mapping:
+PTB-INFO: Screen 0 corresponds to the full Windows desktop area. Useful for stereo presentations in stereomode=4 ...
+PTB-INFO: Screen 1 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY1 ...
+PTB-INFO: Screen 2 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY2 ...
+
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.662998 ms [60.013211 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.654413 ms [60.044145 Hz]. (54 valid samples taken, stddev=0.716569 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+WARNING: Couldn't compute a reliable estimate of monitor refresh interval! Trouble with VBL syncing?!?
+
+
+----- ! PTB - ERROR: SYNCHRONIZATION FAILURE ! ----
+
+One or more internal checks (see Warnings above) indicate that synchronization
+of Psychtoolbox to the vertical retrace (VBL) is not working on your setup.
+
+This will seriously impair proper stimulus presentation and stimulus presentation timing!
+Please read 'help SyncTrouble' for information about how to solve or work-around the problem.
+You can force Psychtoolbox to continue, despite the severe problems, by adding the command
+Screen('Preference', 'SkipSyncTests', 1); at the top of your script, if you really know what you are doing.
+
+
+
+
+PTB-ERROR: Screen('Flip'); beamposition timestamping computed an *impossible stimulus onset value* of 271.414649 secs, which would indicate that
+PTB-ERROR: stimulus onset happened *before* it was actually requested! (Earliest theoretically possible 271.418026 secs).
+
+PTB-ERROR: Some more diagnostic values (only for experts): rawTimestamp = 271.423863, scanline = 597
+PTB-ERROR: Some more diagnostic values (only for experts): line_pre_swaprequest = 203, line_post_swaprequest = 579, time_post_swaprequest = 271.423598
+PTB-ERROR: Some more diagnostic values (only for experts): preflip_vblcount = 0, preflip_vbltimestamp = -1.000000
+PTB-ERROR: Some more diagnostic values (only for experts): postflip_vblcount = 0, postflip_vbltimestamp = -1.000000, vbltimestampquery_retrycount = 0
+
+PTB-ERROR: This error can be due to either of the following causes:
+PTB-ERROR: Very unlikely: Something is broken in your systems beamposition timestamping. I've disabled high precision
+PTB-ERROR: timestamping for now. Returned timestamps will be less robust and accurate.
+
+PTB-ERROR: The most likely cause would be that Synchronization of stimulus onset (buffer swap) to the
+PTB-ERROR: vertical blank interval VBL is not working properly, or swap completion signalling to PTB is broken.
+PTB-ERROR: Please run the script PerceptualVBLSyncTest to check this. With non-working sync to VBL, all stimulus timing
+PTB-ERROR: is futile. Also run OSXCompositorIdiocyTest on macOS. Also read 'help SyncTrouble' !
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 2 times out of a total of 29 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+Error in function FillOval: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{´íÎóÊ¹ÓÃ <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+Screen('FillOval', windowPtr [,color] [,rect] [,perfectUpToMaxDiameter]);
+
+³ö´í <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_180919\exp\trial.m', 81)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_180919\exp\trial.m',81,0)">line 81</a>)
+            Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 +
+            display_info.fixation_radius.*[-1 -1 1 1]);
+
+³ö´í <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_180919\exp\main.m', 96)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_180919\exp\main.m',96,0)">line 96</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+Screen('Screens')
+
+ans =
+
+     0     1     2
+
+Screen('DisplaySize', 0);
+Screen('DisplaySize', 0)
+
+ans =
+
+   677
+
+Screen('DisplaySize', 1)
+
+ans =
+
+   677
+
+Screen('DisplaySize', 2)
+
+ans =
+
+   677
+
+Screen('WindowSize', 2)
+
+ans =
+
+        1920
+
+Screen('WindowSize', 1)
+
+ans =
+
+        1920
+
+Screen('WindowSize', 0)
+
+ans =
+
+        3840
+
+displaySetup
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.664962 ms [60.006139 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.665972 ms [60.002502 Hz]. (60 valid samples taken, stddev=0.727935 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+WARNING: Couldn't compute a reliable estimate of monitor refresh interval! Trouble with VBL syncing?!?
+
+
+----- ! PTB - ERROR: SYNCHRONIZATION FAILURE ! ----
+
+One or more internal checks (see Warnings above) indicate that synchronization
+of Psychtoolbox to the vertical retrace (VBL) is not working on your setup.
+
+This will seriously impair proper stimulus presentation and stimulus presentation timing!
+Please read 'help SyncTrouble' for information about how to solve or work-around the problem.
+You can force Psychtoolbox to continue, despite the severe problems, by adding the command
+Screen('Preference', 'SkipSyncTests', 1); at the top of your script, if you really know what you are doing.
+
+
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+displaySetup
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.665269 ms [60.005031 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.688616 ms [59.921086 Hz]. (59 valid samples taken, stddev=0.617273 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+WARNING: Couldn't compute a reliable estimate of monitor refresh interval! Trouble with VBL syncing?!?
+
+
+----- ! PTB - ERROR: SYNCHRONIZATION FAILURE ! ----
+
+One or more internal checks (see Warnings above) indicate that synchronization
+of Psychtoolbox to the vertical retrace (VBL) is not working on your setup.
+
+This will seriously impair proper stimulus presentation and stimulus presentation timing!
+Please read 'help SyncTrouble' for information about how to solve or work-around the problem.
+You can force Psychtoolbox to continue, despite the severe problems, by adding the command
+Screen('Preference', 'SkipSyncTests', 1); at the top of your script, if you really know what you are doing.
+
+
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+displaySetup
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.664490 ms [60.007836 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.664027 ms [60.009506 Hz]. (50 valid samples taken, stddev=0.047912 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+displaySetup
+
+screen_id =
+
+     1
+
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.333227 ms [120.001530 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.331009 ms [120.033476 Hz]. (50 valid samples taken, stddev=0.054182 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+screen_id =
+
+     1
+
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.333574 ms [119.996533 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332350 ms [120.014160 Hz]. (50 valid samples taken, stddev=0.058785 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+Error in function DrawTexture: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{´íÎóÊ¹ÓÃ <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+Screen('DrawTexture', windowPointer, texturePointer [,sourceRect] [,destinationRect] [,rotationAngle] [, filterMode] [, globalAlpha] [,
+modulateColor] [, textureShader] [, specialFlags] [, auxParameters]);
+
+³ö´í <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_180919\exp\main.m', 52)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_180919\exp\main.m',52,0)">line 52</a>)
+    Screen('DrawTexture', display_info.wPtr, insTexture(i_ins), [], display_info.window_rect)
+} 
++
+ +
+  ¡ü
+{´íÎó: ±í´ïÊ½»òÓï¾ä²»ÍêÕû»ò²»ÕýÈ·¡£
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Please input subject id
+18092201
+Please input subject sex
+0
+Please input subject age
+21
+PTB-INFO: Multi-display setup in explicit multi-display mode detected. Using the following mapping:
+PTB-INFO: Screen 0 corresponds to the full Windows desktop area. Useful for stereo presentations in stereomode=4 ...
+PTB-INFO: Screen 1 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY1 ...
+PTB-INFO: Screen 2 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY2 ...
+
+
+screen_id =
+
+     1
+
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.332612 ms [120.010384 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.335078 ms [119.974884 Hz]. (50 valid samples taken, stddev=0.060141 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+
+PTB-ERROR: Screen('Flip'); beamposition timestamping computed an *impossible stimulus onset value* of 247.934154 secs, which would indicate that
+PTB-ERROR: stimulus onset happened *before* it was actually requested! (Earliest theoretically possible 247.940675 secs).
+
+PTB-ERROR: Some more diagnostic values (only for experts): rawTimestamp = 247.941408, scanline = 939
+PTB-ERROR: Some more diagnostic values (only for experts): line_pre_swaprequest = 840, line_post_swaprequest = 895, time_post_swaprequest = 247.941080
+PTB-ERROR: Some more diagnostic values (only for experts): preflip_vblcount = 0, preflip_vbltimestamp = -1.000000
+PTB-ERROR: Some more diagnostic values (only for experts): postflip_vblcount = 0, postflip_vbltimestamp = -1.000000, vbltimestampquery_retrycount = 0
+
+PTB-ERROR: This error can be due to either of the following causes:
+PTB-ERROR: Very unlikely: Something is broken in your systems beamposition timestamping. I've disabled high precision
+PTB-ERROR: timestamping for now. Returned timestamps will be less robust and accurate.
+
+PTB-ERROR: The most likely cause would be that Synchronization of stimulus onset (buffer swap) to the
+PTB-ERROR: vertical blank interval VBL is not working properly, or swap completion signalling to PTB is broken.
+PTB-ERROR: Please run the script PerceptualVBLSyncTest to check this. With non-working sync to VBL, all stimulus timing
+PTB-ERROR: is futile. Also run OSXCompositorIdiocyTest on macOS. Also read 'help SyncTrouble' !
+[¾¯¸æ: Ä¿Â¼ÒÑ´æÔÚ¡£] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_180919\exp\main.m', 25)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_180919\exp\main.m',25,0)">line 25</a>)] 
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 3 times out of a total of 2758 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+randi(540)
+
+ans =
+
+    41
+
+main
+Please input subject id
+18092202
+Please input subject sex
+0
+Please input subject age
+18
+
+screen_id =
+
+     1
+
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.333352 ms [119.999731 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332178 ms [120.016639 Hz]. (50 valid samples taken, stddev=0.056650 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+randi(540)
+
+ans =
+
+   407
+
+main
+Please input subject id
+18092203
+Please input subject sex
+0
+Please input subject age
+22
+
+screen_id =
+
+     1
+
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.333509 ms [119.997468 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332569 ms [120.011003 Hz]. (50 valid samples taken, stddev=0.045094 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 1).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+Error in function FillOval: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{´íÎóÊ¹ÓÃ <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+Screen('FillOval', windowPtr [,color] [,rect] [,perfectUpToMaxDiameter]);
+
+³ö´í <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_180919\exp\trial.m', 81)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_180919\exp\trial.m',81,0)">line 81</a>)
+            Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 +
+            display_info.fixation_radius.*[-1 -1 1 1]);
+
+³ö´í <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_180919\exp\main.m', 96)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_180919\exp\main.m',96,0)">line 96</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
