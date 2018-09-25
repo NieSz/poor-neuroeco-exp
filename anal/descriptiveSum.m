@@ -17,7 +17,7 @@
 % end
 
 %%
-subs = [18090301, 18090302, 18090303, 18090304, 18090403, 18090404];
+subs = [18092201,18092203,18092204,18092301,18092302,18092304,18092402];
 
 %%
 alphas = nan(length(subs),3);
@@ -50,11 +50,11 @@ end
 
 %% plot utility function
 lineColor = {[1,0,0], [0,1,0], [0,0,1]};
-subs = [18090301, 18090302, 18090303, 18090304, 18090403, 18090404];
+subs = [18092201:18092204,18092301:18092304,18092402];
 xRange = -20:0.1:20;
 for i_sub = 1:length(subs)
     for i_time = 1:length(times)
-        subplot(2,3,i_sub)
+        subplot(2,4,i_sub)
         plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
         hold on
     end
@@ -62,6 +62,7 @@ for i_sub = 1:length(subs)
     ylim([-20, 20]);
     line([-20, 20], [0, 0], 'Color','black','LineStyle','--');
     xlabel('value');
+    axis square
     ylabel('utility');
 end
 legend({'0.5','1.0','2.0'});
@@ -104,7 +105,8 @@ end
 
 
 %% GLM
-subs = [18090301, 18090302, 18090303, 18090304, 18090403, 18090404];
+subs = [18092201,18092203,18092204,18092301,18092302,18092304,18092402];
+%subs = [18092201:18092204,18092301:18092304,18092402];
 times = [0.5, 1.0, 2.0];
 betas = nan(length(subs).*length(times), 5);
 devs = nan(length(subs).*length(times), 1);
@@ -126,7 +128,7 @@ for i_sub = 1:length(subs)
         end
         imSqr = chooseSqr./allSqr;
         imSqr(allSqr == 0) = -1;
-        subplot(3,6,(i_time-1).*6+i_sub)
+        subplot(3,length(subs),(i_time-1).*length(subs)+i_sub)
         colormap([ones(100,1).*[0.5 0.5 0.5];parula(101)]);
         axis square
         imagesc(imSqr);
@@ -152,14 +154,14 @@ for i = 1:3
     ranova(tempModel)
 end
 
-%%
-betaTable = table(betas(1:6,2),betas(7:12,2),betas(13:18,2),betas(1:6,3),betas(7:12,3),betas(13:18,3),'VariableNames',{'sure_reward_plus_0dot5','sure_reward_plus_1dot0','sure_reward_plus_2dot0','sure_reward_minus_0dot5','sure_reward_minus_1dot0','sure_reward_minus_2dot0'});
+%% sr
+betaTable = table(betas(1:length(subs),2),betas(1+length(subs):2*length(subs),2),betas(1+2*length(subs):3*length(subs),2),betas(1:length(subs),3),betas(1+length(subs):2*length(subs),3),betas(1+2*length(subs):3*length(subs),3),'VariableNames',{'sure_reward_plus_0dot5','sure_reward_plus_1dot0','sure_reward_plus_2dot0','sure_reward_minus_0dot5','sure_reward_minus_1dot0','sure_reward_minus_2dot0'});
 %betaTable = betaTable(1:end-1,:);
 Meas = table([0.5 1 2 0.5 1 2]',categorical({'+', '+', '+', '-', '-', '-'})', 'VariableNames',{'time','sign'});
 tempModel = fitrm(betaTable,'sure_reward_plus_0dot5,sure_reward_plus_1dot0,sure_reward_plus_2dot0,sure_reward_minus_0dot5,sure_reward_minus_1dot0,sure_reward_minus_2dot0~1','WithinDesign',Meas, 'WithinModel', 'time+sign+time*sign');
 ranova(tempModel, 'WithinModel', 'time+sign+time*sign')
-%%
-betaTable = table(betas(1:6,4),betas(7:12,4),betas(13:18,4),betas(1:6,5),betas(7:12,5),betas(13:18,5),'VariableNames',{'sure_reward_plus_0dot5','sure_reward_plus_1dot0','sure_reward_plus_2dot0','sure_reward_minus_0dot5','sure_reward_minus_1dot0','sure_reward_minus_2dot0'});
+%% gamble
+betaTable = table(betas(1:length(subs),4),betas(1+length(subs):2*length(subs),4),betas(1+2*length(subs):3*length(subs),4),betas(1:length(subs),5),betas(1+length(subs):2*length(subs),5),betas(1+2*length(subs):3*length(subs),5),'VariableNames',{'sure_reward_plus_0dot5','sure_reward_plus_1dot0','sure_reward_plus_2dot0','sure_reward_minus_0dot5','sure_reward_minus_1dot0','sure_reward_minus_2dot0'});
 %betaTable = betaTable(1:end-1,:);
 Meas = table([0.5 1 2 0.5 1 2]',categorical({'+', '+', '+', '-', '-', '-'})', 'VariableNames',{'time','sign'});
 tempModel = fitrm(betaTable,'sure_reward_plus_0dot5,sure_reward_plus_1dot0,sure_reward_plus_2dot0,sure_reward_minus_0dot5,sure_reward_minus_1dot0,sure_reward_minus_2dot0~1','WithinDesign',Meas, 'WithinModel', 'time+sign+time*sign');
