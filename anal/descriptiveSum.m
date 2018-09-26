@@ -50,12 +50,13 @@ end
 
 %% plot utility function
 lineColor = {[1,0,0], [0,1,0], [0,0,1]};
-subs = [18092201:18092204,18092301:18092304,18092402];
+%subs = [18092201:18092204,18092301:18092304,18092402];
+subs = [18092201,18092203,18092204,18092301,18092302,18092304,18092402];
 xRange = -20:0.1:20;
 for i_sub = 1:length(subs)
     for i_time = 1:length(times)
-        subplot(2,4,i_sub)
-        plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
+        subplot(1,7,i_sub)
+        plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time).*temperatures(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time).*temperatures(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
         hold on
     end
     xlim([-20, 20]);
@@ -69,12 +70,13 @@ legend({'0.5','1.0','2.0'});
 
 %% plot averaged
 lineColor = {[1,0,0], [0,1,0], [0,0,1]};
-subs = [18090301, 18090302, 18090303, 18090304, 18090403, 18090404];
+%subs = [18090301, 18090302, 18090303, 18090304, 18090403, 18090404];
+subs = [18092201,18092203,18092204,18092301,18092302,18092304,18092402];
 xRange = -20:0.1:20;
 utilities = nan(length(xRange),length(times),length(subs));
 for i_sub = 1:length(subs)
     for i_time = 1:length(times)
-        utilities(:,i_time,i_sub) = real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time));
+        utilities(:,i_time,i_sub) = temperatures(i_sub,i_time).*real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time));
     end
 end
 meanUtilities = nanmean(utilities,3);
@@ -94,9 +96,10 @@ end
 legend(lh,{'0.5','1.0','2.0'})
 xlabel('value');
 ylabel('utility');
+%axis square
 
 %% anova of eu model
-betaTable = table(alphas(1:6,1),alphas(1:6,2),alphas(1:6,3),lambdas(1:6,1),lambdas(1:6,2),lambdas(1:6,3),temperatures(1:6,1),temperatures(1:6,2),temperatures(1:6,3),'VariableNames',{'alpha_0dot5','alpha_1dot0','alpha_2dot0','lambda_0dot5','lambda_1dot0','lambda_2dot0','temperature_0dot5','temperature_1dot0','temperature_2dot0'});
+betaTable = table(alphas(1:length(subs),1),alphas(1:length(subs),2),alphas(1:length(subs),3),lambdas(1:length(subs),1),lambdas(1:length(subs),2),lambdas(1:length(subs),3),temperatures(1:length(subs),1),temperatures(1:length(subs),2),temperatures(1:length(subs),3),'VariableNames',{'alpha_0dot5','alpha_1dot0','alpha_2dot0','lambda_0dot5','lambda_1dot0','lambda_2dot0','temperature_0dot5','temperature_1dot0','temperature_2dot0'});
 betaNames = {'alpha','lambda','temperature'};
 for i = 1:3
     tempModel = fitrm(betaTable,sprintf('%s_0dot5,%s_1dot0,%s_2dot0~1',betaNames{i},betaNames{i},betaNames{i}),'WithinDesign',[0.5 1 2]);
@@ -105,8 +108,8 @@ end
 
 
 %% GLM
-subs = [18092201,18092203,18092204,18092301,18092302,18092304,18092402];
-%subs = [18092201:18092204,18092301:18092304,18092402];
+%subs = [18092201,18092203,18092204,18092301,18092302,18092304,18092402];
+subs = [18092201:18092204,18092301:18092304,18092402];
 times = [0.5, 1.0, 2.0];
 betas = nan(length(subs).*length(times), 5);
 devs = nan(length(subs).*length(times), 1);

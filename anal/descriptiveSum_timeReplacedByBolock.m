@@ -108,8 +108,8 @@ end
 
 
 %% GLM
-subs = [18090301, 18090302, 18090303, 18090304, 18090403, 18090404];
-times = [1.0, 2.0, 3];
+subs = [18092201,18092203,18092204,18092301,18092302,18092304,18092402];
+times = [1.0, 2.0, 3 4 5 6];
 betas = nan(length(subs).*length(times), 5);
 devs = nan(length(subs).*length(times), 1);
 slopes = nan(length(subs), length(times))';
@@ -134,7 +134,7 @@ for i_sub = 1:length(subs)
         end
         imSqr = chooseSqr./allSqr;
         imSqr(allSqr == 0) = -1;
-        subplot(3,6,(i_time-1).*6+i_sub)
+        subplot(6,7,(i_time-1).*6+i_sub)
         colormap([ones(100,1).*[0.5 0.5 0.5];parula(101)]);
         axis square
         imagesc(imSqr);
