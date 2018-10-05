@@ -12,12 +12,12 @@
 	"sure_reward_rect": [-2.5, -1.5, 2.5, 1.5],
 	"sure_reward_size": 2,
 	"sure_reward_duration": 1,
-	"sure_reward_locus": [0.5, 0.5],
+	"sure_reward_locus": [0.5, 0.333],
 
 	"gamble_rect": [-5, -1.5, 0.05, 1.5, -0.05, -1.5, 5, 1.5],
 	"gamble_size": 2,
 	"gamble_durations": [0.5, 1.0, 2.0],
-	"gamble_locus": [0.5, 0.5],
+	"gamble_locus": [0.5, 0.667],
 
 	"fig_color": [0, 0, 0],
 	"rect_pen_width": 0.1,
@@ -36,10 +36,14 @@
 	"max_payoff": 18,
 	"payoff_unit": 3,
 	"sure_rewards_per_gamble": 5,
-	"gamble_durations": [0.5, 1.0, 2.0],
+	"gamble_durations": [1.0],
 	"gambles_per_trial": [1],
+	"gambles_per_norm_trial": [7],
+	"norm_trial_pr": 0.8,
+	"max_n_gambles": 10,
 	"blocks_per_duration": 2,
     "n_practice_1": 2,
-    "n_practice_2": 2
+    "n_practice_2": 2,
+    "sure_reward_sigma": 5.45
 }
 }
