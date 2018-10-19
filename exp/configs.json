@@ -11,7 +11,7 @@
 
 	"sure_reward_rect": [-2.5, -1.5, 2.5, 1.5],
 	"sure_reward_size": 2,
-	"sure_reward_duration": 1,
+	"sure_reward_duration": 1.5,
 	"sure_reward_locus": [0.5, 0.333],
 
 	"gamble_rect": [-5, -1.5, 0.05, 1.5, -0.05, -1.5, 5, 1.5],
