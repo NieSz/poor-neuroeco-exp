@@ -7270,4 +7270,242 @@ PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms 
 PTB-INFO: Small deviations between reported values are normal and no reason to worry.
 PTB-WARNING: ==============================================================================================================
 PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
-PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVER
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERPlease input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Jun  6 2017).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is Intel :: Intel(R) HD Graphics 520 :: 4.5.0 - Build 24.20.100.6136
+PTB-INFO: VBL startline = 1824 , VBL Endline = 1824
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.664264 ms [60.008652 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.670400 ms [59.986563 Hz]. (50 valid samples taken, stddev=0.141135 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    74
+
+{No appropriate method, property, or field 'sure_reward' for
+class 'trial'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 104)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',104,0)">line 104</a>)
+            if obj.sure_reward(end) > 0
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 89)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)">line 89</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 5 times out of a total of 14 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Jun  6 2017).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is Intel :: Intel(R) HD Graphics 520 :: 4.5.0 - Build 24.20.100.6136
+PTB-INFO: VBL startline = 1824 , VBL Endline = 1824
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.664356 ms [60.008320 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.664402 ms [60.008154 Hz]. (50 valid samples taken, stddev=0.172194 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    74
+
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 3 times out of a total of 435 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr
+[, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 226)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',226,0)">line 226</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 89)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)">line 89</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('struct')" style="font-weight:bold">struct</a>
+Field names must be non-empty character vectors.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('configs', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\configs.m', 5)" style="font-weight:bold">configs</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\configs.m',5,0)">line 5</a>)
+'display_info', struct( ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('displaySetup', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\displaySetup.m', 2)" style="font-weight:bold">displaySetup</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\displaySetup.m',2,0)">line 2</a>)
+display_info = configs;% jsondecode(fread(fopen('configs.json'),'*char'));
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 21)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',21,0)">line 21</a>)
+displaySetup;
+} 
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\configs.m',5,0)
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\configs.m',5,0)
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\configs.m',5,0)
+matlab.internal.language.introspective.errorDocCallback('struct')
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+Tried to prepare a new configuration phase via PsychImaging('PrepareConfiguration'), but did not finalize the previous phase yet.
+You must call the PsychImaging('OpenWindow', ...); command at least once to open an onscreen
+window according to the provided settings, before you can specify settings for additional onscreen windows.
+
+The most likely reason you see this error message is because your script aborted with some error
+before it managed to open the onscreen window. In that case it is best practice to execute a 'clear all'
+command at the Matlab/Octave prompt before you restart your script.
+
+I will restart configuration now and forget the previously made PsychImaging('AddTask', ...); settings.
+[Warning: Tried to prepare a new configuration phase, but you did not finalize the previous
+phase yet!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PsychImaging', 'C:\Users\Nie Shaozhi\Documents\Psychtoolbox\PsychGLImageProcessing\PsychImaging.m', 1446)" style="font-weight:bold">PsychImaging</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\Documents\Psychtoolbox\PsychGLImageProcessing\PsychImaging.m',1446,0)">line 1446</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PsychImaging', 'C:\Users\Nie Shaozhi\Documents\Psychtoolbox\PsychGLImageProcessing\PsychImaging.m', 1547)" style="font-weight:bold">PsychImaging</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\Documents\Psychtoolbox\PsychGLImageProcessing\PsychImaging.m',1547,0)">line 1547</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('displaySetup', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\displaySetup.m', 22)" style="font-weight:bold">displaySetup</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\displaySetup.m',22,0)">line 22</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 21)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',21,0)">line 21</a>)] 
+Error in function OpenWindow: 	Invalid Rect Argument
+rect argument not 4 elements in size
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[windowPtr,rect]=Screen('OpenWindow',windowPtrOrScreenNumber [,color]
+[,rect][,pixelSize][,numberOfBuffers][,stereomode][,multisample][,imagingmode][,specialFlags][,clientRect][,fbOverrideRect]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PsychImaging', 'C:\Users\Nie Shaozhi\Documents\Psychtoolbox\PsychGLImageProcessing\PsychImaging.m', 2077)" style="font-weight:bold">PsychImaging</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\Documents\Psychtoolbox\PsychGLImageProcessing\PsychImaging.m',2077,0)">line 2077</a>)
+            [win, winRect] = Screen('OpenWindow', screenid, clearcolor, winRect,
+            pixelSize, numbuffers, stereomode, multiSample, imagingMode, specialFlags,
+            clientRect, fbOverrideRect);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('displaySetup', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\displaySetup.m', 22)" style="font-weight:bold">displaySetup</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\displaySetup.m',22,0)">line 22</a>)
+    [wPtr, window_rect] = PsychImaging('OpenWindow', screen_id,
+    display_info.background_color);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 21)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',21,0)">line 21</a>)
+displaySetup;
+} 
+opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\displaySetup.m',22,0)
+main

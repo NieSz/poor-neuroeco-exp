@@ -10,6 +10,7 @@ classdef trial < matlab.mixin.Copyable
         n_gambles
         gambles % matrix [gain loss; gain loss; ... gain loss]
         sure_rewards
+        sure_reward
         
         gamble_duration
         gain_on_left
@@ -156,9 +157,9 @@ classdef trial < matlab.mixin.Copyable
                     if tempTime - timeStamp < display_info.fixation_duration + i_gamble*obj.gamble_duration + display_info.sure_reward_duration - display_info.interstimulus_interval
                         Screen('FrameOval', display_info.wPtr, display_info.rect_color, display_info.sure_reward_locus([1 2 1 2]).*display_info.window_rect([3 4 3 4]) + display_info.sure_reward_rect, display_info.rect_pen_width);
                         Screen('DrawLine', display_info.wPtr, display_info.rect_color,...
-                            display_info.gamble_locus(1).*display_info.window_rect(3) + display_info.sure_reward_rect(1),...
+                            display_info.gamble_locus(1).*display_info.window_rect(3),...
                             display_info.gamble_locus(2).*display_info.window_rect(4) + display_info.sure_reward_rect(2),...
-                            display_info.gamble_locus(1).*display_info.window_rect(3) + display_info.sure_reward_rect(3),...
+                            display_info.gamble_locus(1).*display_info.window_rect(3),...
                             display_info.gamble_locus(2).*display_info.window_rect(4) + display_info.sure_reward_rect(4), display_info.rect_pen_width);
                         Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
                         
@@ -193,7 +194,8 @@ classdef trial < matlab.mixin.Copyable
             end
             % wait for react
             if ~reactTooEarly == 1
-                Screen('FillOval', display_info.wPtr, display_info.ready_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
+%                 Screen('FillOval', display_info.wPtr, display_info.ready_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
+                Screen('FrameOval', display_info.wPtr, display_info.ready_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*4.*[-1 -1 1 1]);
                 Screen('Flip', display_info.wPtr, timeStamp + display_info.sure_reward_duration + display_info.fixation_duration + obj.n_gambles.*obj.gamble_duration, [], 1);
                 while 1
                     [~, timeGetKey, reactKey] = KbCheck;
@@ -218,8 +220,18 @@ classdef trial < matlab.mixin.Copyable
                     end
                 end
             elseif reactTooEarly == 1
-                Screen('FillOval', display_info.wPtr, display_info.fail_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
-                timeStamp = Screen('Flip', display_info.wPtr);
+%                 Screen('FillOval', display_info.wPtr, display_info.fail_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
+            Screen('DrawLine', display_info.wPtr, display_info.rect_color,...
+                display_info.gamble_locus(1).*display_info.window_rect(3) - 4*display_info.fixation_radius,...
+                display_info.gamble_locus(2).*display_info.window_rect(4) - 4*display_info.fixation_radius,...
+                display_info.gamble_locus(1).*display_info.window_rect(3) + 4*display_info.fixation_radius,...
+                display_info.gamble_locus(2).*display_info.window_rect(4) + 4*display_info.fixation_radius, display_info.rect_pen_width);
+            Screen('DrawLine', display_info.wPtr, display_info.rect_color,...
+                display_info.gamble_locus(1).*display_info.window_rect(3) + 4*display_info.fixation_radius,...
+                display_info.gamble_locus(2).*display_info.window_rect(4) - 4*display_info.fixation_radius,...
+                display_info.gamble_locus(1).*display_info.window_rect(3) - 4*display_info.fixation_radius,...
+                display_info.gamble_locus(2).*display_info.window_rect(4) + 4*display_info.fixation_radius, display_info.rect_pen_width);
+            timeStamp = Screen('Flip', display_info.wPtr);
                 Screen('Flip', display_info.wPtr, timeStamp + display_info.fixation_duration);
             end
             Screen('Flip', display_info.wPtr);
