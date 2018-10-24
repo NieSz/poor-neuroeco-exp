@@ -97,14 +97,14 @@ classdef trial < matlab.mixin.Copyable
             %                 end
             %             end
             timeStamp = Screen('Flip', display_info.wPtr); % time marker of the trial
-            reactTooEarly = 0;
             
             % sure reward
+                        reactTooEarly = 0;
                         Screen('FrameOval', display_info.wPtr, display_info.rect_color, display_info.sure_reward_locus([1 2 1 2]).*display_info.window_rect([3 4 3 4]) + display_info.sure_reward_rect, display_info.rect_pen_width);
-                        if obj.sure_reward(end) > 0
-                            sureRewardStr = sprintf('+%d', obj.sure_reward(end));
+                        if obj.sure_reward > 0
+                            sureRewardStr = sprintf('+%d', obj.sure_reward);
                         else
-                            sureRewardStr = num2str(obj.sure_reward(end));
+                            sureRewardStr = num2str(obj.sure_reward);
                         end
                         DrawFormattedText(display_info.wPtr, sureRewardStr, 'center', 'center', display_info.fig_color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.sure_reward_locus([1 2 1 2]) + display_info.sure_reward_rect);
             %             Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
@@ -131,6 +131,7 @@ classdef trial < matlab.mixin.Copyable
             % gambles
             Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
             Screen('Flip', display_info.wPtr,timeStamp + display_info.fixation_duration + display_info.sure_reward_duration - 0.01);
+            reactTooEarly = 0;
             for i_gamble = 1:obj.n_gambles
                 if reactTooEarly == 1
                     break
@@ -182,6 +183,9 @@ classdef trial < matlab.mixin.Copyable
                                 obj.choose_sure = -1;
                             end
                             obj.reaction_time = -i_gamble;
+                            Screen('FillOval', display_info.wPtr, display_info.fail_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
+                            timeStamp = Screen('Flip', display_info.wPtr);
+                            Screen('Flip', display_info.wPtr, timeStamp + display_info.fixation_duration);
                             reactTooEarly = 1;
                             break
                         end
@@ -220,10 +224,8 @@ classdef trial < matlab.mixin.Copyable
                         break
                     end
                 end
-            elseif reactTooEarly == 1
-                Screen('FillOval', display_info.wPtr, display_info.fail_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
-                timeStamp = Screen('Flip', display_info.wPtr);
-                Screen('Flip', display_info.wPtr, timeStamp + display_info.fixation_duration);
+            else
+                
             end
             Screen('Flip', display_info.wPtr);
             fprintf('block: %d, trial: %d, gamble: %d / %d, sr: %d, choose: %d, rt: %d\n', obj.block_id, obj.trial_id, obj.gambles(end,1), obj.gambles(end,2), obj.sure_rewards(end), obj.choose_sure, obj.reaction_time);

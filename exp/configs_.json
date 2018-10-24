@@ -1,0 +1,49 @@
+{
+"display_info": {
+	"seat_distance": 40,
+
+	"background_color": [127, 127, 127],
+    "prepare_color": [150, 150, 150],
+	"fixation_color": [0, 0, 0],
+	"fixation_radius": 0.2,
+	"fixation_duration": 0.5,
+	"intertrial_duration": 1.5,
+
+	"sure_reward_rect": [-2.5, -1.5, 2.5, 1.5],
+	"sure_reward_size": 2,
+	"sure_reward_duration": 1,
+	"sure_reward_locus": [0.5, 0.333],
+
+	"gamble_rect": [-5, -1.5, 0.05, 1.5, -0.05, -1.5, 5, 1.5],
+	"gamble_size": 2,
+	"gamble_durations": [1.0],
+    "interstimulus_interval": 0.75,
+	"gamble_locus": [0.5, 0.667],
+
+	"fig_color": [0, 0, 0],
+	"rect_pen_width": 0.1,
+	"rect_color": [100, 100, 100],
+	
+	"ready_to_choose_color": [50, 150, 50],
+	"fail_to_choose_color": [255, 0, 0],
+	
+	"exit_key": "Escape",
+	"sure_reward_key": "UpArrow",
+	"gamble_key": "DownArrow",
+	"time_limit": 2
+},
+
+"design_info": {
+	"max_payoff": 18,
+	"payoff_unit": 3,
+	"sure_rewards_per_gamble": 12,
+	"gambles_per_trial": [1],
+	"gambles_per_norm_trial": [7],
+	"norm_trial_pr": 0.8,
+	"max_n_gambles": 10,
+	"blocks_per_duration": 2,
+    "n_practice_1": 10,
+    "n_practice_2": 30,
+    "sure_reward_sigma": 5.45
+}
+}

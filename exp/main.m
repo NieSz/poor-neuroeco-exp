@@ -25,11 +25,13 @@ if ~exist('data\data.csv', 'file')
     mkdir('data');
     fid = fopen('data\data.csv', 'a');
     fprintf(fid, 'sub_id, sub_sex, sub_age, block_id, trial_id, gain_on_left, gamble_duration, gambles, sure_reward, choose_sure, reaction_time');
+    subSeq = 1;
 else
     fid = fopen('data\data.csv', 'a');
+    formerData = readtable('data\data.csv');
+    subSeq = length(unique([formerData.sub_id; sub_id]));
 end
-formerData = readtable('data\data.csv');
-subSeq = length(unique([formerData.sub_id; sub_id]));
+
 clear formerData
 
 %% run
@@ -111,13 +113,32 @@ for i_trial = 1:length(trials)
 end
 waitForSpace('exp_end');
 
-fclose(fid);
-sca;
-
-function waitForSpace(texture)
-display_info = evalin('caller', 'display_info');
-Screen('DrawTexture', display_info.wPtr, evalin('caller', ['markers.', texture]), [], display_info.window_rect)
-Screen('Flip', display_info.wPtr);
+invoice = Screen('MakeTexture', display_info.wPtr, imread('instruction\invoice.jpg'));
+nFailTrials = sum([trials.reaction_time] <= 0) + sum(isnan([trials.reaction_time]));
+i=1;
+while 1
+    Screen('DrawTexture', display_info.wPtr,invoice, [], display_info.window_rect)
+    DrawFormattedText(display_info.wPtr, num2str(nFailTrials), 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*1.5.*[560 360 627 390]./[1920 1080 1920 1080]);
+    randTrial = randi(length(trials));
+    DrawFormattedText(display_info.wPtr, num2str(randTrial), 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*1.5.*[456 440 524 473]./[1920 1080 1920 1080]);
+    gambleStr = [num2str(trials(randTrial).gambles(end,1)), ' or ', num2str(trials(randTrial).gambles(end,2))];
+    DrawFormattedText(display_info.wPtr, gambleStr, 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*1.5.*[487 518 615 552]./[1920 1080 1920 1080]);
+    DrawFormattedText(display_info.wPtr, num2str(trials(randTrial).sure_rewards(end)), 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*1.5.*[683 519 820 549]./[1920 1080 1920 1080]);
+    if trials(randTrial).choose_sure == 1
+        DrawFormattedText(display_info.wPtr, num2str(trials(randTrial).sure_rewards(end)), 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*1.5.*[410 556 526 589]./[1920 1080 1920 1080]);
+    elseif trials(randTrial).choose_sure == 0
+        DrawFormattedText(display_info.wPtr, gambleStr, 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*1.5.*[410 556 526 589]./[1920 1080 1920 1080]);
+    end
+    Screen('Flip',display_info.wPtr);
+    [~, ~, reactKey] = KbCheck();
+    if reactKey(KbName(display_info.exit_key))
+        sca
+        break
+    elseif reactKey(KbName('S')) && i > 26
+        break
+    end
+    i = i + 1;
+end
 while 1
     [~, reactKey] = KbWait([], 3);
     if reactKey(KbName(display_info.exit_key))
@@ -127,4 +148,5 @@ while 1
         break
     end
 end
-end
+fclose(fid);
+sca;
