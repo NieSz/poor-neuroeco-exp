@@ -7509,3 +7509,1101 @@ displaySetup;
 } 
 opentoline('C:\Users\Nie Shaozhi\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\displaySetup.m',22,0)
 main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.658820 ms [60.028261 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.664876 ms [60.006448 Hz]. (50 valid samples taken, stddev=0.099369 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+PTB-DEBUG: DrawText: Failed to load external drawtext plugin [Unknown error].
+PTB-INFO: DrawText: Failed to load external drawtext plugin 'libptbdrawtext_ftgl64.dll'. Reverting to legacy GDI text renderer. 'help DrawTextPlugin' for troubleshooting.
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 3 times out of a total of 433 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 237)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',237,0)">line 237</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 89)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)">line 89</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.665171 ms [60.005385 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.665375 ms [60.004650 Hz]. (50 valid samples taken, stddev=0.086792 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+block: -1, trial: 231, gamble: 15 / -18, sr: 4, choose: 1, rt: -7
+block: -1, trial: 213, gamble: 6 / -12, sr: -2, choose: -1, rt: 0
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 2 times out of a total of 846 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 237)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',237,0)">line 237</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 89)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)">line 89</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.665157 ms [60.005435 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.665279 ms [60.004995 Hz]. (50 valid samples taken, stddev=0.096232 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 237)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',237,0)">line 237</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 89)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)">line 89</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.665143 ms [60.005486 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.667735 ms [59.996155 Hz]. (50 valid samples taken, stddev=0.040335 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 239)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',239,0)">line 239</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 89)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)">line 89</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.665178 ms [60.005360 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.661347 ms [60.019158 Hz]. (50 valid samples taken, stddev=0.072584 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 241)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',241,0)">line 241</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 89)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)">line 89</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+1
+
+ans =
+
+     1
+
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.665066 ms [60.005762 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.665485 ms [60.004256 Hz]. (50 valid samples taken, stddev=0.075101 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+[Warning: Directory already exists.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 25)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',25,0)">line 25</a>)] 
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 265)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',265,0)">line 265</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 89)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)">line 89</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.661653 ms [60.018053 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.666121 ms [60.001966 Hz]. (50 valid samples taken, stddev=0.095621 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+block: -1, trial: 231, gamble: 15 / -18, sr: 4, choose: 1, rt: 2.943803e+00
+block: -2, trial: 213, gamble: 6 / -12, sr: -2, choose: NaN, rt: NaN
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 265)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',265,0)">line 265</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 98)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',98,0)">line 98</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.664836 ms [60.006591 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.665409 ms [60.004527 Hz]. (50 valid samples taken, stddev=0.063070 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 32)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',32,0)">line 32</a>)
+Unrecognized variable name 'sub_id'.
+} 
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',32,0)
+formerData = readtable('data\data.csv');
+formerData = readtable('data\data.csv');
+opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',32,0)
+help readtable
+ <strong>readtable</strong> Create a table by reading from a file.
+    Use the <strong>readtable</strong> function to create a table by reading column-oriented data from
+    a file. <strong>readtable</strong> can automatically determine the file format from its extension
+    as described below.
+ 
+    T = <strong>readtable</strong>(FILENAME) creates a table by reading from the file FILENAME, and
+    determines the file format from its extension. The extension must be one of those
+    listed below.
+ 
+    T = <strong>readtable</strong>(FILENAME,'FileType',FILETYPE) specifies the file type, where
+    FILETYPE is one of 'text' or 'spreadsheet'.
+ 
+    T = <strong>readtable</strong>(FILENAME,OPTS) creates a table from the file FILENAME using the
+    supplied ImportOptions OPTS. OPTS specifies variable names, selected variable
+    names, variable types, and other information regarding the location of the data.
+ 
+    For example, import a sub-set of the data in a file:
+        opts = detectImportOptions('patients.xls') opts.SelectedVariableNames =
+        {'Systolic','Diastolic'} T = readtable('patients.xls',opts)
+ 
+    <strong>readtable</strong> reads data from different file types as follows:
+ 
+    .txt, .dat, .csv:  Delimited text file.
+ 
+           Reading from a delimited text file creates one variable in T for each
+           column in the file. Variable names are taken from the first row of the
+           file. By default, the variables created are either double, if the entire
+           column is numeric, datetime, duration, or text. If data in a column cannot be 
+           converted to numeric, datetime or duration, the column is imported as text.
+           <strong>readtable</strong> converts empty fields in the file to either NaN
+           (for a numeric or duration variable), NaT (for a datetime variable), or the empty 
+           character vector or string (for a text variables). Insignificant whitespace 
+           in the file is ignored.
+ 
+           Use the following optional parameter name/value pairs to control how data
+           are read from a delimited text file:
+ 
+           'Delimiter'     The delimiter used in the file. Can be any of ' ',
+                           '\t', ',', ';', '|' or their corresponding names 'space',
+                           'tab', 'comma', 'semi', or 'bar'. If unspecified,
+                           <strong>readtable</strong> detects the delimiter automatically.
+ 
+           'ReadVariableNames'  A logical value that specifies whether or not
+                           the first row (after skipping HeaderLines) of the file is
+                           treated as variable names. If unspecified, <strong>readtable</strong>
+                           detects the presence of variable names automatically.
+ 
+           'ReadRowNames'  A logical value that specifies whether or not the
+                           first column of the file is treated as row names. Default
+                           is false. If the 'ReadVariableNames' and 'ReadRowNames'
+                           parameter values are both true, the name in the first
+                           column of the first row is saved as the first dimension
+                           name for the table.
+ 
+           'TreatAsEmpty'  One or more text values to be treated as the empty
+                           in a numeric column. This may be a character vector, a
+                           cell array of character vectors, or string array. Table 
+                           elements corresponding to these are set to NaN. 'TreatAsEmpty' 
+                           only applies to numeric columns in the file, and numeric
+                           literals such as '-99' are not accepted.
+ 
+           'HeaderLines'   The number of lines to skip at the beginning of the
+                           file. If unspecified, <strong>readtable</strong> detects the number of
+                           lines to skip automatically.
+ 
+           'Format'        A format specifier to define the columns in the file,
+                           as accepted by the TEXTSCAN function. Type
+                           "help textscan" for information about format strings and
+                           additional parameters. Specifying the format can
+                           significantly improve speed for some large files. If
+                           unspecified, <strong>readtable</strong> detects the format automatically.
+ 
+           'DateLocale'    The locale that <strong>readtable</strong> uses to interpret month and
+                           day names in datetime text read with the %D format
+                           specifier. LOCALE must be a character vector or scalar
+                           string in the form xx_YY. See the documentation for
+                           DATETIME for more information.
+ 
+           'Encoding'      The character encoding scheme associated with the
+                           file. It must be 'system' or a name or alias for an
+                           encoding scheme. <strong>readtable</strong> supports the same character
+                           encodings as FOPEN. Some examples are 'UTF-8', 'latin1',
+                           'US-ASCII', and 'Shift_JIS'. If the 'Encoding' parameter
+                           value is 'system', then <strong>readtable</strong> uses your system's
+                           default encoding.
+ 
+                           See the documentation for FOPEN for more information.
+ 
+           'TextType'      The output type of text variables. Text variables are
+                           those with %s, %q, or %[...] formats. It can have either
+                           of the following values:
+                              'char'   - Return text as a cell array of
+                                         character vectors.
+                              'string' - Return text as a string array.
+ 
+           'DatetimeType'  The output type of date variables. The possible values
+                           are:                         
+                               'datetime' - Return dates as MATLAB datetimes.
+                               'text'     - Return dates as text.
+ 
+           'DurationType'  The output type of time variables. The possible
+                           values are:
+                               'duration' - Return time data as MATLAB durations.
+                               'text'     - Return time data as text.
+ 
+    .xls, .xlsx, .xlsb, .xlsm, .xltm, .xltx, .ods:  Spreadsheet file.
+ 
+           Reading from a spreadsheet file creates one variable in T for each column
+           in the file. By default, the variables created are either double, datetime or text.
+           Variable names are taken from the first row of the spreadsheet.
+ 
+           Use the following optional parameter name/value pairs to control how data
+           are read from a spreadsheet file:
+ 
+           'ReadVariableNames'  A logical value that specifies whether or not
+                           the first row of the specified region of the file is
+                           treated as variable names. Default is true.
+ 
+           'ReadRowNames'  A logical value that specifies whether or not the
+                           first column of specified region of the file is treated as
+                           row names. Default is false. If the 'ReadVariableNames'
+                           and 'ReadRowNames' parameter values are both true, the
+                           name in the first column of the first row is saved as the
+                           first dimension name for the table.
+ 
+           'TreatAsEmpty'  One or more text values to be treated as an empty cell
+                           in a numeric column. This may be a character vector, a
+                           cell array of character vectors, or string array. Table
+                           elements corresponding to these are set to NaN.
+                           'TreatAsEmpty' only applies to numeric columns in the
+                           file, and numeric literals such as '-99' are not accepted.
+ 
+           'Sheet'         The sheet to read, specified as the worksheet name,
+                           or a positive integer indicating the worksheet index.
+ 
+           'Range'         A character vector or scalar string that specifies a
+                           rectangular portion of the worksheet to read, using the
+                           Excel A1 reference style. If the spreadsheet contains
+                           figures or other non-tabular information, you should use
+                           the 'Range' parameter to read only the tabular data. By
+                           default, <strong>readtable</strong> reads data from a spreadsheet
+                           contiguously out to the right-most column that contains
+                           data, including any empty columns that precede it. If the
+                           spreadsheet contains one or more empty columns between
+                           columns of data, use the 'Range' parameter to specify a
+                           rectangular range of cells from which to read variable
+                           names and data. An empty character vector ('') signifies
+                           all data in the sheet.
+ 
+           'Basic'         A logical value specifying whether or not to read the
+                           spreadsheet in basic mode. Basic mode is the default for
+                           systems without Excel for Windows installed. Basic mode
+                           may read files where there may be live updates (e.g.
+                           formula evalauation or plugins) to the data differently.
+                           If your files do not have this requirement, basic mode can
+                           be used.
+ 
+           'TextType'      The output type of text variables. It can have either of
+                           the following values:
+                              'char'   - Return text as a cell array of
+                              character vectors. 
+                              'string' - Return text as a string array.
+ 
+           'DatetimeType'  The output type of datetime variables. The possible values
+                           are:
+                               'datetime'     - Return dates as MATLAB datetimes. 
+                               'text'         - Return dates as text.
+                               'exceldatenum' - Return dates as Excel serial day date numbers.
+ 
+    Parameters which are also accepted with import options. These may have slightly
+    different behavior when used with import options:
+ 
+        T = readtable(FILENAME, OPTS, ...parameters...)
+ 
+          'ReadVariableNames' true - Reads the variable names from
+                                     opts.VariableNamesRange/VariableNamesLine location.
+                             false - Uses variable names from the import options.
+                                        
+          'ReadRowNames'      true - Reads the row names from the
+                                     opts.RowNamesRange/RowNameColumn location.
+                             false - Does not import row names.
+ 
+        Text only parameters:
+          'DateLocale'     Override the locale used when importing dates.
+          'Encoding'       Override the encoding defined in import options.
+ 
+        Spreadsheet only parameters:
+          'Sheet'          Override the sheet value in the import options.
+          'Basic'          No difference.
+ 
+ 
+    See also <a href="matlab:help writetable">writetable</a>, <a href="matlab:help table">table</a>, <a href="matlab:help detectImportOptions">detectImportOptions</a>, <a href="matlab:help textscan">textscan</a>.
+
+    <a href="matlab:doc readtable">Reference page for readtable</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('readtable')">Other functions named readtable</a>
+
+clear
+clc
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.665087 ms [60.005687 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.663857 ms [60.010117 Hz]. (50 valid samples taken, stddev=0.117523 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+
+ans =
+
+   976
+
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 2 times out of a total of 197 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 265)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',265,0)">line 265</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 89)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',89,0)">line 89</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.664766 ms [60.006843 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.668651 ms [59.992856 Hz]. (50 valid samples taken, stddev=0.090905 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+block: -1, trial: 797, gamble: 7 / -5, sr: -4, choose: 1, rt: 1.819227e+00
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m', 265)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\trial.m',265,0)">line 265</a>)
+            Screen('Flip', display_info.wPtr);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 98)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',98,0)">line 98</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+clc
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.664941 ms [60.006214 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.665382 ms [60.004625 Hz]. (50 valid samples taken, stddev=0.066544 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imread>get_full_filename', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\imagesci\imread.p', 516)" style="font-weight:bold">imread>get_full_filename</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\imagesci\imread.p',516,0)">line 516</a>)
+File "instruction\1instruction (1).BMP" does not exist.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imread', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\imagesci\imread.p', 340)" style="font-weight:bold">imread</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\imagesci\imread.p',340,0)">line 340</a>)
+    fullname = get_full_filename(filename);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m', 42)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',42,0)">line 42</a>)
+    insTexture(sscanf(insFiles(i_ins).name, 'instruction (%d).bmp')) = Screen('MakeTexture', display_info.wPtr,
+    imread(['instruction\',num2str(mod(subSeq,2)), insFiles(i_ins).name]));
+} 
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+opentoline('C:\Users\Nisz\k\psychology\lab\pr\e3\code_181024\poor-neuroeco-exp\exp\main.m',42,0)
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Apr  6 2018).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 supported and tested to some limited degree.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: GeForce GTX 1050 Ti/PCIe/SSE2 :: 4.6.0 NVIDIA 416.34
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.665331 ms [60.004807 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.667516 ms [59.996943 Hz]. (50 valid samples taken, stddev=0.070513 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    26
+
+block: -1, trial: 314, gamble: 6 / -2, sr: 1, choose: 1, rt: 1.085583e+00
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 3 times out of a total of 634 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, 
