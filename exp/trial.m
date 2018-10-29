@@ -121,8 +121,11 @@ classdef trial < matlab.mixin.Copyable
                     fig_color = display_info.payoff_color(1,:);
                 end
             end
+            if obj.sure_reward(end) == 0
+                fig_color = sum(display_info.payoff_color(:,:)).*0.8;
+            end
                 
-            DrawFormattedText(display_info.wPtr, sureRewardStr, 'center', 'center', fig_color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.sure_reward_locus([1 2 1 2]) + display_info.sure_reward_rect - [0 5 0 5]);
+            DrawFormattedText(display_info.wPtr, sureRewardStr, 'center', 'center', fig_color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.sure_reward_locus([1 2 1 2]) + display_info.sure_reward_rect - [0 2 0 2]);
             %             Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
             Screen('Flip', display_info.wPtr, timeStamp + display_info.fixation_duration, [], 1);
             while GetSecs - timeStamp < display_info.fixation_duration + display_info.sure_reward_duration - 0.010
@@ -188,8 +191,8 @@ classdef trial < matlab.mixin.Copyable
                         Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
                         
                         %                         DrawFormattedText(display_info.wPtr, sureRewardStr, 'center', 'center', display_info.fig_color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.sure_reward_locus([1 2 1 2]) + display_info.sure_reward_rect - [0 5 0 5]);
-                        DrawFormattedText(display_info.wPtr, payoff1Str, 'center', 'center', payoff1color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.gamble_locus([1 2 1 2]) + display_info.gamble_rect(1:4) - [0 5 0 5]);
-                        DrawFormattedText(display_info.wPtr, payoff2Str, 'center', 'center', payoff2color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.gamble_locus([1 2 1 2]) + display_info.gamble_rect(5:8) - [0 5 0 5]);
+                        DrawFormattedText(display_info.wPtr, payoff1Str, 'center', 'center', payoff1color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.gamble_locus([1 2 1 2]) + display_info.gamble_rect(1:4) - [0 2 0 2]);
+                        DrawFormattedText(display_info.wPtr, payoff2Str, 'center', 'center', payoff2color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.gamble_locus([1 2 1 2]) + display_info.gamble_rect(5:8) - [0 2 0 2]);
                     end
                     lastFrame = Screen('Flip', display_info.wPtr);
                     
@@ -221,7 +224,7 @@ classdef trial < matlab.mixin.Copyable
             % wait for react
             if ~reactTooEarly == 1
 %                 Screen('FillOval', display_info.wPtr, display_info.ready_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
-                Screen('FrameOval', display_info.wPtr, display_info.ready_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*4.*[-1 -1 1 1],display_info.rect_pen_width);
+                Screen('FrameOval', display_info.wPtr, display_info.ready_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*2.*[-1 -1 1 1],display_info.rect_pen_width);
                 Screen('Flip', display_info.wPtr, timeStamp + display_info.sure_reward_duration + 2*display_info.fixation_duration + obj.n_gambles.*obj.gamble_duration, [], 1);
                 while 1
                     [~, timeGetKey, reactKey] = KbCheck;
