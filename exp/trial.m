@@ -127,7 +127,7 @@ classdef trial < matlab.mixin.Copyable
                 
             DrawFormattedText(display_info.wPtr, sureRewardStr, 'center', 'center', fig_color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.sure_reward_locus([1 2 1 2]) + display_info.sure_reward_rect - [0 2 0 2]);
             %             Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
-            Screen('Flip', display_info.wPtr, timeStamp + display_info.fixation_duration, [], 1);
+            Screen('Flip', display_info.wPtr, timeStamp + display_info.fixation_duration - 0.5, [], 1);
             while GetSecs - timeStamp < display_info.fixation_duration + display_info.sure_reward_duration - 0.010
                 [~, ~, reactKey] = KbCheck;
                 if any(reactKey)
