@@ -36,10 +36,10 @@ clear formerData
 
 %% run
 % instruct
-insFiles = dir(['instruction\',num2str(mod(subSeq,2)),'\instruction (*).bmp']);
+insFiles = dir(['instruction\',num2str(mod(subSeq,2)+1),'\instruction (*).bmp']);
 insTexture = nan(length(insFiles), 1);
 for i_ins = 1:length(insFiles)
-    insTexture(sscanf(insFiles(i_ins).name, 'instruction (%d).bmp')) = Screen('MakeTexture', display_info.wPtr, imread(['instruction\',num2str(mod(subSeq,2)), '\',insFiles(i_ins).name]));
+    insTexture(sscanf(insFiles(i_ins).name, 'instruction (%d).bmp')) = Screen('MakeTexture', display_info.wPtr, imread(['instruction\',num2str(mod(subSeq,2)+1), '\',insFiles(i_ins).name]));
 end
 clear insFiles
 markerFiles = dir('instruction\markers\*.bmp');

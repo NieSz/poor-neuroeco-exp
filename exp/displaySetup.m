@@ -6,7 +6,7 @@ Screen('Preference', 'SkipSyncTests', 1);
 KbName('UnifyKeyNames');
 
 screens = Screen('Screens');
-screen_id = max(screens);
+screen_id = 1;
 [screen_width, screen_height] = Screen('DisplaySize', screen_id);
 [screen_x_size, screen_y_size] = Screen('WindowSize', screen_id);
 pix_per_cm = [screen_x_size, screen_y_size]/[screen_width, screen_height].*10;
@@ -48,7 +48,7 @@ display_info.fail_to_choose_color = display_info.fail_to_choose_color;
 
 display_info.wPtr = wPtr;
 display_info.window_rect = window_rect;
-Screen('TextFont', wPtr, 'monotype')
+Screen('TextFont', wPtr, 'Monotype')
 global ptb_drawformattedtext_disableClipping;
 ptb_drawformattedtext_disableClipping = 1;
 Screen('TextSize', wPtr, display_info.sure_reward_size)
