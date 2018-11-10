@@ -112,7 +112,7 @@ for i_trial = 1:length(trials)
 end
 waitForSpace('exp_end');
 
-invoice = Screen('MakeTexture', display_info.wPtr, imread('instruction\invoice.jpg'));
+invoice = Screen('MakeTexture', display_info.wPtr, imread('instruction\invoice.bmp'));
 nFailTrials = sum([trials.reaction_time] <= 0) + sum(isnan([trials.reaction_time]));
 i=1;
 while 1
@@ -121,6 +121,7 @@ while 1
     randTrials = randperm(length(trials),2);
     DrawFormattedText(display_info.wPtr, num2str(randTrials(1)), 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*[429 356 531 388]./[1313 739 1313 739]);
     DrawFormattedText(display_info.wPtr, num2str(randTrials(2)), 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*[588 356 665 388]./[1313 739 1313 739]);
+    
     gambleStr = [num2str(trials(randTrials(1)).gambles(end,1)), ' or ', num2str(trials(randTrials(1)).gambles(end,2))];
     DrawFormattedText(display_info.wPtr, gambleStr, 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*[510 439 624 468]./[1313 739 1313 739]);
     DrawFormattedText(display_info.wPtr, num2str(trials(randTrials(1)).sure_rewards(end)), 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*[678 439 813 468]./[1313 739 1313 739]);
@@ -134,9 +135,9 @@ while 1
     gambleStr = [num2str(trials(randTrials(2)).gambles(end,1)), ' or ', num2str(trials(randTrials(2)).gambles(end,2))];
     DrawFormattedText(display_info.wPtr, gambleStr, 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*[510 559 624 589]./[1313 739 1313 739]);
     DrawFormattedText(display_info.wPtr, num2str(trials(randTrials(2)).sure_rewards(end)), 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*[678 559 813 589]./[1313 739 1313 739]);
-    if trials(randTrials(1)).choose_sure == 1
-        chstr =  num2str(trials(randTrials(1)).sure_rewards(end));
-    elseif trials(randTrials(1)).choose_sure == 0
+    if trials(randTrials(2)).choose_sure == 1
+        chstr =  num2str(trials(randTrials(2)).sure_rewards(end));
+    elseif trials(randTrials(2)).choose_sure == 0
         chstr = gambleStr;
     end
     DrawFormattedText(display_info.wPtr,chstr, 'center', 'center', [255 255 255], [], [], [], [], [], display_info.window_rect([3 4 3 4]).*[444 600 640 630]./[1313 739 1313 739]);

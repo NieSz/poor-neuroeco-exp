@@ -1,0 +1,1939 @@
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.333608 ms [119.996046 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332808 ms [120.007568 Hz]. (50 valid samples taken, stddev=0.028873 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    20
+
+block: -1, trial: 314, gamble: 6 / -2, sr: 1, choose: 1, rt: 1.193029e+00
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_181109\exp\trial.m', 83)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\trial.m',83,0)">line 83</a>)
+            Screen('Flip', display_info.wPtr);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 97)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',97,0)">line 97</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.332560 ms [120.011131 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.333674 ms [119.995096 Hz]. (50 valid samples taken, stddev=0.041110 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    20
+
+block: -1, trial: 314, gamble: 6 / -2, sr: 1, choose: 0, rt: 9.256372e-01
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 2 times out of a total of 1259 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_181109\exp\trial.m', 83)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\trial.m',83,0)">line 83</a>)
+            Screen('Flip', display_info.wPtr);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 97)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',97,0)">line 97</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+
+出错 main (line 97)
+ 出错 main (line 97)
+ ↑
+{错误: 输入字符不是 MATLAB 语句或表达式中的有效字符。
+} 
+main1
+{未定义函数或变量 'main1'。
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.331939 ms [120.020089 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332840 ms [120.007106 Hz]. (50 valid samples taken, stddev=0.029587 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_181109\exp\trial.m', 268)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\trial.m',268,0)">line 268</a>)
+            Screen('Flip', display_info.wPtr);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 88)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',88,0)">line 88</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.332868 ms [120.006699 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332519 ms [120.011727 Hz]. (50 valid samples taken, stddev=0.042172 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+block: -1, trial: 314, gamble: 6 / -2, sr: 1, choose: 1, rt: 1.320306e+00
+block: -2, trial: 65, gamble: 2 / -8, sr: 0, choose: NaN, rt: NaN
+block: -2, trial: 243, gamble: 7 / -1, sr: 1, choose: NaN, rt: NaN
+block: 1, trial: 1, gamble: 3 / -7, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 2, gamble: 6 / -8, sr: 2, choose: NaN, rt: NaN
+block: 1, trial: 3, gamble: 8 / -1, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 4, gamble: 1 / -8, sr: -2, choose: NaN, rt: NaN
+block: 1, trial: 5, gamble: 2 / -1, sr: -2, choose: NaN, rt: NaN
+block: 1, trial: 6, gamble: 4 / -5, sr: 1, choose: NaN, rt: NaN
+block: 1, trial: 7, gamble: 3 / -9, sr: -2, choose: NaN, rt: NaN
+block: 1, trial: 8, gamble: 1 / -3, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 9, gamble: 5 / -8, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 10, gamble: 9 / -6, sr: 2, choose: NaN, rt: NaN
+block: 1, trial: 11, gamble: 9 / -1, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 12, gamble: 4 / -7, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 13, gamble: 2 / -3, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 14, gamble: 6 / -7, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 15, gamble: 2 / -6, sr: 1, choose: NaN, rt: NaN
+block: 1, trial: 16, gamble: 4 / -4, sr: -2, choose: NaN, rt: NaN
+block: 1, trial: 17, gamble: 2 / -4, sr: -2, choose: NaN, rt: NaN
+block: 1, trial: 18, gamble: 2 / -2, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 19, gamble: 4 / -3, sr: 1, choose: NaN, rt: NaN
+block: 1, trial: 20, gamble: 8 / -6, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 21, gamble: 3 / -6, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 22, gamble: 2 / -4, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 23, gamble: 7 / -4, sr: 2, choose: NaN, rt: NaN
+block: 1, trial: 24, gamble: 1 / -2, sr: -2, choose: NaN, rt: NaN
+block: 1, trial: 25, gamble: 1 / -6, sr: 1, choose: NaN, rt: NaN
+block: 1, trial: 26, gamble: 6 / -9, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 27, gamble: 5 / -7, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 28, gamble: 4 / -8, sr: 1, choose: NaN, rt: NaN
+block: 1, trial: 29, gamble: 2 / -6, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 30, gamble: 3 / -1, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 31, gamble: 7 / -6, sr: -2, choose: NaN, rt: NaN
+block: 1, trial: 32, gamble: 9 / -2, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 33, gamble: 6 / -5, sr: -2, choose: NaN, rt: NaN
+block: 1, trial: 34, gamble: 1 / -6, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 35, gamble: 1 / -2, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 36, gamble: 2 / -5, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 37, gamble: 9 / -7, sr: -2, choose: NaN, rt: NaN
+block: 1, trial: 38, gamble: 2 / -2, sr: 1, choose: NaN, rt: NaN
+block: 1, trial: 39, gamble: 4 / -9, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 40, gamble: 4 / -4, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 41, gamble: 4 / -9, sr: 0, choose: NaN, rt: NaN
+block: 1, trial: 42, gamble: 5 / -3, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 43, gamble: 5 / -4, sr: -1, choose: NaN, rt: NaN
+block: 1, trial: 44, gamble: 1 / -1, sr: -1, choose: NaN, rt: NaN
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_181109\exp\trial.m', 268)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\trial.m',268,0)">line 268</a>)
+            Screen('Flip', display_info.wPtr);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 104)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',104,0)">line 104</a>)
+    trials(i_trial).show(display_info);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.333412 ms [119.998874 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.333353 ms [119.999715 Hz]. (50 valid samples taken, stddev=0.040238 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+block: -1, trial: 314, gamble: 6 / -2, sr: 1, choose: 1, rt: 9.401339e-01
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_181109\exp\trial.m', 268)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\trial.m',268,0)">line 268</a>)
+            Screen('Flip', display_info.wPtr);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 97)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',97,0)">line 97</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.333523 ms [119.997272 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332808 ms [120.007568 Hz]. (50 valid samples taken, stddev=0.049235 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_181109\exp\trial.m', 268)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\trial.m',268,0)">line 268</a>)
+            Screen('Flip', display_info.wPtr);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 88)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',88,0)">line 88</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+[trials.n_gambles]'<1;
+[trials.n_gambles]'==1;
+round(random('exponential',5))
+
+ans =
+
+     3
+
+round(random('exponential',5,5,5))
+
+ans =
+
+     4     9    17     3     8
+     0     0     3     6     4
+    10     1    12     1    13
+     2     7     0     3     6
+    12     1     3    20     7
+
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.332246 ms [120.015657 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332513 ms [120.011819 Hz]. (50 valid samples taken, stddev=0.050905 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+block: -1, trial: 307, gamble: 4 / -1, sr: 2, choose: 1, rt: -1
+block: -2, trial: 163, gamble: 8 / -9, sr: 1, choose: 1, rt: -2
+block: -2, trial: 190, gamble: 4 / -8, sr: 0, choose: NaN, rt: NaN
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_181109\exp\trial.m', 83)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\trial.m',83,0)">line 83</a>)
+            Screen('Flip', display_info.wPtr);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 104)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',104,0)">line 104</a>)
+    trials(i_trial).show(display_info);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.333071 ms [120.003776 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332519 ms [120.011727 Hz]. (50 valid samples taken, stddev=0.041801 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+block: -1, trial: 307, gamble: 4 / -1, sr: 2, choose: 0, rt: -7
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_181109\exp\trial.m', 83)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\trial.m',83,0)">line 83</a>)
+            Screen('Flip', display_info.wPtr);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 97)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',97,0)">line 97</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+PTB-INFO: Multi-display setup in explicit multi-display mode detected. Using the following mapping:
+PTB-INFO: Screen 0 corresponds to the full Windows desktop area. Useful for stereo presentations in stereomode=4 ...
+PTB-INFO: Screen 1 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY1 ...
+PTB-INFO: Screen 2 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY2 ...
+
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.333497 ms [119.997649 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.331555 ms [120.025619 Hz]. (118 valid samples taken, stddev=0.202476 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+WARNING: Couldn't compute a reliable estimate of monitor refresh interval! Trouble with VBL syncing?!?
+
+
+----- ! PTB - ERROR: SYNCHRONIZATION FAILURE ! ----
+
+One or more internal checks (see Warnings above) indicate that synchronization
+of Psychtoolbox to the vertical retrace (VBL) is not working on your setup.
+
+This will seriously impair proper stimulus presentation and stimulus presentation timing!
+Please read 'help SyncTrouble' for information about how to solve or work-around the problem.
+You can force Psychtoolbox to continue, despite the severe problems, by adding the command
+Screen('Preference', 'SkipSyncTests', 1); at the top of your script, if you really know what you are doing.
+
+
+
+
+PTB-ERROR: Screen('Flip'); beamposition timestamping computed an *impossible stimulus onset value* of 14728.689558 secs, which would indicate that
+PTB-ERROR: stimulus onset happened *before* it was actually requested! (Earliest theoretically possible 14728.692301 secs).
+
+PTB-ERROR: Some more diagnostic values (only for experts): rawTimestamp = 14728.693071, scanline = 455
+PTB-ERROR: Some more diagnostic values (only for experts): line_pre_swaprequest = 352, line_post_swaprequest = 408, time_post_swaprequest = 14728.692716
+PTB-ERROR: Some more diagnostic values (only for experts): preflip_vblcount = 0, preflip_vbltimestamp = -1.000000
+PTB-ERROR: Some more diagnostic values (only for experts): postflip_vblcount = 0, postflip_vbltimestamp = -1.000000, vbltimestampquery_retrycount = 0
+
+PTB-ERROR: This error can be due to either of the following causes:
+PTB-ERROR: Very unlikely: Something is broken in your systems beamposition timestamping. I've disabled high precision
+PTB-ERROR: timestamping for now. Returned timestamps will be less robust and accurate.
+
+PTB-ERROR: The most likely cause would be that Synchronization of stimulus onset (buffer swap) to the
+PTB-ERROR: vertical blank interval VBL is not working properly, or swap completion signalling to PTB is broken.
+PTB-ERROR: Please run the script PerceptualVBLSyncTest to check this. With non-working sync to VBL, all stimulus timing
+PTB-ERROR: is futile. Also run OSXCompositorIdiocyTest on macOS. Also read 'help SyncTrouble' !
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+block: -1, trial: 307, gamble: 4 / -1, sr: 2, choose: 0, rt: 7.347635e+00
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_181109\exp\trial.m', 83)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\trial.m',83,0)">line 83</a>)
+            Screen('Flip', display_info.wPtr);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 97)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',97,0)">line 97</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.332024 ms [120.018863 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.332506 ms [120.011911 Hz]. (50 valid samples taken, stddev=0.059129 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function DrawTexture: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+Screen('DrawTexture', windowPointer, texturePointer [,sourceRect] [,destinationRect] [,rotationAngle] [, filterMode] [, globalAlpha] [,
+modulateColor] [, textureShader] [, specialFlags] [, auxParameters]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 53)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',53,0)">line 53</a>)
+    Screen('DrawTexture', display_info.wPtr, insTexture(i_ins), [], display_info.window_rect)
+} 
+main
+Please input subject id
+2
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.331277 ms [120.029614 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.333815 ms [119.993064 Hz]. (50 valid samples taken, stddev=0.056158 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', windowPtr [, when] [, dontclear] [, dontsync] [, multiflip]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('trial/show', 'E:\nieshaozhi\e3\code_181109\exp\trial.m', 83)" style="font-weight:bold">trial/show</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\trial.m',83,0)">line 83</a>)
+            Screen('Flip', display_info.wPtr);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 88)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',88,0)">line 88</a>)
+    tempTrial.show(tempDisplayInfo);
+} 
+main
+Please input subject id
+1
+Please input subject sex
+1
+Please input subject age
+1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.333326 ms [120.000100 Hz].
+PTB-INFO: Beamposition queries are supported, but disabled. Using basic timestamping as fallback:
+PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.333129 ms [120.002949 Hz]. (50 valid samples taken, stddev=0.037745 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+Error in function DrawTexture: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+Screen('DrawTexture', windowPointer, texturePointer [,sourceRect] [,destinationRect] [,rotationAngle] [, filterMode] [, globalAlpha] [,
+modulateColor] [, textureShader] [, specialFlags] [, auxParameters]);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 53)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',53,0)">line 53</a>)
+    Screen('DrawTexture', display_info.wPtr, insTexture(i_ins), [], display_info.window_rect)
+} 
+main
+Please input subject id
+18111001
+Please input subject sex
+0
+Please input subject age
+20
+PTB-INFO: Multi-display setup in explicit multi-display mode detected. Using the following mapping:
+PTB-INFO: Screen 0 corresponds to the full Windows desktop area. Useful for stereo presentations in stereomode=4 ...
+PTB-INFO: Screen 1 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY1 ...
+PTB-INFO: Screen 2 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY2 ...
+
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.331775 ms [120.022439 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.338490 ms [119.925790 Hz]. (100 valid samples taken, stddev=0.199963 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+
+PTB-ERROR: Screen('Flip'); beamposition timestamping computed an *impossible stimulus onset value* of 203.916198 secs, which would indicate that
+PTB-ERROR: stimulus onset happened *before* it was actually requested! (Earliest theoretically possible 203.918277 secs).
+
+PTB-ERROR: Some more diagnostic values (only for experts): rawTimestamp = 203.918887, scanline = 348
+PTB-ERROR: Some more diagnostic values (only for experts): line_pre_swaprequest = 265, line_post_swaprequest = 296, time_post_swaprequest = 203.918503
+PTB-ERROR: Some more diagnostic values (only for experts): preflip_vblcount = 0, preflip_vbltimestamp = -1.000000
+PTB-ERROR: Some more diagnostic values (only for experts): postflip_vblcount = 0, postflip_vbltimestamp = -1.000000, vbltimestampquery_retrycount = 0
+
+PTB-ERROR: This error can be due to either of the following causes:
+PTB-ERROR: Very unlikely: Something is broken in your systems beamposition timestamping. I've disabled high precision
+PTB-ERROR: timestamping for now. Returned timestamps will be less robust and accurate.
+
+PTB-ERROR: The most likely cause would be that Synchronization of stimulus onset (buffer swap) to the
+PTB-ERROR: vertical blank interval VBL is not working properly, or swap completion signalling to PTB is broken.
+PTB-ERROR: Please run the script PerceptualVBLSyncTest to check this. With non-working sync to VBL, all stimulus timing
+PTB-ERROR: is futile. Also run OSXCompositorIdiocyTest on macOS. Also read 'help SyncTrouble' !
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+block: -1, trial: 80, gamble: 7 / -2, sr: 0, choose: 0, rt: 1.056866e+00
+block: -2, trial: 171, gamble: 9 / -7, sr: 0, choose: 0, rt: 9.897490e-01
+block: -2, trial: 257, gamble: 6 / -1, sr: 1, choose: 0, rt: 1.629440e+00
+block: 1, trial: 1, gamble: 6 / -7, sr: 1, choose: NaN, rt: NaN
+block: 1, trial: 2, gamble: 5 / -1, sr: -1, choose: 0, rt: 9.168340e-01
+block: 1, trial: 3, gamble: 1 / -6, sr: 1, choose: 1, rt: 5.222080e-01
+block: 1, trial: 4, gamble: 8 / -1, sr: 1, choose: 0, rt: 8.828207e-01
+block: 1, trial: 5, gamble: 7 / -3, sr: -2, choose: 0, rt: 1.084309e+00
+block: 1, trial: 6, gamble: 9 / -3, sr: 2, choose: 0, rt: 6.951369e-01
+block: 1, trial: 7, gamble: 2 / -2, sr: -1, choose: 0, rt: 8.731901e-01
+block: 1, trial: 8, gamble: 5 / -2, sr: -1, choose: 0, rt: 1.036352e+00
+block: 1, trial: 9, gamble: 4 / -5, sr: -1, choose: 0, rt: 1.367613e+00
+block: 1, trial: 10, gamble: 7 / -8, sr: 1, choose: 1, rt: 5.109134e-01
+block: 1, trial: 11, gamble: 3 / -8, sr: 1, choose: 1, rt: 8.554891e-01
+block: 1, trial: 12, gamble: 5 / -9, sr: -1, choose: 1, rt: 1.275797e+00
+block: 1, trial: 13, gamble: 9 / -6, sr: -2, choose: 0, rt: 1.006536e+00
+block: 1, trial: 14, gamble: 6 / -8, sr: -1, choose: 1, rt: 9.239200e-01
+block: 1, trial: 15, gamble: 4 / -3, sr: -1, choose: 0, rt: 1.036330e+00
+block: 1, trial: 16, gamble: 3 / -9, sr: 2, choose: 1, rt: 5.600038e-01
+block: 1, trial: 17, gamble: 4 / -3, sr: 0, choose: 1, rt: 1.095316e+00
+block: 1, trial: 18, gamble: 3 / -3, sr: -1, choose: 0, rt: 7.777813e-01
+block: 1, trial: 19, gamble: 2 / -2, sr: -1, choose: 1, rt: 1.287682e+00
+block: 1, trial: 20, gamble: 1 / -2, sr: -2, choose: 0, rt: 1.090405e+00
+block: 1, trial: 21, gamble: 2 / -4, sr: 2, choose: 1, rt: 7.008408e-01
+block: 1, trial: 22, gamble: 8 / -1, sr: -2, choose: 0, rt: 7.498635e-01
+block: 1, trial: 23, gamble: 2 / -3, sr: -1, choose: 0, rt: 1.301912e+00
+block: 1, trial: 24, gamble: 1 / -9, sr: 2, choose: 1, rt: -1
+block: 1, trial: 25, gamble: 1 / -6, sr: 2, choose: 1, rt: 7.042332e-01
+block: 1, trial: 26, gamble: 3 / -6, sr: 0, choose: 1, rt: 6.140274e-01
+block: 1, trial: 27, gamble: 6 / -7, sr: -1, choose: 1, rt: 1.122585e+00
+block: 1, trial: 28, gamble: 8 / -6, sr: 0, choose: 1, rt: 1.043109e+00
+block: 1, trial: 29, gamble: 6 / -1, sr: -1, choose: 0, rt: 9.992847e-01
+block: 1, trial: 30, gamble: 1 / -4, sr: -1, choose: 0, rt: 1.236652e+00
+block: 1, trial: 31, gamble: 1 / -7, sr: 1, choose: 1, rt: 7.679360e-01
+block: 1, trial: 32, gamble: 7 / -7, sr: -1, choose: 1, rt: 1.399680e+00
+block: 1, trial: 33, gamble: 2 / -5, sr: 2, choose: 1, rt: 1.109876e+00
+block: 1, trial: 34, gamble: 8 / -9, sr: 1, choose: 1, rt: 9.589368e-01
+block: 1, trial: 35, gamble: 7 / -1, sr: -1, choose: 0, rt: 9.502126e-01
+block: 1, trial: 36, gamble: 1 / -8, sr: -1, choose: 1, rt: 9.338580e-01
+block: 1, trial: 37, gamble: 7 / -4, sr: 1, choose: 1, rt: 6.943898e-01
+block: 1, trial: 38, gamble: 9 / -4, sr: -1, choose: 1, rt: 1.223128e+00
+block: 1, trial: 39, gamble: 4 / -2, sr: 2, choose: 1, rt: 4.772680e-01
+block: 1, trial: 40, gamble: 8 / -2, sr: 0, choose: 0, rt: 8.153608e-01
+block: 1, trial: 41, gamble: 9 / -2, sr: -2, choose: 0, rt: 5.247211e-01
+block: 1, trial: 42, gamble: 9 / -6, sr: 0, choose: 0, rt: 1.213130e+00
+block: 1, trial: 43, gamble: 2 / -8, sr: 1, choose: 1, rt: 8.822741e-01
+block: 1, trial: 44, gamble: 6 / -5, sr: -1, choose: 1, rt: 9.688570e-01
+block: 1, trial: 45, gamble: 7 / -4, sr: 1, choose: 1, rt: 4.793194e-01
+block: 1, trial: 46, gamble: 1 / -4, sr: -2, choose: 1, rt: 1.113675e+00
+block: 1, trial: 47, gamble: 2 / -7, sr: -2, choose: 1, rt: 1.050780e+00
+block: 1, trial: 48, gamble: 9 / -4, sr: 1, choose: 0, rt: 1.406212e+00
+block: 1, trial: 49, gamble: 4 / -2, sr: 2, choose: 1, rt: 4.915815e-01
+block: 1, trial: 50, gamble: 4 / -2, sr: 0, choose: 0, rt: 9.975098e-01
+block: 1, trial: 51, gamble: 5 / -6, sr: 1, choose: 1, rt: 5.072930e-01
+block: 1, trial: 52, gamble: 3 / -9, sr: -2, choose: 1, rt: 1.460395e+00
+block: 1, trial: 53, gamble: 6 / -5, sr: 0, choose: 1, rt: 1.543306e+00
+block: 1, trial: 54, gamble: 9 / -5, sr: 1, choose: 1, rt: 4.396300e-01
+block: 1, trial: 55, gamble: 6 / -6, sr: -1, choose: 1, rt: 1.588230e+00
+block: 1, trial: 56, gamble: 2 / -9, sr: 1, choose: 1, rt: 1.379308e+00
+block: 1, trial: 57, gamble: 8 / -5, sr: 0, choose: 1, rt: 4.653790e-01
+block: 1, trial: 58, gamble: 3 / -1, sr: -1, choose: 0, rt: 1.428212e+00
+block: 1, trial: 59, gamble: 8 / -2, sr: -2, choose: 0, rt: 6.316625e-01
+block: 1, trial: 60, gamble: 1 / -9, sr: -1, choose: 1, rt: 4.613076e-01
+block: 1, trial: 61, gamble: 4 / -3, sr: 1, choose: 1, rt: 8.474889e-01
+block: 1, trial: 62, gamble: 4 / -6, sr: -2, choose: 1, rt: 1.252342e+00
+block: 1, trial: 63, gamble: 7 / -3, sr: 2, choose: 1, rt: 5.831729e-01
+block: 1, trial: 64, gamble: 8 / -4, sr: 2, choose: 1, rt: 4.382202e-01
+block: 1, trial: 65, gamble: 5 / -6, sr: -2, choose: 1, rt: 1.978066e+00
+block: 1, trial: 66, gamble: 1 / -7, sr: 1, choose: 1, rt: 7.195052e-01
+block: 1, trial: 67, gamble: 5 / -2, sr: 2, choose: 0, rt: 1.321451e+00
+block: 1, trial: 68, gamble: 3 / -4, sr: -2, choose: 1, rt: 1.609944e+00
+block: 1, trial: 69, gamble: 2 / -6, sr: 0, choose: 1, rt: 1.127413e+00
+block: 1, trial: 70, gamble: 7 / -2, sr: 0, choose: 0, rt: 4.791497e-01
+block: 1, trial: 71, gamble: 8 / -2, sr: -2, choose: 0, rt: 8.666540e-01
+block: 1, trial: 72, gamble: 8 / -5, sr: 0, choose: 1, rt: 5.095369e-01
+block: 1, trial: 73, gamble: 1 / -1, sr: 2, choose: 1, rt: 6.706259e-01
+block: 1, trial: 74, gamble: 2 / -3, sr: -1, choose: 0, rt: 1.935315e+00
+block: 1, trial: 75, gamble: 6 / -6, sr: 2, choose: 1, rt: 5.617575e-01
+block: 1, trial: 76, gamble: 7 / -5, sr: 1, choose: 1, rt: 5.869719e-01
+block: 1, trial: 77, gamble: 3 / -6, sr: 1, choose: 1, rt: 4.267723e-01
+block: 1, trial: 78, gamble: 8 / -8, sr: -1, choose: 1, rt: 1.375093e+00
+block: 1, trial: 79, gamble: 2 / -1, sr: -1, choose: 0, rt: 9.900983e-01
+block: 1, trial: 80, gamble: 7 / -2, sr: 0, choose: 0, rt: 4.601190e-01
+block: 1, trial: 81, gamble: 1 / -3, sr: -2, choose: 0, rt: 1.686834e+00
+block: 1, trial: 82, gamble: 2 / -8, sr: 0, choose: 1, rt: 7.533043e-01
+block: 1, trial: 83, gamble: 7 / -5, sr: 0, choose: 1, rt: 8.155572e-01
+block: 1, trial: 84, gamble: 9 / -7, sr: 1, choose: 1, rt: 1.637884e+00
+block: 1, trial: 85, gamble: 1 / -4, sr: -2, choose: 1, rt: 8.621532e-01
+block: 1, trial: 86, gamble: 6 / -9, sr: 1, choose: 1, rt: 8.871033e-01
+block: 1, trial: 87, gamble: 6 / -2, sr: 0, choose: 0, rt: 4.591028e-01
+block: 1, trial: 88, gamble: 7 / -1, sr: 1, choose: 0, rt: 6.383278e-01
+block: 1, trial: 89, gamble: 2 / -3, sr: 0, choose: 1, rt: 4.664164e-01
+block: 1, trial: 90, gamble: 2 / -1, sr: -1, choose: 0, rt: 9.093697e-01
+block: 1, trial: 91, gamble: 9 / -3, sr: 1, choose: 0, rt: 1.006817e+00
+block: 1, trial: 92, gamble: 7 / -8, sr: -1, choose: 1, rt: 1.403864e+00
+block: 1, trial: 93, gamble: 5 / -8, sr: 1, choose: 1, rt: 5.612308e-01
+block: 1, trial: 94, gamble: 4 / -1, sr: 2, choose: 1, rt: 1.223621e+00
+block: 1, trial: 95, gamble: 8 / -4, sr: 1, choose: 1, rt: 1.061063e+00
+block: 1, trial: 96, gamble: 6 / -6, sr: 2, choose: 1, rt: 5.271430e-01
+block: 1, trial: 97, gamble: 9 / -1, sr: 0, choose: 0, rt: 6.235494e-01
+block: 1, trial: 98, gamble: 4 / -4, sr: -1, choose: 1, rt: 8.858387e-01
+block: 1, trial: 99, gamble: 9 / -9, sr: -1, choose: 1, rt: 1.991754e+00
+block: 1, trial: 100, gamble: 9 / -6, sr: -1, choose: 1, rt: 3.980349e-01
+block: 1, trial: 101, gamble: 5 / -5, sr: 0, choose: 1, rt: 4.757895e-01
+block: 1, trial: 102, gamble: 3 / -4, sr: 0, choose: 1, rt: 1.582412e+00
+block: 1, trial: 103, gamble: 1 / -2, sr: -1, choose: 0, rt: 6.526477e-01
+block: 1, trial: 104, gamble: 8 / -9, sr: 2, choose: 1, rt: 6.917634e-01
+block: 1, trial: 105, gamble: 9 / -5, sr: -1, choose: 0, rt: 5.304492e-01
+block: 1, trial: 106, gamble: 6 / -2, sr: -1, choose: 0, rt: 5.308173e-01
+block: 1, trial: 107, gamble: 4 / -6, sr: 0, choose: 1, rt: 4.509840e-01
+block: 1, trial: 108, gamble: 8 / -8, sr: 1, choose: 1, rt: 9.264070e-01
+block: 1, trial: 109, gamble: 7 / -1, sr: -1, choose: 0, rt: 4.147386e-01
+block: 1, trial: 110, gamble: 3 / -8, sr: 1, choose: 1, rt: 3.735566e-01
+block: 1, trial: 111, gamble: 9 / -9, sr: -2, choose: 0, rt: 5.721231e-01
+block: 1, trial: 112, gamble: 7 / -2, sr: 1, choose: 0, rt: 1.066903e+00
+block: 1, trial: 113, gamble: 4 / -5, sr: 0, choose: 1, rt: 5.016972e-01
+block: 1, trial: 114, gamble: 5 / -6, sr: 0, choose: 1, rt: 1.447315e+00
+block: 1, trial: 115, gamble: 5 / -7, sr: 1, choose: 1, rt: 6.267887e-01
+block: 1, trial: 116, gamble: 6 / -8, sr: -1, choose: 1, rt: 1.367222e+00
+block: 1, trial: 117, gamble: 4 / -4, sr: 2, choose: 1, rt: 9.625702e-01
+block: 1, trial: 118, gamble: 3 / -2, sr: 1, choose: 1, rt: 7.374991e-01
+block: 1, trial: 119, gamble: 3 / -3, sr: 1, choose: 1, rt: 1.153446e+00
+block: 1, trial: 120, gamble: 1 / -8, sr: 0, choose: 1, rt: 5.677351e-01
+block: 1, trial: 121, gamble: 9 / -5, sr: 1, choose: 1, rt: 5.435654e-01
+block: 1, trial: 122, gamble: 5 / -9, sr: -1, choose: 1, rt: 1.279330e+00
+block: 1, trial: 123, gamble: 6 / -3, sr: 2, choose: 1, rt: 6.023172e-01
+block: 1, trial: 124, gamble: 7 / -9, sr: 0, choose: 1, rt: 8.075067e-01
+block: 1, trial: 125, gamble: 9 / -8, sr: 0, choose: 1, rt: 5.413478e-01
+block: 1, trial: 126, gamble: 2 / -7, sr: -1, choose: 1, rt: 9.253067e-01
+block: 1, trial: 127, gamble: 3 / -9, sr: -1, choose: 1, rt: 7.258362e-01
+block: 1, trial: 128, gamble: 2 / -2, sr: 1, choose: 1, rt: 9.990538e-01
+block: 1, trial: 129, gamble: 7 / -8, sr: 2, choose: 1, rt: 6.762997e-01
+block: 1, trial: 130, gamble: 7 / -5, sr: 2, choose: 1, rt: 5.428831e-01
+block: 1, trial: 131, gamble: 6 / -7, sr: 0, choose: 1, rt: 7.346874e-01
+block: 1, trial: 132, gamble: 7 / -7, sr: -2, choose: 1, rt: 5.430935e-01
+block: 1, trial: 133, gamble: 5 / -1, sr: -1, choose: 0, rt: 9.989729e-01
+block: 1, trial: 134, gamble: 3 / -7, sr: -1, choose: 1, rt: 1.852981e+00
+block: 1, trial: 135, gamble: 8 / -7, sr: -1, choose: 1, rt: 1.046937e+00
+block: 1, trial: 136, gamble: 1 / -3, sr: -1, choose: 1, rt: 1.355842e+00
+block: 1, trial: 137, gamble: 2 / -4, sr: -1, choose: 1, rt: 1.219271e+00
+block: 1, trial: 138, gamble: 5 / -9, sr: 2, choose: 1, rt: 0
+block: 1, trial: 139, gamble: 3 / -8, sr: -1, choose: 1, rt: 1.513631e+00
+block: 1, trial: 140, gamble: 8 / -7, sr: 1, choose: 1, rt: 9.784490e-01
+block: 1, trial: 141, gamble: 5 / -4, sr: 0, choose: 1, rt: 1.639297e+00
+block: 1, trial: 142, gamble: 3 / -3, sr: 1, choose: 1, rt: 1.309212e+00
+block: 1, trial: 143, gamble: 4 / -4, sr: -1, choose: 0, rt: 5.901587e-01
+block: 1, trial: 144, gamble: 5 / -3, sr: 1, choose: 1, rt: 4.044368e-01
+block: 1, trial: 145, gamble: 3 / -7, sr: 0, choose: 1, rt: 1.058171e+00
+block: 1, trial: 146, gamble: 4 / -7, sr: 0, choose: 1, rt: 8.695100e-01
+block: 1, trial: 147, gamble: 1 / -1, sr: 2, choose: 1, rt: 5.031940e-01
+block: 1, trial: 148, gamble: 6 / -8, sr: -2, choose: 0, rt: 5.172924e-01
+block: 1, trial: 149, gamble: 3 / -5, sr: 1, choose: 1, rt: 4.781389e-01
+block: 1, trial: 150, gamble: 6 / -8, sr: 2, choose: 1, rt: 3.914202e-01
+block: 1, trial: 151, gamble: 1 / -5, sr: 1, choose: 1, rt: 9.506974e-01
+block: 1, trial: 152, gamble: 7 / -9, sr: 0, choose: 1, rt: 8.464095e-01
+block: 1, trial: 153, gamble: 9 / -1, sr: 0, choose: 0, rt: 6.102339e-01
+block: 1, trial: 154, gamble: 5 / -5, sr: -2, choose: 0, rt: 5.266615e-01
+block: 1, trial: 155, gamble: 1 / -1, sr: 1, choose: 1, rt: 3.752497e-01
+block: 1, trial: 156, gamble: 2 / -7, sr: -1, choose: 1, rt: 9.984975e-01
+block: 1, trial: 157, gamble: 4 / -1, sr: -2, choose: 0, rt: 3.882656e-01
+block: 1, trial: 158, gamble: 3 / -5, sr: 0, choose: 1, rt: 1.058144e+00
+block: 1, trial: 159, gamble: 9 / -9, sr: 1, choose: 1, rt: 1.333737e+00
+block: 1, trial: 160, gamble: 6 / -1, sr: -1, choose: 0, rt: 4.298486e-01
+block: 1, trial: 161, gamble: 7 / -2, sr: 0, choose: 0, rt: 5.544535e-01
+block: 1, trial: 162, gamble: 1 / -2, sr: -2, choose: 0, rt: 8.094260e-01
+block: 2, trial: 163, gamble: 8 / -2, sr: -1, choose: 0, rt: 4.527297e-01
+block: 2, trial: 164, gamble: 8 / -5, sr: 0, choose: 0, rt: 4.782554e-01
+block: 2, trial: 165, gamble: 3 / -4, sr: 1, choose: 1, rt: 4.874042e-01
+block: 2, trial: 166, gamble: 3 / -1, sr: 0, choose: 0, rt: 4.106912e-01
+block: 2, trial: 167, gamble: 5 / -7, sr: -1, choose: 1, rt: 1.851476e+00
+block: 2, trial: 168, gamble: 6 / -2, sr: -1, choose: 0, rt: 3.913622e-01
+block: 2, trial: 169, gamble: 9 / -2, sr: 0, choose: 0, rt: 6.301352e-01
+block: 2, trial: 170, gamble: 5 / -3, sr: -2, choose: 0, rt: 6.658766e-01
+block: 2, trial: 171, gamble: 9 / -7, sr: 0, choose: 1, rt: 1.348914e+00
+block: 2, trial: 172, gamble: 9 / -4, sr: 0, choose: 0, rt: 4.044140e-01
+block: 2, trial: 173, gamble: 7 / -3, sr: 1, choose: 0, rt: 1.153744e+00
+block: 2, trial: 174, gamble: 1 / -4, sr: -2, choose: 0, rt: 1.191023e+00
+block: 2, trial: 175, gamble: 4 / -4, sr: 1, choose: 1, rt: 5.430855e-01
+block: 2, trial: 176, gamble: 7 / -7, sr: 1, choose: 1, rt: 4.072302e-01
+block: 2, trial: 177, gamble: 8 / -6, sr: 2, choose: 1, rt: 5.325816e-01
+block: 2, trial: 178, gamble: 9 / -2, sr: -1, choose: 0, rt: 5.167498e-01
+block: 2, trial: 179, gamble: 1 / -3, sr: -2, choose: 0, rt: 7.577950e-01
+block: 2, trial: 180, gamble: 8 / -4, sr: 0, choose: 0, rt: 4.452105e-01
+block: 2, trial: 181, gamble: 2 / -6, sr: 0, choose: 1, rt: 4.554875e-01
+block: 2, trial: 182, gamble: 3 / -1, sr: -1, choose: 0, rt: 3.884013e-01
+block: 2, trial: 183, gamble: 9 / -7, sr: 0, choose: 0, rt: 9.063537e-01
+block: 2, trial: 184, gamble: 4 / -8, sr: 2, choose: 1, rt: 4.196736e-01
+block: 2, trial: 185, gamble: 4 / -5, sr: 0, choose: 1, rt: 5.996213e-01
+block: 2, trial: 186, gamble: 5 / -8, sr: 1, choose: 1, rt: 1.254202e+00
+block: 2, trial: 187, gamble: 3 / -6, sr: 0, choose: 1, rt: 4.655464e-01
+block: 2, trial: 188, gamble: 1 / -5, sr: -1, choose: 1, rt: 1.324447e+00
+block: 2, trial: 189, gamble: 7 / -4, sr: 1, choose: 1, rt: 1.061214e+00
+block: 2, trial: 190, gamble: 7 / -4, sr: -2, choose: 0, rt: 9.200827e-01
+block: 2, trial: 191, gamble: 5 / -6, sr: 1, choose: 1, rt: 6.828657e-01
+block: 2, trial: 192, gamble: 4 / -3, sr: 1, choose: 1, rt: 8.232978e-01
+block: 2, trial: 193, gamble: 6 / -7, sr: -1, choose: 0, rt: 1.684241e+00
+block: 2, trial: 194, gamble: 6 / -3, sr: 1, choose: 1, rt: 1.270574e+00
+block: 2, trial: 195, gamble: 8 / -3, sr: 2, choose: 1, rt: 6.410869e-01
+block: 2, trial: 196, gamble: 2 / -4, sr: -2, choose: 0, rt: 1.397313e+00
+block: 2, trial: 197, gamble: 1 / -5, sr: 1, choose: 0, rt: 1.498814e+00
+block: 2, trial: 198, gamble: 3 / -7, sr: -1, choose: 1, rt: 1.644422e+00
+block: 2, trial: 199, gamble: 8 / -3, sr: -2, choose: 0, rt: 8.154449e-01
+block: 2, trial: 200, gamble: 1 / -8, sr: -1, choose: 1, rt: 5.253982e-01
+block: 2, trial: 201, gamble: 4 / -9, sr: -2, choose: 1, rt: 9.741591e-01
+block: 2, trial: 202, gamble: 9 / -3, sr: -2, choose: 0, rt: 5.728102e-01
+block: 2, trial: 203, gamble: 5 / -8, sr: 0, choose: 1, rt: 1.483333e+00
+block: 2, trial: 204, gamble: 4 / -2, sr: 2, choose: 1, rt: 3.897137e-01
+block: 2, trial: 205, gamble: 4 / -7, sr: -1, choose: 1, rt: 1.211680e+00
+block: 2, trial: 206, gamble: 2 / -9, sr: 1, choose: 1, rt: 1.031545e+00
+block: 2, trial: 207, gamble: 4 / -7, sr: 1, choose: 1, rt: 1.197353e+00
+block: 2, trial: 208, gamble: 1 / -2, sr: 2, choose: 1, rt: 3.949377e-01
+block: 2, trial: 209, gamble: 7 / -6, sr: 0, choose: 1, rt: 5.437890e-01
+block: 2, trial: 210, gamble: 2 / -8, sr: -2, choose: 1, rt: 7.676839e-01
+block: 2, trial: 211, gamble: 9 / -8, sr: -1, choose: 0, rt: 1.471522e+00
+block: 2, trial: 212, gamble: 8 / -7, sr: 2, choose: 1, rt: 1.330580e+00
+block: 2, trial: 213, gamble: 8 / -9, sr: -2, choose: 1, rt: 1.050776e+00
+block: 2, trial: 214, gamble: 3 / -1, sr: -1, choose: 0, rt: 4.944987e-01
+block: 2, trial: 215, gamble: 8 / -7, sr: 1, choose: 1, rt: 4.471470e-01
+block: 2, trial: 216, gamble: 2 / -8, sr: -1, choose: 1, rt: 6.678768e-01
+block: 2, trial: 217, gamble: 7 / -6, sr: -2, choose: 0, rt: 1.907756e+00
+block: 2, trial: 218, gamble: 8 / -9, sr: 0, choose: 1, rt: 1.449840e+00
+block: 2, trial: 219, gamble: 8 / -6, sr: -2, choose: 0, rt: 9.415081e-01
+block: 2, trial: 220, gamble: 2 / -4, sr: 0, choose: 1, rt: 4.932916e-01
+block: 2, trial: 221, gamble: 8 / -4, sr: 0, choose: 0, rt: 3.513488e-01
+block: 2, trial: 222, gamble: 9 / -3, sr: 1, choose: 0, rt: 6.066151e-01
+block: 2, trial: 223, gamble: 2 / -7, sr: 2, choose: 1, rt: 4.204101e-01
+block: 2, trial: 224, gamble: 9 / -1, sr: 0, choose: 0, rt: 1.038758e+00
+block: 2, trial: 225, gamble: 6 / -6, sr: 1, choose: 1, rt: 1.341122e+00
+block: 2, trial: 226, gamble: 5 / -1, sr: 0, choose: 0, rt: 5.891967e-01
+block: 2, trial: 227, gamble: 4 / -5, sr: 2, choose: 1, rt: 4.352109e-01
+block: 2, trial: 228, gamble: 4 / -8, sr: -2, choose: 1, rt: 9.829118e-01
+block: 2, trial: 229, gamble: 8 / -3, sr: 0, choose: 0, rt: 5.179303e-01
+block: 2, trial: 230, gamble: 6 / -3, sr: -1, choose: 0, rt: 1.246601e+00
+block: 2, trial: 231, gamble: 2 / -3, sr: 2, choose: 1, rt: 4.742821e-01
+block: 2, trial: 232, gamble: 9 / -1, sr: -1, choose: 0, rt: 4.928842e-01
+block: 2, trial: 233, gamble: 8 / -8, sr: -1, choose: 1, rt: 1.918943e+00
+block: 2, trial: 234, gamble: 4 / -1, sr: 1, choose: 1, rt: 1.707595e+00
+block: 2, trial: 235, gamble: 3 / -3, sr: -1, choose: 1, rt: 1.057398e+00
+block: 2, trial: 236, gamble: 1 / -5, sr: 1, choose: 1, rt: 4.204929e-01
+block: 2, trial: 237, gamble: 9 / -5, sr: 1, choose: 1, rt: 1.079580e+00
+block: 2, trial: 238, gamble: 1 / -1, sr: -1, choose: 0, rt: 1.319960e+00
+block: 2, trial: 239, gamble: 5 / -4, sr: -1, choose: 0, rt: 4.076441e-01
+block: 2, trial: 240, gamble: 6 / -5, sr: 2, choose: 1, rt: 9.660230e-01
+block: 2, trial: 241, gamble: 2 / -5, sr: 0, choose: 1, rt: 3.569709e-01
+block: 2, trial: 242, gamble: 9 / -8, sr: 1, choose: 1, rt: 5.886173e-01
+block: 2, trial: 243, gamble: 9 / -8, sr: 1, choose: 1, rt: 3.701675e-01
+block: 2, trial: 244, gamble: 6 / -4, sr: 0, choose: NaN, rt: NaN
+block: 2, trial: 245, gamble: 1 / -6, sr: 1, choose: 1, rt: 5.182755e-01
+block: 2, trial: 246, gamble: 2 / -1, sr: -1, choose: 0, rt: 4.074663e-01
+block: 2, trial: 247, gamble: 4 / -8, sr: 2, choose: 1, rt: 3.969291e-01
+block: 2, trial: 248, gamble: 3 / -4, sr: 2, choose: 1, rt: 1.030267e+00
+block: 2, trial: 249, gamble: 8 / -8, sr: -2, choose: 0, rt: 8.428520e-01
+block: 2, trial: 250, gamble: 3 / -8, sr: -2, choose: 1, rt: 1.278706e+00
+block: 2, trial: 251, gamble: 5 / -9, sr: -1, choose: 1, rt: 5.511869e-01
+block: 2, trial: 252, gamble: 6 / -4, sr: 2, choose: 1, rt: 4.789666e-01
+block: 2, trial: 253, gamble: 6 / -1, sr: -1, choose: 0, rt: 6.916012e-01
+block: 2, trial: 254, gamble: 7 / -7, sr: 1, choose: 1, rt: 4.613005e-01
+block: 2, trial: 255, gamble: 4 / -1, sr: 2, choose: 1, rt: 9.596008e-01
+block: 2, trial: 256, gamble: 4 / -6, sr: 0, choose: 1, rt: 8.233395e-01
+block: 2, trial: 257, gamble: 6 / -1, sr: 1, choose: 1, rt: 1.516800e+00
+block: 2, trial: 258, gamble: 1 / -9, sr: -1, choose: 1, rt: 6.534510e-01
+block: 2, trial: 259, gamble: 6 / -4, sr: -1, choose: 0, rt: 8.473664e-01
+block: 2, trial: 260, gamble: 5 / -8, sr: -1, choose: 1, rt: 6.207294e-01
+block: 2, trial: 261, gamble: 2 / -2, sr: -2, choose: NaN, rt: NaN
+block: 2, trial: 262, gamble: 5 / -4, sr: -2, choose: 0, rt: 4.458225e-01
+block: 2, trial: 263, gamble: 4 / -8, sr: -1, choose: 1, rt: 1.825732e+00
+block: 2, trial: 264, gamble: 7 / -6, sr: 2, choose: 1, rt: 7.507749e-01
+block: 2, trial: 265, gamble: 1 / -8, sr: 0, choose: 1, rt: 4.302416e-01
+block: 2, trial: 266, gamble: 2 / -9, sr: 0, choose: 1, rt: 4.425553e-01
+block: 2, trial: 267, gamble: 4 / -7, sr: -2, choose: 1, rt: 1.182453e+00
+block: 2, trial: 268, gamble: 7 / -5, sr: 1, choose: 1, rt: 1.649042e+00
+block: 2, trial: 269, gamble: 6 / -9, sr: -1, choose: 0, rt: 1.056772e+00
+block: 2, trial: 270, gamble: 6 / -9, sr: -2, choose: 1, rt: 1.408042e+00
+block: 2, trial: 271, gamble: 7 / -6, sr: -1, choose: 0, rt: 5.675766e-01
+block: 2, trial: 272, gamble: 8 / -1, sr: 2, choose: 0, rt: 5.643103e-01
+block: 2, trial: 273, gamble: 3 / -5, sr: 1, choose: 1, rt: 1.163434e+00
+block: 2, trial: 274, gamble: 3 / -9, sr: 2, choose: 1, rt: 4.262747e-01
+block: 2, trial: 275, gamble: 8 / -5, sr: 0, choose: 0, rt: 1.147208e+00
+block: 2, trial: 276, gamble: 2 / -5, sr: -2, choose: 0, rt: 4.904494e-01
+block: 2, trial: 277, gamble: 1 / -7, sr: 1, choose: 1, rt: 4.525382e-01
+block: 2, trial: 278, gamble: 9 / -9, sr: 1, choose: 1, rt: 1.087437e+00
+block: 2, trial: 279, gamble: 7 / -8, sr: 0, choose: 1, rt: 1.466213e+00
+block: 2, trial: 280, gamble: 3 / -2, sr: -1, choose: 0, rt: 3.812029e-01
+block: 2, trial: 281, gamble: 3 / -7, sr: -1, choose: 0, rt: 1.559608e+00
+block: 2, trial: 282, gamble: 2 / -5, sr: -2, choose: 0, rt: 7.749208e-01
+block: 2, trial: 283, gamble: 7 / -1, sr: -1, choose: 0, rt: 3.893893e-01
+block: 2, trial: 284, gamble: 5 / -2, sr: 1, choose: 1, rt: 1.163528e+00
+block: 2, trial: 285, gamble: 5 / -5, sr: 2, choose: 1, rt: 9.302908e-01
+block: 2, trial: 286, gamble: 9 / -2, sr: -1, choose: 0, rt: 6.266768e-01
+block: 2, trial: 287, gamble: 6 / -4, sr: -1, choose: 0, rt: 1.607260e+00
+block: 2, trial: 288, gamble: 8 / -6, sr: 1, choose: 1, rt: 1.052522e+00
+block: 2, trial: 289, gamble: 2 / -6, sr: 0, choose: 1, rt: 3.516494e-01
+block: 2, trial: 290, gamble: 6 / -2, sr: -1, choose: 0, rt: 3.674523e-01
+block: 2, trial: 291, gamble: 5 / -1, sr: 0, choose: 0, rt: 3.748089e-01
+block: 2, trial: 292, gamble: 9 / -4, sr: -1, choose: 0, rt: 4.373820e-01
+block: 2, trial: 293, gamble: 3 / -2, sr: 1, choose: 1, rt: 1.121300e+00
+block: 2, trial: 294, gamble: 4 / -9, sr: 0, choose: 1, rt: 1.162032e+00
+block: 2, trial: 295, gamble: 5 / -3, sr: 0, choose: 1, rt: 1.267452e+00
+block: 2, trial: 296, gamble: 3 / -5, sr: -2, choose: 0, rt: 1.011817e+00
+block: 2, trial: 297, gamble: 9 / -7, sr: 1, choose: 1, rt: 1.281530e+00
+block: 2, trial: 298, gamble: 6 / -5, sr: 0, choose: 1, rt: 5.196502e-01
+block: 2, trial: 299, gamble: 6 / -3, sr: 0, choose: 0, rt: 6.074828e-01
+block: 2, trial: 300, gamble: 7 / -3, sr: -2, choose: 0, rt: 1.078010e+00
+block: 2, trial: 301, gamble: 5 / -7, sr: 2, choose: 1, rt: 6.955741e-01
+block: 2, trial: 302, gamble: 7 / -9, sr: 1, choose: 1, rt: 1.074115e+00
+block: 2, trial: 303, gamble: 1 / -7, sr: 0, choose: 1, rt: 3.647093e-01
+block: 2, trial: 304, gamble: 1 / -3, sr: 2, choose: 1, rt: 4.517269e-01
+block: 2, trial: 305, gamble: 2 / -1, sr: 0, choose: 1, rt: 1.302846e+00
+block: 2, trial: 306, gamble: 9 / -6, sr: 1, choose: 1, rt: 3.912695e-01
+block: 2, trial: 307, gamble: 1 / -6, sr: 1, choose: 1, rt: 3.667896e-01
+block: 2, trial: 308, gamble: 5 / -2, sr: -2, choose: 0, rt: 1.125760e+00
+block: 2, trial: 309, gamble: 2 / -6, sr: 1, choose: 1, rt: 1.134474e+00
+block: 2, trial: 310, gamble: 4 / -9, sr: 1, choose: 1, rt: 4.549303e-01
+block: 2, trial: 311, gamble: 1 / -9, sr: 1, choose: 1, rt: 4.260421e-01
+block: 2, trial: 312, gamble: 2 / -9, sr: 2, choose: 1, rt: 6.788887e-01
+block: 2, trial: 313, gamble: 7 / -9, sr: 2, choose: 1, rt: 8.788330e-01
+block: 2, trial: 314, gamble: 8 / -3, sr: 1, choose: 0, rt: 8.116814e-01
+block: 2, trial: 315, gamble: 5 / -7, sr: -1, choose: 0, rt: 1.847363e+00
+block: 2, trial: 316, gamble: 5 / -4, sr: 0, choose: 1, rt: 9.086454e-01
+block: 2, trial: 317, gamble: 4 / -9, sr: 2, choose: 1, rt: 9.818974e-01
+block: 2, trial: 318, gamble: 8 / -1, sr: -1, choose: 0, rt: 4.521603e-01
+block: 2, trial: 319, gamble: 3 / -6, sr: 1, choose: 1, rt: 7.195270e-01
+block: 2, trial: 320, gamble: 6 / -9, sr: -2, choose: NaN, rt: NaN
+block: 2, trial: 321, gamble: 5 / -5, sr: 1, choose: 1, rt: 4.778743e-01
+block: 2, trial: 322, gamble: 5 / -3, sr: 1, choose: 1, rt: 3.917003e-01
+block: 2, trial: 323, gamble: 4 / -6, sr: 1, choose: 1, rt: 3.906350e-01
+block: 2, trial: 324, gamble: 3 / -2, sr: 0, choose: 1, rt: 1.316665e+00
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imread>get_full_filename', 'C:\Program Files\MATLAB\R2017b\toolbox\matlab\imagesci\imread.p', 516)" style="font-weight:bold">imread>get_full_filename</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017b\toolbox\matlab\imagesci\imread.p',516,0)">line 516</a>)
+文件 "instruction\invoice.jpg" 不存在。
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imread', 'C:\Program Files\MATLAB\R2017b\toolbox\matlab\imagesci\imread.p', 340)" style="font-weight:bold">imread</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017b\toolbox\matlab\imagesci\imread.p',340,0)">line 340</a>)
+    fullname = get_full_filename(filename);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 115)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',115,0)">line 115</a>)
+invoice = Screen('MakeTexture', display_info.wPtr, imread('instruction\invoice.jpg'));
+} 
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 6 times out of a total of 375982 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+rand()
+
+ans =
+
+    0.5242
+
+rand()
+
+ans =
+
+    0.2228
+
+rand()
+
+ans =
+
+    0.7553
+
+rand()
+
+ans =
+
+    0.4126
+
+rand()
+
+ans =
+
+    0.4600
+
+clc
+Please input subject id
+18111002
+Please input subject sex
+0
+Please input subject age
+19
+PTB-INFO: Multi-display setup in explicit multi-display mode detected. Using the following mapping:
+PTB-INFO: Screen 0 corresponds to the full Windows desktop area. Useful for stereo presentations in stereomode=4 ...
+PTB-INFO: Screen 1 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY1 ...
+PTB-INFO: Screen 2 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY2 ...
+
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.14 - Build date: Oct  3 2017).
+PTB-INFO: Support status on this operating system release: Windows version 6.1 partially supported, but no longer tested at all.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro K620/PCIe/SSE2 :: 4.6.0 NVIDIA 391.74
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.331841 ms [120.021496 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.330620 ms [120.039085 Hz]. (120 valid samples taken, stddev=0.210409 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.333333 ms [120.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+
+WARNING: Couldn't compute a reliable estimate of monitor refresh interval! Trouble with VBL syncing?!?
+
+
+----- ! PTB - ERROR: SYNCHRONIZATION FAILURE ! ----
+
+One or more internal checks (see Warnings above) indicate that synchronization
+of Psychtoolbox to the vertical retrace (VBL) is not working on your setup.
+
+This will seriously impair proper stimulus presentation and stimulus presentation timing!
+Please read 'help SyncTrouble' for information about how to solve or work-around the problem.
+You can force Psychtoolbox to continue, despite the severe problems, by adding the command
+Screen('Preference', 'SkipSyncTests', 1); at the top of your script, if you really know what you are doing.
+
+
+
+ans =
+
+    'Arial'
+
+
+ans =
+
+    24
+
+
+ans =
+
+    43
+
+
+
+PTB-ERROR: Screen('Flip'); beamposition timestamping computed an *impossible stimulus onset value* of 10185.778944 secs, which would indicate that
+PTB-ERROR: stimulus onset happened *before* it was actually requested! (Earliest theoretically possible 10185.779471 secs).
+
+PTB-ERROR: Some more diagnostic values (only for experts): rawTimestamp = 10185.780642, scanline = 220
+PTB-ERROR: Some more diagnostic values (only for experts): line_pre_swaprequest = 62, line_post_swaprequest = 104, time_post_swaprequest = 10185.779781
+PTB-ERROR: Some more diagnostic values (only for experts): preflip_vblcount = 0, preflip_vbltimestamp = -1.000000
+PTB-ERROR: Some more diagnostic values (only for experts): postflip_vblcount = 0, postflip_vbltimestamp = -1.000000, vbltimestampquery_retrycount = 0
+
+PTB-ERROR: This error can be due to either of the following causes:
+PTB-ERROR: Very unlikely: Something is broken in your systems beamposition timestamping. I've disabled high precision
+PTB-ERROR: timestamping for now. Returned timestamps will be less robust and accurate.
+
+PTB-ERROR: The most likely cause would be that Synchronization of stimulus onset (buffer swap) to the
+PTB-ERROR: vertical blank interval VBL is not working properly, or swap completion signalling to PTB is broken.
+PTB-ERROR: Please run the script PerceptualVBLSyncTest to check this. With non-working sync to VBL, all stimulus timing
+PTB-ERROR: is futile. Also run OSXCompositorIdiocyTest on macOS. Also read 'help SyncTrouble' !
+block: -1, trial: 28, gamble: 9 / -9, sr: 0, choose: 0, rt: 1.645163e+01
+block: -1, trial: 93, gamble: 8 / -7, sr: 2, choose: 0, rt: 9.897487e-01
+block: -1, trial: 114, gamble: 8 / -4, sr: -2, choose: 0, rt: 1.305955e+00
+block: -2, trial: 197, gamble: 9 / -4, sr: -1, choose: NaN, rt: NaN
+block: -2, trial: 173, gamble: 9 / -1, sr: 0, choose: 0, rt: 8.443013e-01
+block: -2, trial: 200, gamble: 2 / -8, sr: 0, choose: 1, rt: 9.520626e-01
+block: -2, trial: 211, gamble: 9 / -5, sr: 2, choose: 0, rt: 4.861098e-01
+block: -2, trial: 322, gamble: 6 / -7, sr: 0, choose: 1, rt: 8.821256e-01
+block: -2, trial: 132, gamble: 4 / -9, sr: -1, choose: 1, rt: 8.447045e-01
+block: -2, trial: 265, gamble: 6 / -3, sr: -2, choose: 0, rt: 8.470790e-01
+block: -2, trial: 134, gamble: 4 / -3, sr: 1, choose: 0, rt: 7.160625e-01
+block: -2, trial: 134, gamble: 4 / -3, sr: 1, choose: 0, rt: 4.211072e-01
+block: -2, trial: 122, gamble: 4 / -4, sr: -1, choose: 1, rt: 7.860226e-01
+block: 1, trial: 1, gamble: 8 / -8, sr: 0, choose: 0, rt: 7.822736e-01
+block: 1, trial: 2, gamble: 8 / -9, sr: -1, choose: 1, rt: 7.114380e-01
+block: 1, trial: 3, gamble: 4 / -1, sr: 1, choose: 1, rt: 6.278406e-01
+block: 1, trial: 4, gamble: 8 / -6, sr: 0, choose: 0, rt: 6.956399e-01
+block: 1, trial: 5, gamble: 5 / -2, sr: -1, choose: 0, rt: 4.324342e-01
+block: 1, trial: 6, gamble: 3 / -3, sr: -2, choose: 1, rt: 5.047028e-01
+block: 1, trial: 7, gamble: 1 / -7, sr: 0, choose: 1, rt: 3.940959e-01
+block: 1, trial: 8, gamble: 9 / -8, sr: 2, choose: 1, rt: 5.278818e-01
+block: 1, trial: 9, gamble: 8 / -7, sr: -2, choose: 1, rt: 3.678183e-01
+block: 1, trial: 10, gamble: 6 / -5, sr: 1, choose: 1, rt: 6.319108e-01
+block: 1, trial: 11, gamble: 9 / -3, sr: 0, choose: 0, rt: 4.198567e-01
+block: 1, trial: 12, gamble: 6 / -6, sr: -1, choose: 1, rt: 6.314613e-01
+block: 1, trial: 13, gamble: 7 / -2, sr: 0, choose: 0, rt: 3.331297e-01
+block: 1, trial: 14, gamble: 9 / -5, sr: 0, choose: 1, rt: 6.373936e-01
+block: 1, trial: 15, gamble: 2 / -7, sr: 1, choose: 1, rt: 3.614668e-01
+block: 1, trial: 16, gamble: 4 / -9, sr: -2, choose: 1, rt: 5.916051e-01
+block: 1, trial: 17, gamble: 7 / -7, sr: 0, choose: 1, rt: 4.309268e-01
+block: 1, trial: 18, gamble: 8 / -6, sr: -1, choose: 0, rt: 3.800243e-01
+block: 1, trial: 19, gamble: 3 / -8, sr: -1, choose: 1, rt: 8.417818e-01
+block: 1, trial: 20, gamble: 1 / -5, sr: -1, choose: 1, rt: 8.219938e-01
+block: 1, trial: 21, gamble: 4 / -7, sr: 1, choose: 1, rt: 5.298177e-01
+block: 1, trial: 22, gamble: 6 / -1, sr: 1, choose: 0, rt: 5.183571e-01
+block: 1, trial: 23, gamble: 9 / -2, sr: 0, choose: 0, rt: 3.513325e-01
+block: 1, trial: 24, gamble: 6 / -6, sr: 0, choose: 1, rt: 4.070349e-01
+block: 1, trial: 25, gamble: 7 / -6, sr: 0, choose: 1, rt: 3.881880e-01
+block: 1, trial: 26, gamble: 7 / -9, sr: -1, choose: 1, rt: 6.599562e-01
+block: 1, trial: 27, gamble: 2 / -3, sr: 1, choose: 1, rt: 3.772427e-01
+block: 1, trial: 28, gamble: 9 / -9, sr: 0, choose: 1, rt: 8.236574e-01
+block: 1, trial: 29, gamble: 5 / -4, sr: -1, choose: 1, rt: 5.969482e-01
+block: 1, trial: 30, gamble: 1 / -1, sr: 1, choose: 1, rt: 3.304409e-01
+block: 1, trial: 31, gamble: 5 / -6, sr: 0, choose: 0, rt: 6.270232e-01
+block: 1, trial: 32, gamble: 2 / -7, sr: -2, choose: 1, rt: 7.434991e-01
+block: 1, trial: 33, gamble: 6 / -9, sr: -1, choose: 1, rt: 6.152988e-01
+block: 1, trial: 34, gamble: 2 / -8, sr: -1, choose: 1, rt: 6.242162e-01
+block: 1, trial: 35, gamble: 7 / -2, sr: 0, choose: 0, rt: 6.050404e-01
+block: 1, trial: 36, gamble: 2 / -2, sr: -2, choose: 1, rt: 2.902902e-01
+block: 1, trial: 37, gamble: 7 / -6, sr: 2, choose: 1, rt: 3.801006e-01
+block: 1, trial: 38, gamble: 4 / -5, sr: 2, choose: 1, rt: 4.264553e-01
+block: 1, trial: 39, gamble: 2 / -5, sr: 2, choose: 1, rt: 3.992061e-01
+block: 1, trial: 40, gamble: 5 / -4, sr: -1, choose: 0, rt: 3.967200e-01
+block: 1, trial: 41, gamble: 8 / -9, sr: -2, choose: 1, rt: 4.241104e-01
+block: 1, trial: 42, gamble: 3 / -9, sr: 0, choose: 1, rt: 4.547779e-01
+block: 1, trial: 43, gamble: 6 / -8, sr: -1, choose: 1, rt: 4.585918e-01
+block: 1, trial: 44, gamble: 2 / -4, sr: 0, choose: 1, rt: 7.495270e-01
+block: 1, trial: 45, gamble: 4 / -6, sr: -1, choose: 1, rt: 4.053398e-01
+block: 1, trial: 46, gamble: 3 / -9, sr: 0, choose: 1, rt: 3.867682e-01
+block: 1, trial: 47, gamble: 9 / -7, sr: -1, choose: 0, rt: 9.835639e-01
+block: 1, trial: 48, gamble: 7 / -3, sr: -1, choose: 0, rt: 4.868194e-01
+block: 1, trial: 49, gamble: 4 / -8, sr: -1, choose: 1, rt: 6.877928e-01
+block: 1, trial: 50, gamble: 5 / -5, sr: 2, choose: 1, rt: 4.964037e-01
+block: 1, trial: 51, gamble: 2 / -4, sr: 0, choose: 1, rt: 3.450989e-01
+block: 1, trial: 52, gamble: 3 / -6, sr: -1, choose: 1, rt: 3.993710e-01
+block: 1, trial: 53, gamble: 6 / -3, sr: 1, choose: 1, rt: 7.189647e-01
+block: 1, trial: 54, gamble: 2 / -2, sr: -2, choose: 0, rt: 8.789270e-01
+block: 1, trial: 55, gamble: 9 / -9, sr: 0, choose: 1, rt: 3.903668e-01
+block: 1, trial: 56, gamble: 1 / -9, sr: 1, choose: 1, rt: 4.361227e-01
+block: 1, trial: 57, gamble: 6 / -1, sr: 1, choose: 0, rt: 4.155081e-01
+block: 1, trial: 58, gamble: 7 / -6, sr: 1, choose: 1, rt: 3.821992e-01
+block: 1, trial: 59, gamble: 2 / -1, sr: 1, choose: 1, rt: 3.879926e-01
+block: 1, trial: 60, gamble: 5 / -5, sr: 1, choose: 1, rt: 4.822168e-01
+block: 1, trial: 61, gamble: 5 / -7, sr: -1, choose: 1, rt: 6.207621e-01
+block: 1, trial: 62, gamble: 3 / -5, sr: 0, choose: 1, rt: 1.096080e+00
+block: 1, trial: 63, gamble: 5 / -5, sr: -1, choose: 1, rt: 4.429127e-01
+block: 1, trial: 64, gamble: 1 / -1, sr: 2, choose: 1, rt: 4.145881e-01
+block: 1, trial: 65, gamble: 7 / -8, sr: 1, choose: 1, rt: 3.880802e-01
+block: 1, trial: 66, gamble: 4 / -5, sr: 0, choose: 1, rt: 3.699570e-01
+block: 1, trial: 67, gamble: 1 / -8, sr: 0, choose: 1, rt: 3.922039e-01
+block: 1, trial: 68, gamble: 3 / -6, sr: 0, choose: 1, rt: 4.546724e-01
+block: 1, trial: 69, gamble: 5 / -6, sr: -2, choose: 1, rt: 5.220502e-01
+block: 1, trial: 70, gamble: 3 / -9, sr: -1, choose: 1, rt: 4.748419e-01
+block: 1, trial: 71, gamble: 9 / -4, sr: -2, choose: 0, rt: 5.103074e-01
+block: 1, trial: 72, gamble: 5 / -8, sr: 1, choose: 1, rt: 3.580039e-01
+block: 1, trial: 73, gamble: 3 / -6, sr: 2, choose: 1, rt: 3.980525e-01
+block: 1, trial: 74, gamble: 8 / -3, sr: -2, choose: 0, rt: 4.035261e-01
+block: 1, trial: 75, gamble: 3 / -2, sr: -2, choose: 1, rt: 3.914953e-01
+block: 1, trial: 76, gamble: 3 / -7, sr: 2, choose: 1, rt: 3.994858e-01
+block: 1, trial: 77, gamble: 7 / -3, sr: 0, choose: 0, rt: 4.200303e-01
+block: 1, trial: 78, gamble: 9 / -8, sr: 2, choose: 1, rt: 4.173681e-01
+block: 1, trial: 79, gamble: 8 / -3, sr: 0, choose: 0, rt: 4.301700e-01
+block: 1, trial: 80, gamble: 8 / -1, sr: 1, choose: 0, rt: 4.945987e-01
+block: 1, trial: 81, gamble: 4 / -4, sr: -1, choose: 1, rt: 4.552812e-01
+block: 1, trial: 82, gamble: 6 / -5, sr: -2, choose: 0, rt: 6.838346e-01
+block: 1, trial: 83, gamble: 5 / -9, sr: 2, choose: 1, rt: 3.580687e-01
+block: 1, trial: 84, gamble: 6 / -7, sr: 1, choose: 1, rt: 3.573838e-01
+block: 1, trial: 85, gamble: 1 / -9, sr: 0, choose: 1, rt: 4.527923e-01
+block: 1, trial: 86, gamble: 5 / -6, sr: 0, choose: 1, rt: 3.917446e-01
+block: 1, trial: 87, gamble: 7 / -7, sr: 1, choose: -1, rt: -3
+block: 1, trial: 88, gamble: 1 / -5, sr: 0, choose: 1, rt: 3.605544e-01
+block: 1, trial: 89, gamble: 6 / -4, sr: 0, choose: 1, rt: 1.031882e+00
+block: 1, trial: 90, gamble: 3 / -4, sr: -1, choose: 1, rt: 3.564474e-01
+block: 1, trial: 91, gamble: 1 / -6, sr: 1, choose: 1, rt: 2.997050e-01
+block: 1, trial: 92, gamble: 6 / -6, sr: 2, choose: 1, rt: 3.249644e-01
+block: 1, trial: 93, gamble: 8 / -7, sr: 2, choose: 1, rt: 4.059894e-01
+block: 1, trial: 94, gamble: 2 / -1, sr: -2, choose: 1, rt: 3.550693e-01
+block: 1, trial: 95, gamble: 7 / -1, sr: -1, choose: 0, rt: 2.825394e-01
+block: 1, trial: 96, gamble: 3 / -7, sr: 1, choose: 1, rt: 3.730193e-01
+block: 1, trial: 97, gamble: 5 / -2, sr: 1, choose: 1, rt: 7.516049e-01
+block: 1, trial: 98, gamble: 3 / -1, sr: 0, choose: 1, rt: 6.791620e-01
+block: 1, trial: 99, gamble: 6 / -5, sr: 0, choose: 1, rt: 3.694489e-01
+block: 1, trial: 100, gamble: 1 / -2, sr: -1, choose: 1, rt: 4.876313e-01
+block: 1, trial: 101, gamble: 5 / -9, sr: 0, choose: 1, rt: 3.782256e-01
+block: 1, trial: 102, gamble: 8 / -8, sr: 0, choose: 1, rt: 4.236266e-01
+block: 1, trial: 103, gamble: 1 / -9, sr: -1, choose: 1, rt: 4.734646e-01
+block: 1, trial: 104, gamble: 4 / -7, sr: -2, choose: 1, rt: 5.801300e-01
+block: 1, trial: 105, gamble: 6 / -7, sr: 0, choose: 1, rt: 7.269203e-01
+block: 1, trial: 106, gamble: 7 / -9, sr: 2, choose: 1, rt: 4.071260e-01
+block: 1, trial: 107, gamble: 4 / -8, sr: 1, choose: 1, rt: 3.239857e-01
+block: 1, trial: 108, gamble: 6 / -9, sr: 1, choose: 1, rt: 4.497725e-01
+block: 1, trial: 109, gamble: 3 / -3, sr: 0, choose: 1, rt: 3.805475e-01
+block: 1, trial: 110, gamble: 8 / -4, sr: 0, choose: 0, rt: 3.141616e-01
+block: 1, trial: 111, gamble: 7 / -7, sr: 1, choose: 0, rt: 7.712430e-01
+block: 1, trial: 112, gamble: 3 / -8, sr: -1, choose: 1, rt: 3.777249e-01
+block: 1, trial: 113, gamble: 2 / -3, sr: 1, choose: 1, rt: 3.836665e-01
+block: 1, trial: 114, gamble: 8 / -4, sr: -2, choose: 0, rt: 3.430542e-01
+block: 1, trial: 115, gamble: 5 / -1, sr: 0, choose: 0, rt: 2.704274e-01
+block: 1, trial: 116, gamble: 6 / -6, sr: 2, choose: 1, rt: 3.374748e-01
+block: 1, trial: 117, gamble: 5 / -7, sr: 1, choose: 1, rt: 6.615497e-01
+block: 1, trial: 118, gamble: 6 / -1, sr: -1, choose: 0, rt: 6.079576e-01
+block: 1, trial: 119, gamble: 6 / -4, sr: -1, choose: 1, rt: 3.745234e-01
+block: 1, trial: 120, gamble: 3 / -2, sr: 0, choose: 1, rt: 3.964441e-01
+block: 1, trial: 121, gamble: 8 / -9, sr: 0, choose: 1, rt: 3.303158e-01
+block: 1, trial: 122, gamble: 4 / -4, sr: -1, choose: 1, rt: 4.344157e-01
+block: 1, trial: 123, gamble: 7 / -7, sr: 0, choose: 1, rt: 3.989356e-01
+block: 1, trial: 124, gamble: 5 / -8, sr: -1, choose: 1, rt: 3.726231e-01
+block: 1, trial: 125, gamble: 3 / -8, sr: 1, choose: 1, rt: 3.953396e-01
+block: 1, trial: 126, gamble: 6 / -8, sr: -1, choose: 0, rt: 4.314926e-01
+block: 1, trial: 127, gamble: 1 / -2, sr: 2, choose: 1, rt: 6.375210e-01
+block: 1, trial: 128, gamble: 9 / -4, sr: -1, choose: 1, rt: 5.216797e-01
+block: 1, trial: 129, gamble: 8 / -8, sr: 2, choose: 1, rt: 4.107971e-01
+block: 1, trial: 130, gamble: 4 / -1, sr: -2, choose: 0, rt: 3.663928e-01
+block: 1, trial: 131, gamble: 2 / -7, sr: 2, choose: 1, rt: 3.982017e-01
+block: 1, trial: 132, gamble: 4 / -9, sr: -1, choose: 1, rt: 3.553497e-01
+block: 1, trial: 133, gamble: 3 / -2, sr: 2, choose: 1, rt: 3.631275e-01
+block: 1, trial: 134, gamble: 4 / -3, sr: 1, choose: 1, rt: 4.430272e-01
+block: 1, trial: 135, gamble: 5 / -9, sr: -2, choose: 0, rt: 3.340709e-01
+block: 1, trial: 136, gamble: 1 / -3, sr: -1, choose: 1, rt: 2.385720e-01
+block: 1, trial: 137, gamble: 8 / -5, sr: 0, choose: 1, rt: 6.744035e-01
+block: 1, trial: 138, gamble: 9 / -5, sr: 0, choose: 0, rt: 3.807127e-01
+block: 1, trial: 139, gamble: 1 / -3, sr: 0, choose: 1, rt: 4.674269e-01
+block: 1, trial: 140, gamble: 2 / -9, sr: 1, choose: 1, rt: 6.343139e-01
+block: 1, trial: 141, gamble: 2 / -1, sr: -2, choose: 1, rt: 5.427390e-01
+block: 1, trial: 142, gamble: 5 / -7, sr: -1, choose: 0, rt: 3.745847e-01
+block: 1, trial: 143, gamble: 6 / -9, sr: 0, choose: 0, rt: 7.730256e-01
+block: 1, trial: 144, gamble: 3 / -6, sr: -1, choose: 1, rt: 3.236800e-01
+block: 1, trial: 145, gamble: 9 / -6, sr: -1, choose: 0, rt: 3.564208e-01
+block: 1, trial: 146, gamble: 4 / -2, sr: 1, choose: 1, rt: 4.756163e-01
+block: 1, trial: 147, gamble: 4 / -1, sr: -2, choose: 0, rt: 3.342310e-01
+block: 1, trial: 148, gamble: 4 / -2, sr: 1, choose: 0, rt: 3.186648e-01
+block: 1, trial: 149, gamble: 3 / -1, sr: -1, choose: 0, rt: 7.038787e-01
+block: 1, trial: 150, gamble: 5 / -7, sr: -1, choose: 1, rt: 3.352947e-01
+block: 1, trial: 151, gamble: 1 / -7, sr: 2, choose: 1, rt: 3.532001e-01
+block: 1, trial: 152, gamble: 9 / -8, sr: 1, choose: 1, rt: 2.956968e-01
+block: 1, trial: 153, gamble: 4 / -2, sr: 0, choose: 1, rt: 2.983612e-01
+block: 1, trial: 154, gamble: 8 / -6, sr: -1, choose: 0, rt: 3.558896e-01
+block: 1, trial: 155, gamble: 2 / -5, sr: 0, choose: 1, rt: 8.079884e-01
+block: 1, trial: 156, gamble: 1 / -4, sr: 0, choose: 1, rt: 7.724039e-01
+block: 1, trial: 157, gamble: 7 / -4, sr: 2, choose: 1, rt: 2.754076e-01
+block: 1, trial: 158, gamble: 7 / -4, sr: 2, choose: 1, rt: 5.738329e-01
+block: 1, trial: 159, gamble: 5 / -4, sr: 0, choose: 0, rt: 3.806861e-01
+block: 1, trial: 160, gamble: 4 / -7, sr: 1, choose: 1, rt: 4.349703e-01
+block: 1, trial: 161, gamble: 4 / -2, sr: -1, choose: 0, rt: 4.393766e-01
+block: 1, trial: 162, gamble: 8 / -2, sr: 0, choose: 1, rt: 8.242247e-01
+block: 2, trial: 163, gamble: 8 / -5, sr: -2, choose: 0, rt: 4.254331e-01
+block: 2, trial: 164, gamble: 2 / -6, sr: -2, choose: 1, rt: 3.675133e-01
+block: 2, trial: 165, gamble: 2 / -5, sr: 0, choose: 1, rt: 2.872350e-01
+block: 2, trial: 166, gamble: 2 / -4, sr: -1, choose: 1, rt: 3.115417e-01
+block: 2, trial: 167, gamble: 2 / -1, sr: -2, choose: 1, rt: 0
+block: 2, trial: 168, gamble: 4 / -7, sr: 0, choose: 1, rt: 3.636641e-01
+block: 2, trial: 169, gamble: 1 / -2, sr: 1, choose: 1, rt: 1.630488e-01
+block: 2, trial: 170, gamble: 5 / -1, sr: 1, choose: 1, rt: 5.140090e-01
+block: 2, trial: 171, gamble: 8 / -8, sr: 1, choose: 1, rt: 3.867858e-01
+block: 2, trial: 172, gamble: 7 / -3, sr: 1, choose: 0, rt: 2.874978e-01
+block: 2, trial: 173, gamble: 9 / -1, sr: 0, choose: 0, rt: 3.311476e-01
+block: 2, trial: 174, gamble: 6 / -2, sr: -1, choose: 0, rt: 3.075232e-01
+block: 2, trial: 175, gamble: 7 / -4, sr: 0, choose: 1, rt: 7.168013e-01
+block: 2, trial: 176, gamble: 1 / -9, sr: -1, choose: 1, rt: 2.295466e-01
+block: 2, trial: 177, gamble: 7 / -5, sr: 2, choose: 1, rt: 2.979435e-01
+block: 2, trial: 178, gamble: 5 / -8, sr: -2, choose: 0, rt: 3.554959e-01
+block: 2, trial: 179, gamble: 8 / -7, sr: 1, choose: 1, rt: 2.428455e-01
+block: 2, trial: 180, gamble: 7 / -3, sr: 0, choose: 0, rt: 3.108995e-01
+block: 2, trial: 181, gamble: 2 / -4, sr: 0, choose: 1, rt: 1.874124e-01
+block: 2, trial: 182, gamble: 9 / -2, sr: 1, choose: 0, rt: 1.860424e-01
+block: 2, trial: 183, gamble: 2 / -2, sr: 1, choose: 1, rt: 2.397666e-01
+block: 2, trial: 184, gamble: 6 / -2, sr: 0, choose: 0, rt: 2.161347e-01
+block: 2, trial: 185, gamble: 9 / -6, sr: 0, choose: 0, rt: 3.254927e-01
+block: 2, trial: 186, gamble: 5 / -1, sr: 0, choose: 0, rt: 4.558263e-02
+block: 2, trial: 187, gamble: 3 / -9, sr: 2, choose: 1, rt: 6.538778e-01
+block: 2, trial: 188, gamble: 6 / -8, sr: 0, choose: 1, rt: 5.674415e-01
+block: 2, trial: 189, gamble: 6 / -3, sr: 1, choose: 0, rt: 3.271842e-01
+block: 2, trial: 190, gamble: 9 / -2, sr: 0, choose: 0, rt: 2.873053e-01
+block: 2, trial: 191, gamble: 9 / -2, sr: -2, choose: 1, rt: 8.192478e-01
+block: 2, trial: 192, gamble: 4 / -6, sr: -2, choose: 1, rt: 2.556786e-01
+block: 2, trial: 193, gamble: 1 / -7, sr: -2, choose: 1, rt: 6.750929e-01
+block: 2, trial: 194, gamble: 2 / -3, sr: 2, choose: 1, rt: 3.496653e-01
+block: 2, trial: 195, gamble: 6 / -2, sr: 2, choose: 1, rt: 7.252572e-01
+block: 2, trial: 196, gamble: 1 / -6, sr: 1, choose: 1, rt: 2.219318e-01
+block: 2, trial: 197, gamble: 9 / -4, sr: -1, choose: 0, rt: 1.868460e-01
+block: 2, trial: 198, gamble: 8 / -7, sr: -1, choose: 0, rt: 2.395555e-01
+block: 2, trial: 199, gamble: 7 / -4, sr: 0, choose: 1, rt: 2.607836e-01
+block: 2, trial: 200, gamble: 2 / -8, sr: 0, choose: 1, rt: 5.518106e-01
+block: 2, trial: 201, gamble: 2 / -5, sr: -1, choose: 1, rt: 2.719046e-01
+block: 2, trial: 202, gamble: 7 / -5, sr: 0, choose: 1, rt: 2.633220e-02
+block: 2, trial: 203, gamble: 2 / -6, sr: -1, choose: 1, rt: 7.118048e-02
+block: 2, trial: 204, gamble: 8 / -3, sr: -1, choose: 0, rt: -7
+block: 2, trial: 205, gamble: 1 / -4, sr: 1, choose: 1, rt: 5.798039e-01
+block: 2, trial: 206, gamble: 5 / -3, sr: 1, choose: 0, rt: 3.218464e-01
+block: 2, trial: 207, gamble: 9 / -1, sr: 2, choose: 0, rt: 3.545079e-01
+block: 2, trial: 208, gamble: 6 / -9, sr: 1, choose: 1, rt: 3.300203e-01
+block: 2, trial: 209, gamble: 9 / -6, sr: -1, choose: 1, rt: 4.263908e-01
+block: 2, trial: 210, gamble: 7 / -2, sr: 1, choose: 1, rt: 7.391231e-01
+block: 2, trial: 211, gamble: 9 / -5, sr: 2, choose: 1, rt: 3.228507e-01
+block: 2, trial: 212, gamble: 5 / -8, sr: 1, choose: 1, rt: 2.595149e-01
+block: 2, trial: 213, gamble: 9 / -3, sr: 2, choose: 0, rt: 4.466190e-01
+block: 2, trial: 214, gamble: 9 / -6, sr: 1, choose: 1, rt: 3.066638e-01
+block: 2, trial: 215, gamble: 3 / -4, sr: 1, choose: 1, rt: 4.917252e-01
+block: 2, trial: 216, gamble: 8 / -1, sr: -1, choose: 0, rt: 3.894705e-01
+block: 2, trial: 217, gamble: 1 / -4, sr: 0, choose: 1, rt: 3.939898e-01
+block: 2, trial: 218, gamble: 3 / -5, sr: 2, choose: 1, rt: 3.932327e-01
+block: 2, trial: 219, gamble: 1 / -1, sr: 1, choose: 1, rt: 1.032008e-01
+block: 2, trial: 220, gamble: 2 / -3, sr: 0, choose: 1, rt: 3.035416e-01
+block: 2, trial: 221, gamble: 1 / -8, sr: 1, choose: 1, rt: 2.023134e-01
+block: 2, trial: 222, gamble: 3 / -4, sr: 1, choose: 1, rt: 5.115900e-01
+block: 2, trial: 223, gamble: 7 / -9, sr: 2, choose: 1, rt: 3.626625e-01
+block: 2, trial: 224, gamble: 6 / -8, sr: -1, choose: 0, rt: 3.960701e-01
+block: 2, trial: 225, gamble: 8 / -1, sr: 0, choose: 0, rt: 2.976962e-01
+block: 2, trial: 226, gamble: 5 / -6, sr: 0, choose: 1, rt: 5.077046e-01
+block: 2, trial: 227, gamble: 1 / -6, sr: 1, choose: 1, rt: 5.325749e-01
+block: 2, trial: 228, gamble: 5 / -1, sr: -1, choose: 0, rt: 4.449538e-01
+block: 2, trial: 229, gamble: 4 / -5, sr: 1, choose: 1, rt: 1.435545e-01
+block: 2, trial: 230, gamble: 6 / -1, sr: -1, choose: 0, rt: 4.075222e-01
+block: 2, trial: 231, gamble: 1 / -2, sr: 0, choose: 1, rt: 1.822896e-01
+block: 2, trial: 232, gamble: 7 / -1, sr: 0, choose: 0, rt: 3.882592e-01
+block: 2, trial: 233, gamble: 9 / -1, sr: 0, choose: 0, rt: 3.705245e-01
+block: 2, trial: 234, gamble: 9 / -1, sr: 0, choose: 0, rt: 4.173902e-01
+block: 2, trial: 235, gamble: 9 / -9, sr: 2, choose: 1, rt: 8.390696e-01
+block: 2, trial: 236, gamble: 3 / -7, sr: 1, choose: 1, rt: 1.621913e-01
+block: 2, trial: 237, gamble: 5 / -5, sr: 1, choose: 1, rt: 3.116004e-01
+block: 2, trial: 238, gamble: 1 / -4, sr: 0, choose: 1, rt: 4.825430e-01
+block: 2, trial: 239, gamble: 5 / -9, sr: 1, choose: 1, rt: 4.047935e-01
+block: 2, trial: 240, gamble: 2 / -8, sr: 1, choose: 1, rt: 3.543889e-01
+block: 2, trial: 241, gamble: 5 / -3, sr: 1, choose: 0, rt: 5.735937e-02
+block: 2, trial: 242, gamble: 4 / -8, sr: -2, choose: 1, rt: 9.249293e-02
+block: 2, trial: 243, gamble: 2 / -8, sr: 0, choose: 1, rt: 2.386358e-01
+block: 2, trial: 244, gamble: 7 / -8, sr: 0, choose: 1, rt: 4.506677e-01
+block: 2, trial: 245, gamble: 9 / -8, sr: 2, choose: 1, rt: 5.183691e-01
+block: 2, trial: 246, gamble: 5 / -4, sr: 1, choose: 1, rt: 7.115506e-01
+block: 2, trial: 247, gamble: 3 / -1, sr: -1, choose: 1, rt: 6.635865e-01
+block: 2, trial: 248, gamble: 3 / -1, sr: -1, choose: 0, rt: 1.964764e-02
+block: 2, trial: 249, gamble: 6 / -7, sr: 2, choose: 1, rt: 2.561662e-01
+block: 2, trial: 250, gamble: 8 / -3, sr: 1, choose: 0, rt: 8.313878e-02
+block: 2, trial: 251, gamble: 4 / -4, sr: 1, choose: 1, rt: 3.735226e-01
+block: 2, trial: 252, gamble: 8 / -5, sr: 1, choose: 1, rt: 5.801797e-01
+block: 2, trial: 253, gamble: 1 / -3, sr: 0, choose: 1, rt: 2.984696e-01
+block: 2, trial: 254, gamble: 4 / -4, sr: -1, choose: 1, rt: 3.800788e-01
+block: 2, trial: 255, gamble: 3 / -7, sr: 0, choose: 1, rt: 9.625222e-01
+block: 2, trial: 256, gamble: 1 / -6, sr: 0, choose: 1, rt: 1.161388e+00
+block: 2, trial: 257, gamble: 2 / -6, sr: 2, choose: 1, rt: 7.516439e-01
+block: 2, trial: 258, gamble: 6 / -4, sr: 2, choose: 1, rt: 4.156708e-01
+block: 2, trial: 259, gamble: 6 / -5, sr: -1, choose: 1, rt: 4.691739e-01
+block: 2, trial: 260, gamble: 8 / -9, sr: 0, choose: 1, rt: 2.878301e-01
+block: 2, trial: 261, gamble: 8 / -2, sr: 1, choose: 0, rt: 1.783310e-01
+block: 2, trial: 262, gamble: 4 / -3, sr: 0, choose: 1, rt: 9.678752e-01
+block: 2, trial: 263, gamble: 4 / -9, sr: 1, choose: 1, rt: 7.941476e-02
+block: 2, trial: 264, gamble: 7 / -9, sr: -1, choose: 1, rt: 1.220384e-01
+block: 2, trial: 265, gamble: 6 / -3, sr: -2, choose: 0, rt: 2.910386e-01
+block: 2, trial: 266, gamble: 4 / -3, sr: 1, choose: 1, rt: 2.929925e-01
+block: 2, trial: 267, gamble: 4 / -9, sr: -1, choose: 1, rt: 2.149768e-01
+block: 2, trial: 268, gamble: 1 / -3, sr: 2, choose: 1, rt: 1.799337e-01
+block: 2, trial: 269, gamble: 3 / -2, sr: 0, choose: 1, rt: 9.700707e-01
+block: 2, trial: 270, gamble: 1 / -1, sr: 1, choose: 1, rt: 4.718053e-01
+block: 2, trial: 271, gamble: 8 / -2, sr: 1, choose: 0, rt: 1.786153e-01
+block: 2, trial: 272, gamble: 7 / -8, sr: -1, choose: 1, rt: 7.587132e-01
+block: 2, trial: 273, gamble: 1 / -8, sr: 1, choose: 1, rt: 7.800298e-02
+block: 2, trial: 274, gamble: 7 / -2, sr: 2, choose: 0, rt: 2.478591e-01
+block: 2, trial: 275, gamble: 7 / -1, sr: -1, choose: 0, rt: 3.242840e-01
+block: 2, trial: 276, gamble: 8 / -2, sr: 1, choose: 0, rt: 5.646526e-01
+block: 2, trial: 277, gamble: 9 / -7, sr: 0, choose: 1, rt: 5.638234e-01
+block: 2, trial: 278, gamble: 9 / -3, sr: 0, choose: 0, rt: 6.667720e-01
+block: 2, trial: 279, gamble: 1 / -5, sr: 1, choose: 1, rt: 4.777027e-01
+block: 2, trial: 280, gamble: 1 / -7, sr: -1, choose: 1, rt: 2.956143e-01
+block: 2, trial: 281, gamble: 5 / -3, sr: 1, choose: 0, rt: -8
+block: 2, trial: 282, gamble: 6 / -4, sr: -1, choose: 1, rt: 2.768390e-01
+block: 2, trial: 283, gamble: 3 / -5, sr: -1, choose: 1, rt: 5.353327e-01
+block: 2, trial: 284, gamble: 9 / -4, sr: 1, choose: 0, rt: 2.875132e-01
+block: 2, trial: 285, gamble: 9 / -5, sr: 2, choose: 1, rt: 3.536110e-01
+block: 2, trial: 286, gamble: 8 / -5, sr: 1, choose: 0, rt: 1.007808e+00
+block: 2, trial: 287, gamble: 8 / -1, sr: 1, choose: 0, rt: 3.107404e-01
+block: 2, trial: 288, gamble: 3 / -4, sr: 1, choose: 1, rt: 9.918348e-01
+block: 2, trial: 289, gamble: 1 / -8, sr: -2, choose: 1, rt: 8.541780e-01
+block: 2, trial: 290, gamble: 4 / -8, sr: -2, choose: 1, rt: 1.990975e-01
+block: 2, trial: 291, gamble: 3 / -3, sr: 2, choose: 1, rt: 3.191588e-01
+block: 2, trial: 292, gamble: 6 / -3, sr: 2, choose: 1, rt: 9.717870e-01
+block: 2, trial: 293, gamble: 4 / -1, sr: 0, choose: 0, rt: 3.470378e-02
+block: 2, trial: 294, gamble: 2 / -9, sr: -1, choose: 1, rt: 3.672801e-01
+block: 2, trial: 295, gamble: 5 / -2, sr: -1, choose: 0, rt: 5.263340e-01
+block: 2, trial: 296, gamble: 3 / -3, sr: -1, choose: 1, rt: 9.550904e-01
+block: 2, trial: 297, gamble: 9 / -3, sr: 2, choose: 0, rt: 2.981088e-01
+block: 2, trial: 298, gamble: 7 / -5, sr: -1, choose: 1, rt: 2.435156e-01
+block: 2, trial: 299, gamble: 7 / -6, sr: -2, choose: 1, rt: 9.717922e-01
+block: 2, trial: 300, gamble: 1 / -5, sr: 1, choose: 1, rt: 2.183325e-01
+block: 2, trial: 301, gamble: 4 / -6, sr: 2, choose: 1, rt: 8.637249e-01
+block: 2, trial: 302, gamble: 8 / -4, sr: 0, choose: 1, rt: 1.816753e-02
+block: 2, trial: 303, gamble: 7 / -8, sr: -1, choose: 1, rt: 4.388598e-01
+block: 2, trial: 304, gamble: 7 / -5, sr: 1, choose: 1, rt: 2.986057e-01
+block: 2, trial: 305, gamble: 4 / -3, sr: -1, choose: 1, rt: 7.764643e-01
+block: 2, trial: 306, gamble: 2 / -9, sr: 1, choose: 1, rt: 2.471678e-01
+block: 2, trial: 307, gamble: 2 / -9, sr: -2, choose: 1, rt: 2.668840e-01
+block: 2, trial: 308, gamble: 4 / -6, sr: 0, choose: 1, rt: 1.185984e+00
+block: 2, trial: 309, gamble: 5 / -2, sr: 1, choose: 1, rt: 1.031860e+00
+block: 2, trial: 310, gamble: 5 / -3, sr: 2, choose: 1, rt: 2.601747e-01
+block: 2, trial: 311, gamble: 6 / -2, sr: 2, choose: 1, rt: 5.033643e-01
+block: 2, trial: 312, gamble: 3 / -8, sr: 1, choose: 1, rt: 3.173779e-02
+block: 2, trial: 313, gamble: 9 / -7, sr: -1, choose: 1, rt: 1.237397e+00
+block: 2, trial: 314, gamble: 2 / -2, sr: -1, choose: 1, rt: 3.775401e-01
+block: 2, trial: 315, gamble: 2 / -7, sr: 2, choose: 1, rt: 1.163818e+00
+block: 2, trial: 316, gamble: 3 / -5, sr: -2, choose: 1, rt: 5.190311e-01
+block: 2, trial: 317, gamble: 8 / -6, sr: -2, choose: 0, rt: 8.481260e-01
+block: 2, trial: 318, gamble: 8 / -4, sr: 0, choose: 1, rt: 7.360506e-01
+block: 2, trial: 319, gamble: 4 / -5, sr: 0, choose: 1, rt: 2.794717e-01
+block: 2, trial: 320, gamble: 9 / -9, sr: 0, choose: 1, rt: 9.942420e-01
+block: 2, trial: 321, gamble: 7 / -1, sr: 0, choose: 0, rt: 1.037067e-01
+block: 2, trial: 322, gamble: 6 / -7, sr: 0, choose: 1, rt: 2.895178e-01
+block: 2, trial: 323, gamble: 2 / -6, sr: 0, choose: 1, rt: 3.234188e-01
+block: 2, trial: 324, gamble: 9 / -7, sr: 0, choose: 1, rt: 3.322168e-01
+{错误使用 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imread>get_full_filename', 'C:\Program Files\MATLAB\R2017b\toolbox\matlab\imagesci\imread.p', 516)" style="font-weight:bold">imread>get_full_filename</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017b\toolbox\matlab\imagesci\imread.p',516,0)">line 516</a>)
+文件 "instruction\invoice.bmmp" 不存在。
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imread', 'C:\Program Files\MATLAB\R2017b\toolbox\matlab\imagesci\imread.p', 340)" style="font-weight:bold">imread</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017b\toolbox\matlab\imagesci\imread.p',340,0)">line 340</a>)
+    fullname = get_full_filename(filename);
+
+出错 <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'E:\nieshaozhi\e3\code_181109\exp\main.m', 115)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('E:\nieshaozhi\e3\code_181109\exp\main.m',115,0)">line 115</a>)
+invoice = Screen('MakeTexture', display_info.wPtr, imread('instruction\invoice.bmmp'));
+} 
+PTB-INFO: Enforcing script abortion and restoring desktop by executing Screen('CloseAll') now!
+PTB-INFO: Please ignore the false error message (INTERNAL PSYCHTOOLBOX ERROR) caused by this...
+
+
+PTB-INFO: There are still 11 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 9 times out of a total of 393621 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+main
