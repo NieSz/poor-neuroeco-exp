@@ -64,7 +64,8 @@ classdef trial < matlab.mixin.Copyable
                 obj.gambles = eval(trialInfo.gambles{:});
                 obj.n_gambles = size(obj.gambles, 1);
                 obj.key_gamble = obj.gambles(end,:);
-                obj.sure_reward = trialInfo.sure_reward;
+                sureRewards = eval(trialInfo.sure_reward{:});
+                obj.sure_reward = sureRewards(end);
             end
             
             if any(strcmp(trialInfo.Properties.VariableNames(:),'choose_sure'))
