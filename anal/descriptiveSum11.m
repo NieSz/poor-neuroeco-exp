@@ -266,3 +266,27 @@ errorbar(1:9,mean(betas(1:7,:),1),std(betas(1:7,:),[],1)./sqrt(7),'.k','LineWidt
 xticks([1:5 9])
 xticklabels({'constant','sr','g1','g2','...','g7'});
 ylabel('normal trial \beta s');
+
+
+%% rt
+subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
+for i_sub = 1:length(subs)
+    
+    subTrials = getSubData(subs(i_sub));
+    for i_time = 1:2
+        if i_time == 1
+            subSubTrials = subTrials([subTrials.n_gambles] == 7);
+        else
+            subSubTrials = subTrials([subTrials.n_gambles] ~= 7);
+        end
+        subplot(2,length(subs),(i_time-1).*length(subs)+i_sub);
+        histogram([subSubTrials.reaction_time],'BinWidth',0.1)
+        xlim([0 2]);
+        if i_time == 2
+            ylim([0 20])
+        else
+            ylim([0 100])
+        end
+        axis square
+    end
+end
