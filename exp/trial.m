@@ -81,7 +81,8 @@ classdef trial < matlab.mixin.Copyable
         
         function show(obj, display_info)
             Screen('Flip', display_info.wPtr);
-            WaitSecs(display_info.intertrial_duration);
+            %             WaitSecs(display_info.intertrial_duration);
+            WaitSecs(1 + rand*2);
             obj.sure_rewards;
             % prepare
             %             Screen('FillOval', display_info.wPtr, display_info.prepare_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);

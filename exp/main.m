@@ -103,7 +103,7 @@ waitForSpace('prac_end');
 for i_trial = 1:length(trials)
     trials(i_trial).show(display_info);
     trials(i_trial).write(fid);
-    if mod(i_trial, round(length(trials)/6)) == 0 && i_trial ~= length(trials)
+    if mod(i_trial, round(length(trials)/9)) == 0 && i_trial ~= length(trials)
         Screen('DrawTexture', display_info.wPtr, markers.rest, [], display_info.window_rect)
         Screen('Flip', display_info.wPtr);
         WaitSecs(30);
