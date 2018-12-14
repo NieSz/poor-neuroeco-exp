@@ -33,7 +33,7 @@ for i_sub = 1:length(subs)
         if i_time == 1
             subSubTrials = subTrials([subTrials.n_gambles] == 7);
         else
-            subSubTrials = subTrials([subTrials.n_gambles] ~= 7);
+            subSubTrials = subTrials([subTrials.n_gambles] < 7);
         end
     funOpt = @(parameters)-eutheory(subSubTrials, parameters);
     tempParaList = nan(itTimes,3);
@@ -61,8 +61,8 @@ xRange = -20:0.1:20;
 for i_sub = 1:length(subs)
     for i_time = 1:2
         subplot(1,7,i_sub)
-        plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time).*temperatures(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time).*temperatures(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
-%         plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time).*temperatures(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
+%         plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time).*temperatures(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time).*temperatures(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
+        plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
         hold on
     end
     xlim([-10, 10]);
@@ -82,12 +82,12 @@ xRange = -10:0.1:10;
 utilities = nan(length(xRange),length(times),length(subs));
 for i_sub = 1:length(subs)
     for i_time = 1:2
-        utilities(:,i_time,i_sub) = temperatures(i_sub,i_time).*real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time));
-%         utilities(:,i_time,i_sub) = real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time));
+%         utilities(:,i_time,i_sub) = temperatures(i_sub,i_time).*real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time));
+        utilities(:,i_time,i_sub) = (xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time);
     end
 end
-meanUtilities = nanmean(utilities,2);
-seUtilities = nanstd(utilities,[],2)./sqrt(length(subs));
+meanUtilities = nanmean(utilities,3);
+seUtilities = nanstd(utilities,[],3)./sqrt(length(subs));
 for i = 1:2
     tempA = area(xRange',[meanUtilities(:,i)-seUtilities(:,i),2.*seUtilities(:,i)],'LineStyle','none');
     tempA(1).FaceColor = [1,1,1];
