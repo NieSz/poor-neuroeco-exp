@@ -17,7 +17,8 @@
 % end
 
 %%
-subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
+% subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
+subs = [18121401 18121402 18121601 18121602 18121604 18121605];
 
 %%
 alphas = nan(length(subs),2);
@@ -112,7 +113,8 @@ end
 
 
 %% GLM
-subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
+% subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
+subs = [18121401 18121402 18121601 18121602 18121604 18121605];
 times = [1.0];
 betas = nan(length(subs).*6, 5);
 devs = nan(length(subs).*6, 1);
@@ -121,7 +123,7 @@ constant = nan(length(subs), 6)';
 for i_sub = 1:length(subs)
     subTrials = getSubData(subs(i_sub));
     for i_time = 1:6
-        subSubTrials = subTrials(([subTrials.trial_id] > 60*(i_time - 1))&([subTrials.trial_id] <= 60*i_time));
+        subSubTrials = subTrials(ceil([subTrials.trial_id] ./ (192/6)) == i_time);
         [tempBetas, tempDevs] = glmfit(zscore([([subSubTrials.sure_reward]' > 0).*[subSubTrials.sure_reward]',([subSubTrials.sure_reward]' < 0).*[subSubTrials.sure_reward]',-reshape([subSubTrials.key_gamble],2,length(subSubTrials))']), [subSubTrials.choose_sure]','binomial');
         betas((i_time-1).*length(subs)+i_sub,:) = tempBetas./sum(abs(tempBetas));
         devs((i_time-1).*length(subs)+i_sub,:) = tempDevs;
@@ -154,12 +156,12 @@ end
 
 %% plot
 subplot(2,1,1)
-bar(betas(1:7,:)');
+bar(betas(1:length(subs),:)');
 xticklabels({'constant','sr+','sr-','gamble+','gamble-'});
 legend({'s1','s2','...'})
 ylabel('normal trial');
 subplot(2,1,2)
-bar(betas(8:14,:)');
+bar(betas(length(subs)+1:2*length(subs),:)');
 xticklabels({'constant','sr+','sr-','gamble+','gamble-'});
 ylabel('catch trial');
 
@@ -167,12 +169,12 @@ ylabel('catch trial');
 %%
 betaByBlock = nan(5,6);
 for i = 1:6
-    betaByBlock(:,i) = mean(betas(i*7-6:7*i,:));
+    betaByBlock(:,i) = mean(betas((i-1)*length(subs)+1:length(subs)*i,:));
 end
 h = bar(betaByBlock);
 hold on
 for i = 1:6
-    errorbar((1:5)+0.135*(i-3.5),mean(betas(i*7-6:7*i,:),1),std(betas(i*7-6:7*i,:),[],1)./sqrt(7),'.k','LineWidth',1.5);
+    errorbar((1:5)+0.135*(i-3.5),mean(betas((i-1)*length(subs)+1:length(subs)*i,:),1),std(betas((i-1)*length(subs)+1:length(subs)*i,:),[],1)./sqrt(length(subs)),'.k','LineWidth',1.5);
 end
 % errorbar((1:5)-0.15,mean(betas(1:7,:),1),std(betas(1:7,:),[],1)./sqrt(7),'.k','LineWidth',1.5);
 % errorbar((1:5)+0.15,mean(betas(8:14,:)),std(betas(8:14,:),[],1)./sqrt(7),'.k','LineWidth',1.5);

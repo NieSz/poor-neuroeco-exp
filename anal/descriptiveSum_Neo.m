@@ -1,24 +1,7 @@
-% trialTable = readtable('data\data.csv');
-% trials(height(trialTable),1) = trial();
-% for i_trial = 1:length(trials)
-%     trials(i_trial).read(trialTable(i_trial,:));
-% end
-% pretrials = trials([trials.block_id] > 0);
-%
-% reactTooEarly = nan(length(subs),1);
-%
-% for i_sub = 1:length(subs)
-%
-%     trials = pretrials([pretrials.sub_id] == subs(i_sub));
-%
-%     reactTooEarly(i_sub) = sum([trials.reaction_time] <= 0, 'omitnan') ./ length(trials);
-%
-%     trials = trials([trials.reaction_time] > 0);
-% end
-
 %%
 subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
 % subs = [18112301,18112302,18112303,18112501,18112502,18112503];
+% subs = [18121401 18121402 18121601 18121602 18121604 18121605];
 
 %%
 alphas = nan(length(subs),2);
@@ -57,14 +40,15 @@ end
 
 %% plot utility function
 lineColor = {[1,0,0], [0,0,1]};
-subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
+% subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
 % subs = [18112301,18112302,18112303,18112501,18112502,18112503];
+subs = [18121401 18121402 18121601 18120602 18121604 18121605];
 xRange = -20:0.1:20;
 for i_sub = 1:length(subs)
     for i_time = 1:2
-        subplot(1,7,i_sub)
-%         plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time).*temperatures(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time).*temperatures(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
-        plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
+        subplot(2,length(subs)/2,i_sub)
+        plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time).*temperatures(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time).*temperatures(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
+%         plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
         hold on
     end
     xlim([-10, 10]);
@@ -72,20 +56,21 @@ for i_sub = 1:length(subs)
     line([-10, 10], [0, 0], 'Color','black','LineStyle','--');
     xlabel('value');
     axis square
-    ylabel('utility');
-%     ylabel('utility_{with T}');
+%     ylabel('utility');
+    ylabel('utility_{with T}');
 end
 legend({'normal','catch'});
 
 %% plot averaged
 lineColor = {[1,0,0], [0,0,1]};
-subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
+% subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
 % subs = [18112301,18112302,18112303,18112501,18112502];%,18112503];
+subs = [18121401 18121402 18121601 18121604 18121605];
 xRange = -10:0.1:10;
 utilities = nan(length(xRange),length(times),length(subs));
 for i_sub = 1:length(subs)
     for i_time = 1:2
-        utilities(:,i_time,i_sub) = temperatures(i_sub,i_time).*real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time));
+%         utilities(:,i_time,i_sub) = temperatures(i_sub,i_time).*real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time));
         utilities(:,i_time,i_sub) = real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time));
     end
 end
@@ -107,21 +92,21 @@ for i = 1:2
 end
 legend(lh,{'normal','catch'})
 xlabel('value');
-% ylabel('utility');
-    ylabel('utility_{with T}');
+ylabel('utility');
+%     ylabel('utility_{with T}');
 %axis square
 
 
 %% plot median
 lineColor = {[1,0,0], [0,0,1]};
-subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
+% subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
 % subs = [18112301,18112302,18112303,18112501,18112502];%,18112503];
 xRange = -10:0.1:10;
 utilities = nan(length(xRange),length(times));
 
 for i_time = 1:2
-    utilities(:,i_time) = median(temperatures(:,i_time)).*real((xRange >= 0).*xRange.^median(alphas(:,i_time)) - median(lambdas(:,i_time)).*(xRange < 0).*(-xRange).^median(alphas(:,i_time)));
-%       utilities(:,i_time) = real((xRange >= 0).*xRange.^median(alphas(:,i_time)) - median(lambdas(:,i_time)).*(xRange < 0).*(-xRange).^median(alphas(:,i_time)));
+%     utilities(:,i_time) = median(temperatures(:,i_time)).*real((xRange >= 0).*xRange.^median(alphas(:,i_time)) - median(lambdas(:,i_time)).*(xRange < 0).*(-xRange).^median(alphas(:,i_time)));
+      utilities(:,i_time) = real((xRange >= 0).*xRange.^median(alphas(:,i_time)) - median(lambdas(:,i_time)).*(xRange < 0).*(-xRange).^median(alphas(:,i_time)));
 end
 
 medianUtilities = utilities;
@@ -144,8 +129,8 @@ end
 line([-10, 10], [0, 0], 'Color','black','LineStyle','--');
 legend(lh,{'normal','catch'})
 xlabel('value');
-% ylabel('utility');
-    ylabel('utility_{with T}');
+ylabel('utility');
+%     ylabel('utility_{with T}');
 %axis square
 title('median')
 
@@ -160,7 +145,7 @@ end
 
 %% GLM
 % subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
-subs = [18112301,18112302,18112303,18112501,18112502,18112503];
+subs = [18121401 18121402 18121601 18121602 18121604 18121605];
 times = [1.0];
 betas = nan(length(subs).*length(times), 5);
 devs = nan(length(subs).*length(times), 1);
@@ -233,10 +218,10 @@ xticklabels({'constant','sr+','sr-','gamble+','gamble-'});
 ylabel('catch trial');
 
 %%
-h = bar([mean(betas(1:7,:));mean(betas(8:14,:))]');
+h = bar([mean(betas(1:length(subs),:));mean(betas(length(subs)+1:2*length(subs),:))]');
 hold on
-errorbar((1:5)-0.15,mean(betas(1:7,:),1),std(betas(1:7,:),[],1)./sqrt(7),'.k','LineWidth',1.5);
-errorbar((1:5)+0.15,mean(betas(8:14,:)),std(betas(8:14,:),[],1)./sqrt(7),'.k','LineWidth',1.5);
+errorbar((1:5)-0.15,mean(betas(1:length(subs),:),1),std(betas(1:length(subs),:),[],1)./sqrt(length(subs)),'.k','LineWidth',1.5);
+errorbar((1:5)+0.15,mean(betas(length(subs)+1:2*length(subs),:)),std(betas(length(subs)+1:2*length(subs),:),[],1)./sqrt(length(subs)),'.k','LineWidth',1.5);
 % errorbar(0.75:0.5:5.25,[mean(betas(1:7,:));mean(betas(8:14,:))]',[std(betas(1:7,:),[],1);std(betas(8:14,:),[],1)]'./sqrt(7),'.k','LineWidth',1.5);
 xticklabels({'constant','sr+','sr-','gamble+','gamble-'});
 legend(h,{'normal','catch'})
@@ -266,7 +251,8 @@ ranova(tempModel, 'WithinModel', 'time+sign+time*sign')
 
 %% serial effect
 % subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
-subs = [18112301,18112302,18112303,18112501,18112502];%,18112503];
+% subs = [18112301,18112302,18112303,18112501,18112502];%,18112503];
+subs = [18121401 18121402 18121601 18121602 18121604 18121605];
 times = [1.0];
 betas = nan(length(subs).*length(times), 9);
 devs = nan(length(subs).*length(times), 1);
@@ -314,7 +300,8 @@ ylabel('normal trial \beta s');
 
 %% rt
 % subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
-subs = [18112301,18112302,18112303,18112501,18112502,18112503];
+% subs = [18112301,18112302,18112303,18112501,18112502,18112503];
+subs = [18121401 18121402 18121601 18121602 18121604 18121605];
 for i_sub = 1:length(subs)
     
     subTrials = getSubData(subs(i_sub));
@@ -325,8 +312,8 @@ for i_sub = 1:length(subs)
             subSubTrials = subTrials([subTrials.n_gambles] ~= 7);
         end
         subplot(2,length(subs),(i_time-1).*length(subs)+i_sub);
-        histogram([subSubTrials.reaction_time],'BinWidth',0.05)
-        xlim([0 1]);
+        histogram([subSubTrials.reaction_time],'BinWidth',0.1)
+        xlim([0 1.5]);
         if i_time == 2
             ylim([0 20])
         else

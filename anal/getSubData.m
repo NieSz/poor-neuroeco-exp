@@ -15,7 +15,7 @@ if nargin ==0
 end
 trials = trials([trials.block_id] > 0);
 trials = trials(any([trials.sub_id]' == subs_id, 2));
-trials = trials([trials.reaction_time] > 0.150);
+trials = trials([trials.reaction_time] > 0.0);
 %if nargout == 0
 %     if evalin('base', 'exist(''trials'', ''var'')')
 %         if ~evalin('base','isa(trials, ''trial'')')
