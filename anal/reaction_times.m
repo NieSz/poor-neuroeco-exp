@@ -129,3 +129,29 @@ errorbar((1:3)+0.15,permute(mean(betas(:,2,1:3),1),[3 2 1]),permute(std(betas(:,
 xticklabels({'constant','value difference','trial No.'});
 legend(h,{'normal','catch'})
 % ylabel('normal trial');
+
+%% rt ~ is_catch + dif + trial_no.
+subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
+% subs = [18121401 18121402 18121601 18121602 18121604 18121605];
+betas = nan(length(subs), 4);
+devs = nan(length(subs), 1);
+for i_sub = 1:length(subs)
+    subTrials = getSubData(subs(i_sub));
+    is_catch = [subTrials.n_gambles]' ~= 7;
+    %         subSubTrials = subTrials(ceil([subTrials.trial_id] ./ (192/6)) == i_time);
+    dif_raw = abs(mean(reshape([subTrials.key_gamble],2,length(subTrials)),1)-[subTrials.sure_reward])';
+    [tempBetas, tempDevs] = glmfit(zscore([is_catch, dif_raw, [subTrials.trial_id]']), [subTrials.reaction_time]');
+    betas(i_sub,:) = tempBetas./sum(abs(tempBetas));
+    devs(i_sub,:) = tempDevs;
+end
+%% plot
+bar(betas(1:length(subs),2:end)');
+xticklabels({'is catch','difference','trial No.'});
+legend({'s1','s2','...'})
+%% averaged
+h = bar(mean(betas(:,2:4)));
+hold on
+errorbar((1:3),mean(betas(:,2:4),1),std(betas(:,2:4),[],1)./sqrt(length(subs)),'.k','LineWidth',1.5);
+% errorbar(0.75:0.5:5.25,[mean(betas(1:7,:));mean(betas(8:14,:))]',[std(betas(1:7,:),[],1);std(betas(8:14,:),[],1)]'./sqrt(7),'.k','LineWidth',1.5);
+xticklabels({'is catch','value difference','trial No.'});
+% legend(h,{'normal','catch'})
