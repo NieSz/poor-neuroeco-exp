@@ -5,6 +5,7 @@ if evalin('base', 'exist(''trials'', ''var'') && isa(trials, ''trial'')')
     trials = evalin('base', 'trials');
 else
     trialTable = readtable('data181111.csv');
+    trialTable = readtable('data_181216.csv');
     trials(height(trialTable),1) = trial();
     for i_trial = 1:length(trials)
         trials(i_trial).read(trialTable(i_trial,:));

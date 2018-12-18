@@ -78,7 +78,7 @@ for i_sub = 1:length(subs)
         u_gamble = mean((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time),2);
         xRange = [subSubTrials.sure_reward]';
         u_sr = (xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time);
-        x_rt_raw = round([u_gamble-u_sr,[subSubTrials.reaction_time]'].*2)./2;
+        x_rt_raw = round(zscore([u_gamble-u_sr,[subSubTrials.reaction_time]']).*5)./5;
         x_rt = [unique(x_rt_raw(:,1)),splitapply(@mean, x_rt_raw(:,2),findgroups(x_rt_raw(:,1)))];
         x_rt = sortrows(x_rt,1);
         
@@ -90,37 +90,42 @@ end
 label({'normal','catch'})
 
 %% RT GLM
+% subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
 subs = [18121401 18121402 18121601 18121602 18121604 18121605];
+times = [1 2];
+betas = nan(length(subs),length(times), 3);
+devs = nan(length(subs),length(times), 1);
 for i_sub = 1:length(subs)
-    subSubTrials = getSubData(subs(i_sub));
-    for i_time = 1:6
-        subSubTrials = subSubTrials(ceil([subSubTrials.trial_id] ./ (192/6)) == i_time);
-        [tempBetas, tempDevs] = glmfit(zscore([([subSubTrials.sure_reward]' > 0).*[subSubTrials.sure_reward]',([subSubTrials.sure_reward]' < 0).*[subSubTrials.sure_reward]',-reshape([subSubTrials.key_gamble],2,length(subSubTrials))']), [subSubTrials.choose_sure]','binomial');
-        betas((i_time-1).*length(subs)+i_sub,:) = tempBetas./sum(abs(tempBetas));
-        devs((i_time-1).*length(subs)+i_sub,:) = tempDevs;
-        
-        chooseSqr = zeros(37);
-        allSqr = zeros(37);
-        for i_trial = 1:length(subSubTrials)
-            chooseSqr(round(subSubTrials(i_trial).sure_reward) + 19, round(sum(subSubTrials(i_trial).key_gamble)/2) + 19) = chooseSqr(round(subSubTrials(i_trial).sure_reward) + 19, round(sum(subSubTrials(i_trial).key_gamble)/2) + 19) + subSubTrials(i_trial).choose_sure;
-            allSqr(round(subSubTrials(i_trial).sure_reward) + 19, round(sum(subSubTrials(i_trial).key_gamble)/2) + 19) = allSqr(round(subSubTrials(i_trial).sure_reward) + 19, round(sum(subSubTrials(i_trial).key_gamble)/2) + 19) + 1;
+    subTrials = getSubData(subs(i_sub));
+    for i_time = 1:2
+        if i_time == 1
+            subSubTrials = subTrials([subTrials.n_gambles] == 7);
+        else
+            subSubTrials = subTrials([subTrials.n_gambles] ~= 7);
         end
-        imSqr = chooseSqr./allSqr;
-        imSqr(allSqr == 0) = -1;
-        subplot(6,length(subs),(i_time-1).*length(subs)+i_sub)
-        colormap([ones(100,1).*[0.5 0.5 0.5];parula(101)]);
-        axis square
-        imagesc(imSqr);
-        axis xy
-        xticks(1:6:37);
-        xticklabels({-18:6:18})
-        yticks(1:6:37);
-        yticklabels({-18:6:18})
-        
-        [tempBetas, tempDevs] = glmfit(zscore([[subSubTrials.sure_reward]',mean(reshape([subSubTrials.key_gamble],2,length(subSubTrials)))']), [subSubTrials.choose_sure]','binomial');
-        line([0, 39],-(tempBetas(3).*([0, 39]-19)+tempBetas(1))./tempBetas(2) + 19,'Color','red');
-        slopes(i_time,i_sub) = -tempBetas(3)./tempBetas(2);
-        constant(i_time,i_sub) = tempBetas(1);
-        axis square
+%         subSubTrials = subTrials(ceil([subTrials.trial_id] ./ (192/6)) == i_time);
+        dif_raw = abs(mean(reshape([subSubTrials.key_gamble],2,length(subSubTrials)),1)-[subSubTrials.sure_reward])';
+        [tempBetas, tempDevs] = glmfit(zscore([dif_raw, [subSubTrials.trial_id]']), [subSubTrials.reaction_time]');
+        betas(i_sub,i_time,:) = tempBetas./sum(abs(tempBetas));
+        devs(i_sub,i_time,:) = tempDevs;
     end
 end
+%% plot
+subplot(2,1,1)
+bar(reshape(betas(:,1,2:3),length(subs),2)');
+xticklabels({'difference','trial No.'});
+legend({'s1','s2','...'})
+ylabel('normal trial');
+subplot(2,1,2)
+bar(reshape(betas(:,2,2:3),length(subs),2)');
+xticklabels({'difference','trial No.'});
+ylabel('catch trial');
+%%
+h = bar(permute([mean(betas(:,1,1:3)),mean(betas(:,2,1:3))],[3,2,1]));
+hold on
+errorbar((1:3)-0.15,permute(mean(betas(:,1,1:3),1),[3 2 1]),permute(std(betas(:,1,1:3),[],1)./sqrt(length(subs)),[3 2 1]),'.k','LineWidth',1.5);
+errorbar((1:3)+0.15,permute(mean(betas(:,2,1:3),1),[3 2 1]),permute(std(betas(:,2,1:3),[],1)./sqrt(length(subs)),[3 2 1]),'.k','LineWidth',1.5);
+% errorbar(0.75:0.5:5.25,[mean(betas(1:7,:));mean(betas(8:14,:))]',[std(betas(1:7,:),[],1);std(betas(8:14,:),[],1)]'./sqrt(7),'.k','LineWidth',1.5);
+xticklabels({'constant','value difference','trial No.'});
+legend(h,{'normal','catch'})
+% ylabel('normal trial');
