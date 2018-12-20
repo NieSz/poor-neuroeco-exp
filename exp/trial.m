@@ -89,7 +89,11 @@ classdef trial < matlab.mixin.Copyable
             Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
             
             % trigger
-            if 0 % if meg
+            % < 200: trial no.
+            % 200: sr onset; 201~213: gamble onset; 220: white circle
+            % onset; 221: response
+            meg = display_info.meg;
+            if meg % if meg
                 lptwrite(15612, obj.trial_id);
                 WaitSecs(0.1);
                 lptwrite(15612, 0);
@@ -124,6 +128,11 @@ classdef trial < matlab.mixin.Copyable
 
             DrawFormattedText(display_info.wPtr, sureRewardStr, 'center', 'center', fig_color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.sure_reward_locus([1 2 1 2]) + display_info.sure_reward_rect - [0 2 0 2]);
             Screen('Flip', display_info.wPtr, timeStamp + display_info.fixation_duration - 0.5, [], 1);
+            if meg % if meg
+                lptwrite(15612, 200);
+                WaitSecs(0.1);
+                lptwrite(15612, 0);
+            end
             while GetSecs - timeStamp < display_info.fixation_duration + display_info.sure_reward_duration - 0.010
                 [~, ~, reactKey] = KbCheck;
                 if any(reactKey)
@@ -164,7 +173,7 @@ classdef trial < matlab.mixin.Copyable
                     payoff2color = display_info.payoff_color(2,:);
                 end
                 
-                
+                triggered = 0;
                 while 1
                     tempTime = GetSecs;
                     Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
@@ -178,6 +187,12 @@ classdef trial < matlab.mixin.Copyable
                         Screen('FillOval', display_info.wPtr, display_info.fixation_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*[-1 -1 1 1]);
                         DrawFormattedText(display_info.wPtr, payoff1Str, 'center', 'center', payoff1color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.gamble_locus([1 2 1 2]) + display_info.gamble_rect(1:4) - [0 2 0 2]);
                         DrawFormattedText(display_info.wPtr, payoff2Str, 'center', 'center', payoff2color, [], [], [], [], [], display_info.window_rect([3 4 3 4]).*display_info.gamble_locus([1 2 1 2]) + display_info.gamble_rect(5:8) - [0 2 0 2]);
+                    end
+                    if meg && triggered == 0 % if meg
+                        lptwrite(15612, 200 + i_gamble);
+                        WaitSecs(0.1);
+                        lptwrite(15612, 0);
+                        triggered = 1;
                     end
                     lastFrame = Screen('Flip', display_info.wPtr);
                     
@@ -210,6 +225,11 @@ classdef trial < matlab.mixin.Copyable
             % wait for react
             if ~reactTooEarly == 1
                 Screen('FrameOval', display_info.wPtr, display_info.ready_to_choose_color, display_info.window_rect([3 4 3 4])./2 + display_info.fixation_radius.*3.*[-1 -1 1 1],display_info.rect_pen_width);
+                if meg % if meg
+                    lptwrite(15612, 220);
+                    WaitSecs(0.1);
+                    lptwrite(15612, 0);
+                end
                 Screen('Flip', display_info.wPtr, timeStamp + display_info.sure_reward_duration + 2*display_info.fixation_duration + obj.n_gambles.*obj.gamble_duration, [], 1);
                 while 1
                     [~, timeGetKey, reactKey] = KbCheck;
@@ -220,6 +240,11 @@ classdef trial < matlab.mixin.Copyable
                         break
                     end
                     if any(reactKey(KbName({display_info.exit_key, display_info.sure_reward_key, display_info.gamble_key})))
+                        if meg % if meg
+                            lptwrite(15612, 221);
+                            WaitSecs(0.1);
+                            lptwrite(15612, 0);
+                        end
                         if reactKey(KbName(display_info.sure_reward_key))
                             obj.choose_sure = 1;
                         elseif reactKey(KbName(display_info.gamble_key))
