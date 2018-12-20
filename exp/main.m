@@ -1,5 +1,6 @@
 %% startup
 diary
+addpath(genpath(pwd));
 sub_argin = input('Please input subject id\n');
 if ischar(sub_argin)
     sub_id = str2num(sub_argin);
