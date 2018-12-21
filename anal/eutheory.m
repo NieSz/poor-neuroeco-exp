@@ -4,10 +4,18 @@ function [logPrChooseSureSum] = eutheory(trialin, parameters)
 logPrChooseSureSum = 0;
 for i_trial = 1:length(trialin)
     values = [trialin(i_trial).sure_reward, trialin(i_trial).gambles(end,:)];
-%     disp(values)
+    %     disp(values)
     weightedUtilities = ((values >= 0) - parameters(2).*(values < 0)).*abs(values).^parameters(1).*[1 -0.5 -0.5];
-    logPrChooseSure = log(1/(1+exp(-sum(weightedUtilities).*parameters(3)))).*trialin(i_trial).choose_sure + log(1-1/(1+exp(-sum(weightedUtilities).*parameters(3)))).*(1-trialin(i_trial).choose_sure);
+    if trialin(i_trial).choose_sure == 0
+        logPrChooseSure =  -log(1-1/(1+exp(-sum(weightedUtilities).*parameters(3))));
+    elseif trialin(i_trial).choose_sure == 1
+        logPrChooseSure = -log(1/(1+exp(-sum(weightedUtilities).*parameters(3))));
+    end
     logPrChooseSureSum = logPrChooseSureSum + logPrChooseSure;
+end
+if isnan(logPrChooseSureSum) || abs(logPrChooseSureSum) == inf
+%     error('error')
+    logPrChooseSureSum = 1000;
 end
 % if length(trialin) == 1
 % else

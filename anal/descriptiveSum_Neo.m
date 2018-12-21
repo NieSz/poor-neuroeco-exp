@@ -1,7 +1,8 @@
 %%
-subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
+% subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
 % subs = [18112301,18112302,18112303,18112501,18112502,18112503];
 % subs = [18121401 18121402 18121601 18121602 18121604 18121605];
+subs = 2018120000+[1901 1902 1903 2001 2002 2003];
 
 %%
 alphas = nan(length(subs),2);
@@ -15,15 +16,16 @@ for i_sub = 1:length(subs)
     subTrials = getSubData(subs(i_sub));
     for i_time = 1:2
         if i_time == 1
-            subSubTrials = subTrials([subTrials.n_gambles] == 7);
+            subSubTrials = subTrials([subTrials.n_gambles] == 13);
         else
-            subSubTrials = subTrials([subTrials.n_gambles] ~= 7);
+            subSubTrials = subTrials([subTrials.n_gambles] ~= 13);
         end
-    funOpt = @(parameters)-eutheory(subSubTrials, parameters);
+    funOpt = @(parameters)eutheory(subSubTrials, parameters);
     tempParaList = nan(itTimes,3);
     tempLogL = nan(itTimes,1);
-    parfor i_it = 1:itTimes
-        [parameters, logL] = fmincon(funOpt, rand(1,3).*[1,10,1].*0.99+0.005, [],[],[],[],[0 0 0],[1 10 1000]);
+    for i_it = 1:itTimes
+        startingPara = rand(1,3).*[1,10,100];
+        [parameters, logL] = fmincon(funOpt, startingPara, [],[],[],[],[0 0 0],[1 10 1000]);
         tempParaList(i_it,:) = parameters;
         tempLogL(i_it) = logL;
         fprintf('.');
@@ -42,8 +44,9 @@ end
 lineColor = {[1,0,0], [0,0,1]};
 % subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
 % subs = [18112301,18112302,18112303,18112501,18112502,18112503];
-subs = [18121401 18121402 18121601 18120602 18121604 18121605];
-xRange = -20:0.1:20;
+% subs = [18121401 18121402 18121601 18120602 18121604 18121605];
+subs = 2018120000+[1901 1902 1903 2001 2002 2003];
+xRange = -90:0.1:90;
 for i_sub = 1:length(subs)
     for i_time = 1:2
         subplot(2,length(subs)/2,i_sub)
@@ -51,9 +54,9 @@ for i_sub = 1:length(subs)
 %         plot(xRange, real((xRange >= 0).*xRange.^alphas(i_sub,i_time) - lambdas(i_sub,i_time).*(xRange < 0).*(-xRange).^alphas(i_sub,i_time)),'Color',lineColor{i_time},'LineWidth',1.5);
         hold on
     end
-    xlim([-10, 10]);
+    xlim([-90, 90]);
     ylim([-10, 10]);
-    line([-10, 10], [0, 0], 'Color','black','LineStyle','--');
+    line([-90, 90], [0, 0], 'Color','black','LineStyle','--');
     xlabel('value');
     axis square
 %     ylabel('utility');
@@ -65,8 +68,9 @@ legend({'normal','catch'});
 lineColor = {[1,0,0], [0,0,1]};
 % subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
 % subs = [18112301,18112302,18112303,18112501,18112502];%,18112503];
-subs = [18121401 18121402 18121601 18121604 18121605];
-xRange = -10:0.1:10;
+% subs = [18121401 18121402 18121601 18121604 18121605];
+subs = 2018120000+[1901 1902 1903 2001 2002 2003];
+xRange = -90:0.1:90;
 utilities = nan(length(xRange),length(times),length(subs));
 for i_sub = 1:length(subs)
     for i_time = 1:2
@@ -101,6 +105,7 @@ ylabel('utility');
 lineColor = {[1,0,0], [0,0,1]};
 % subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
 % subs = [18112301,18112302,18112303,18112501,18112502];%,18112503];
+subs = 2018120000+[1901 1902 1903 2001 2002 2003];
 xRange = -10:0.1:10;
 utilities = nan(length(xRange),length(times));
 
@@ -145,7 +150,8 @@ end
 
 %% GLM
 % subs = [18111001,18111002,18111003,18111004,18111101,18111102,18111104];
-subs = [18121401 18121402 18121601 18121602 18121604 18121605];
+% subs = [18121401 18121402 18121601 18121602 18121604 18121605];
+subs = 2018120000+[1901 1902 1903 2001 2002 2003];
 times = [1.0];
 betas = nan(length(subs).*length(times), 5);
 devs = nan(length(subs).*length(times), 1);
@@ -155,9 +161,9 @@ for i_sub = 1:length(subs)
     subTrials = getSubData(subs(i_sub));
     for i_time = 1:2
         if i_time == 1
-            subSubTrials = subTrials([subTrials.n_gambles] == 7);
+            subSubTrials = subTrials([subTrials.n_gambles] == 13);
         else
-            subSubTrials = subTrials([subTrials.n_gambles] ~= 7);
+            subSubTrials = subTrials([subTrials.n_gambles] ~= 13);
         end
         [tempBetas, tempDevs] = glmfit(zscore([([subSubTrials.sure_reward]' > 0).*[subSubTrials.sure_reward]',([subSubTrials.sure_reward]' < 0).*[subSubTrials.sure_reward]',-reshape([subSubTrials.key_gamble],2,length(subSubTrials))']), [subSubTrials.choose_sure]','binomial');
         betas((i_time-1).*length(subs)+i_sub,:) = tempBetas./sum(abs(tempBetas));
@@ -166,8 +172,8 @@ for i_sub = 1:length(subs)
         chooseSqr = zeros(19);
         allSqr = zeros(19);
         for i_trial = 1:length(subSubTrials)
-            chooseSqr(round(subSubTrials(i_trial).sure_reward.*2) + 10, round(sum(subSubTrials(i_trial).key_gamble)) + 10) = chooseSqr(round(subSubTrials(i_trial).sure_reward.*2) + 10, round(sum(subSubTrials(i_trial).key_gamble)) + 10) + subSubTrials(i_trial).choose_sure;
-            allSqr(round(subSubTrials(i_trial).sure_reward.*2) + 10, round(sum(subSubTrials(i_trial).key_gamble)) + 10) = allSqr(round(subSubTrials(i_trial).sure_reward.*2) + 10, round(sum(subSubTrials(i_trial).key_gamble)) + 10) + 1;
+            chooseSqr(round(subSubTrials(i_trial).sure_reward./10.*2) + 10, round(sum(subSubTrials(i_trial).key_gamble)./10) + 10) = chooseSqr(round(subSubTrials(i_trial).sure_reward./10.*2) + 10, round(sum(subSubTrials(i_trial).key_gamble)./10) + 10) + subSubTrials(i_trial).choose_sure;
+            allSqr(round(subSubTrials(i_trial).sure_reward./10.*2) + 10, round(sum(subSubTrials(i_trial).key_gamble)./10) + 10) = allSqr(round(subSubTrials(i_trial).sure_reward./10.*2) + 10, round(sum(subSubTrials(i_trial).key_gamble)./10) + 10) + 1;
         end
         imSqr = chooseSqr./allSqr;
         imSqr(allSqr == 0) = -1;
