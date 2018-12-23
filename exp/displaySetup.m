@@ -6,7 +6,7 @@ Screen('Preference', 'SkipSyncTests', 1);
 KbName('UnifyKeyNames');
 
 screens = Screen('Screens');
-screen_id = 1;
+screen_id = 0;
 [screen_width, screen_height] = Screen('DisplaySize', screen_id);
 [screen_x_size, screen_y_size] = Screen('WindowSize', screen_id);
 pix_per_cm = [screen_x_size, screen_y_size]/[screen_width, screen_height].*10;

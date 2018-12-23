@@ -4,7 +4,7 @@ function [trials] = getSubData(subs_id)
 if evalin('base', 'exist(''trials'', ''var'') && isa(trials, ''trial'')')
     trials = evalin('base', 'trials');
 else
-    trialTable = readtable('data181111.csv');
+    trialTable = readtable('data_181223.csv');
 %     trialTable = readtable('data_181216.csv');
     trials(height(trialTable),1) = trial();
     for i_trial = 1:length(trials)
